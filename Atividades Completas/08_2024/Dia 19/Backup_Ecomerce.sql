@@ -147,30 +147,30 @@ LOCK TABLES `EX2_PRODUTO` WRITE;
 UNLOCK TABLES;
 
 --
--- Table structure for table `EX2_REQUISICAP_COMPRA`
+-- Table structure for table `EX2_REQUISICAO_COMPRA`
 --
 
-DROP TABLE IF EXISTS `EX2_REQUISICAP_COMPRA`;
+DROP TABLE IF EXISTS `EX2_REQUISICAO_COMPRA`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `EX2_REQUISICAP_COMPRA` (
+CREATE TABLE `EX2_REQUISICAO_COMPRA` (
   `cod_requisicao_compra` int NOT NULL AUTO_INCREMENT,
   `cod_produto` int NOT NULL,
   `data_requisicao` date NOT NULL,
   `quantidade` int NOT NULL,
   PRIMARY KEY (`cod_requisicao_compra`),
   KEY `cod_produto` (`cod_produto`),
-  CONSTRAINT `EX2_REQUISICAP_COMPRA_ibfk_1` FOREIGN KEY (`cod_produto`) REFERENCES `EX2_ITEMPEDIDO` (`cod_produto`)
+  CONSTRAINT `EX2_REQUISICAO_COMPRA_ibfk_1` FOREIGN KEY (`cod_produto`) REFERENCES `EX2_ITEMPEDIDO` (`cod_produto`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `EX2_REQUISICAP_COMPRA`
+-- Dumping data for table `EX2_REQUISICAO_COMPRA`
 --
 
-LOCK TABLES `EX2_REQUISICAP_COMPRA` WRITE;
-/*!40000 ALTER TABLE `EX2_REQUISICAP_COMPRA` DISABLE KEYS */;
-/*!40000 ALTER TABLE `EX2_REQUISICAP_COMPRA` ENABLE KEYS */;
+LOCK TABLES `EX2_REQUISICAO_COMPRA` WRITE;
+/*!40000 ALTER TABLE `EX2_REQUISICAO_COMPRA` DISABLE KEYS */;
+/*!40000 ALTER TABLE `EX2_REQUISICAO_COMPRA` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -190,4 +190,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-08-19  8:40:47
+-- Dump completed on 2024-08-19  9:01:53
