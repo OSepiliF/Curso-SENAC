@@ -1,6 +1,8 @@
+drop database netflix;
+create database netflix;
 use netflix;
--- drop database netflix;
--- create database netflix;
+
+
 
 create table cliente(
 id int auto_increment primary key,
