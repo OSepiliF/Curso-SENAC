@@ -23,11 +23,11 @@ DROP TABLE IF EXISTS `EX2_CLIENTE`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `EX2_CLIENTE` (
-  `cod_cliente` int NOT NULL AUTO_INCREMENT,
+  `codcliente` int NOT NULL AUTO_INCREMENT,
   `nome` varchar(255) NOT NULL,
-  `data_nascimento` date NOT NULL,
+  `datanascimento` date NOT NULL,
   `cpf` char(11) NOT NULL,
-  PRIMARY KEY (`cod_cliente`)
+  PRIMARY KEY (`codcliente`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -48,16 +48,16 @@ DROP TABLE IF EXISTS `EX2_ITEMPEDIDO`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `EX2_ITEMPEDIDO` (
-  `cod_pedido` int NOT NULL,
-  `cod_produto` int NOT NULL,
-  `numero_item` int NOT NULL AUTO_INCREMENT,
-  `volor_unitario` float NOT NULL,
+  `codpedido` int NOT NULL,
+  `codproduto` int NOT NULL,
+  `numeroitem` int NOT NULL AUTO_INCREMENT,
+  `volorunitario` float NOT NULL,
   `quantidade` int NOT NULL,
-  PRIMARY KEY (`numero_item`),
-  KEY `cod_pedido` (`cod_pedido`),
-  KEY `cod_produto` (`cod_produto`),
-  CONSTRAINT `EX2_ITEMPEDIDO_ibfk_1` FOREIGN KEY (`cod_pedido`) REFERENCES `EX2_PEDIDO` (`cod_pedido`),
-  CONSTRAINT `EX2_ITEMPEDIDO_ibfk_2` FOREIGN KEY (`cod_produto`) REFERENCES `EX2_PRODUTO` (`cod_produto`)
+  PRIMARY KEY (`numeroitem`),
+  KEY `codpedido` (`codpedido`),
+  KEY `codproduto` (`codproduto`),
+  CONSTRAINT `EX2_ITEMPEDIDO_ibfk_1` FOREIGN KEY (`codpedido`) REFERENCES `EX2_PEDIDO` (`codpedido`),
+  CONSTRAINT `EX2_ITEMPEDIDO_ibfk_2` FOREIGN KEY (`codproduto`) REFERENCES `EX2_PRODUTO` (`codproduto`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -78,10 +78,10 @@ DROP TABLE IF EXISTS `EX2_LOG`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `EX2_LOG` (
-  `cod_log` int NOT NULL AUTO_INCREMENT,
-  `data_log` date NOT NULL,
+  `codlog` int NOT NULL AUTO_INCREMENT,
+  `data` date NOT NULL,
   `descricao` varchar(255) NOT NULL,
-  PRIMARY KEY (`cod_log`)
+  PRIMARY KEY (`codlog`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -102,14 +102,14 @@ DROP TABLE IF EXISTS `EX2_PEDIDO`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `EX2_PEDIDO` (
-  `cod_pedido` int NOT NULL AUTO_INCREMENT,
-  `cod_cliente` int NOT NULL,
-  `data_pedido` date NOT NULL,
-  `nota_fiscal` varchar(255) NOT NULL,
-  `valor_total` float NOT NULL,
-  PRIMARY KEY (`cod_pedido`),
-  KEY `cod_cliente` (`cod_cliente`),
-  CONSTRAINT `EX2_PEDIDO_ibfk_1` FOREIGN KEY (`cod_cliente`) REFERENCES `EX2_CLIENTE` (`cod_cliente`)
+  `codpedido` int NOT NULL AUTO_INCREMENT,
+  `codcliente` int NOT NULL,
+  `datapedido` date NOT NULL,
+  `notafiscal` varchar(255) NOT NULL,
+  `valortotal` float NOT NULL,
+  PRIMARY KEY (`codpedido`),
+  KEY `codcliente` (`codcliente`),
+  CONSTRAINT `EX2_PEDIDO_ibfk_1` FOREIGN KEY (`codcliente`) REFERENCES `EX2_CLIENTE` (`codcliente`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -130,10 +130,10 @@ DROP TABLE IF EXISTS `EX2_PRODUTO`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `EX2_PRODUTO` (
-  `cod_produto` int NOT NULL AUTO_INCREMENT,
+  `codproduto` int NOT NULL AUTO_INCREMENT,
   `descricao` varchar(255) NOT NULL,
   `quantidade` int NOT NULL,
-  PRIMARY KEY (`cod_produto`)
+  PRIMARY KEY (`codproduto`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -154,13 +154,13 @@ DROP TABLE IF EXISTS `EX2_REQUISICAO_COMPRA`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `EX2_REQUISICAO_COMPRA` (
-  `cod_requisicao_compra` int NOT NULL AUTO_INCREMENT,
-  `cod_produto` int NOT NULL,
-  `data_requisicao` date NOT NULL,
+  `codrequisicaocompra` int NOT NULL AUTO_INCREMENT,
+  `codproduto` int NOT NULL,
+  `data` date NOT NULL,
   `quantidade` int NOT NULL,
-  PRIMARY KEY (`cod_requisicao_compra`),
-  KEY `cod_produto` (`cod_produto`),
-  CONSTRAINT `EX2_REQUISICAO_COMPRA_ibfk_1` FOREIGN KEY (`cod_produto`) REFERENCES `EX2_ITEMPEDIDO` (`cod_produto`)
+  PRIMARY KEY (`codrequisicaocompra`),
+  KEY `codproduto` (`codproduto`),
+  CONSTRAINT `EX2_REQUISICAO_COMPRA_ibfk_1` FOREIGN KEY (`codproduto`) REFERENCES `EX2_ITEMPEDIDO` (`codproduto`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -190,4 +190,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-08-19  9:01:53
+-- Dump completed on 2024-08-19  9:26:28
