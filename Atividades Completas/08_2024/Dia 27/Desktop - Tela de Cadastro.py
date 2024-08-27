@@ -12,18 +12,18 @@ def verificacao():
         messagebox.showinfo(f"Sucesso! O usuário {usuario.get()} foi cadastrado. ")
 
 root = Tk()
-root.geometry("600x400")
+root.geometry("350x400")
 root.title("Tela de Cadastro")
 
-Label(root, text="Usuário:", font=("Arial", 10, "bold")).place(relx=0.39, rely=0.25, anchor="center")
+Label(root, text="Usuário:", font=("Arial", 10, "bold")).place(relx=0.41, rely=0.25, anchor="e")
 usuario = Entry(root, width=30)
 usuario.place(relx=0.5, rely=0.3, anchor="center")
 
-Label(root, text="Senha:", font=("Arial", 10, "bold")).place(relx=0.38, rely=0.4, anchor="center")
+Label(root, text="Senha:", font=("Arial", 10, "bold")).place(relx=0.38, rely=0.4, anchor="e")
 senha = Entry(root, width=30, show="*")
 senha.place(relx=0.5, rely=0.45, anchor="center")
 
-Label(root, text="Confirmar Senha:", font=("Arial", 10, "bold")).place(relx=0.44, rely=0.55, anchor="center")
+Label(root, text="Confirmar Senha:", font=("Arial", 10, "bold")).place(relx=0.575, rely=0.55, anchor="e")
 confirmar_senha = Entry(root, width=30, show="*")
 confirmar_senha.place(relx=0.5, rely=0.6, anchor="center")
 
