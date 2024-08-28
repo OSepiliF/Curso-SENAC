@@ -1,15 +1,21 @@
-import tkinter as tk
-from tkinter import Scrollbar, Canvas, ttk
-from PIL import Image, ImageTk
+from tkinter import *
+from tkinter import PhotoImage
 
-def Criar_Galeria(root, imagens, descricao):
-    galeria_frame = tk.Frame(root)
-    galeria_frame.pack(fill=tk.BOTH, expand=True)
+root = Tk()
+root.title("Galeria de Imagens")
+root.geometry("800x600")
 
-    for i, (img_path, desc) in enumerate(zip(imagens, descricao)):
-        img = Image.open(img_path)
-        img.thumbnail((450, 250))
-        img_tk = ImageTk.PhotoImage(img)
+def Imagem1():
+    global img, img_label
+    img = PhotoImage(file=r"C:\\Users\\FilipeSimoes\\Documents\\GitHub\\Atividades-SENAC\\Atividades Completas\\08_2024\\Dia 27\\Imagens_Galeria\\Paisagem1.png")
+    img_label = Label(root, image=img).place(x=300,y=125)
 
-        img_frame = tk.Frame(galeria_frame)
-        img_frame.grid(row=i // 3, column=i % 3, padx=10, pady=10, sticky="nsew")
+def Imagem2():
+    global img, img_label
+    img = PhotoImage(file=r"C:\\Users\\FilipeSimoes\\Documents\\GitHub\\Atividades-SENAC\\Atividades Completas\\08_2024\\Dia 27\\Imagens_Galeria\\Paisagem2.png")
+    img_label = Label(root, image=img).place(x=300,y=125)
+
+def Imagem3():
+    global img, img_label
+    img = PhotoImage(file=r"C:\\Users\\FilipeSimoes\\Documents\\GitHub\\Atividades-SENAC\\Atividades Completas\\08_2024\\Dia 27\\Imagens_Galeria\\Paisagem3.png")
+    img_label = Label(root, image=img).place(x=300,y=125)
