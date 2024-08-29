@@ -20,15 +20,15 @@ root = Tk()
 root.geometry("1920x1200")
 root.title("Cadastro")
 
-Label(root, text="Usuário", font=("Arial", 20, "bold")).place(relx=0.532, rely=0.25, anchor="e")
+Label(root, text="Usuário", font=("Arial", 20, "bold")).place(relx=0.5, rely=0.25, anchor="center")
 usuario = Entry(root, font=("Arial", 20))
 usuario.place(relx=0.5, rely=0.3, anchor="center")
 
-Label(root, text="Senha", font=("Arial", 20, "bold")).place(relx=0.525, rely=0.4, anchor="e")
+Label(root, text="Senha", font=("Arial", 20, "bold")).place(relx=0.5, rely=0.4, anchor="center")
 senha = Entry(root, font=("Arial", 20), show="*")
 senha.place(relx=0.5, rely=0.45, anchor="center")
 
-Label(root, text="Confirmar Senha", font=("Arial", 20, "bold")).place(relx=0.563, rely=0.55, anchor="e")
+Label(root, text="Confirmar Senha", font=("Arial", 20, "bold")).place(relx=0.5, rely=0.55, anchor="center")
 confirmar_senha = Entry(root, font=("Arial", 20), show="*")
 confirmar_senha.place(relx=0.5, rely=0.6, anchor="center")
 
