@@ -6,20 +6,24 @@ root = Tk()
 root.title("Galeria de Imagens")
 root.geometry("1100x600")
 
+
+# Coloque o atalho de onde de localiza as imagens!
 def Imagem1():
     global img, img_label
-    img = PhotoImage(file="C:\\Users\\FilipeSimoes\\Documents\\GitHub\\Atividades-SENAC\\Atividades Completas\\08_2024\\Dia 27\\Imagens_Galeria\\Paisagem1.png")
+    img = PhotoImage(file="C:\\Users\\...\\Imagem.png")
     img_label = Label(root, image=img).place(x=300,y=50)
 
 def Imagem2():
     global img, img_label
-    img = PhotoImage(file="C:\\Users\\FilipeSimoes\\Documents\\GitHub\\Atividades-SENAC\\Atividades Completas\\08_2024\\Dia 27\\Imagens_Galeria\\Paisagem2.png")
+    img = PhotoImage(file="C:\\Users\\...\\Imagem.png")
     img_label = Label(root, image=img).place(x=300,y=50)
 
 def Imagem3():
     global img, img_label
-    img = PhotoImage(file="C:\\Users\\FilipeSimoes\\Documents\\GitHub\\Atividades-SENAC\\Atividades Completas\\08_2024\\Dia 27\\Imagens_Galeria\\Paisagem3.png")
+    img = PhotoImage(file="C:\\Users\\...\\Imagem.png")
     img_label = Label(root, image=img).place(x=300,y=50)
+#-------------------------------------------------------------------
+
 
 def Nada():
     global img,img_label

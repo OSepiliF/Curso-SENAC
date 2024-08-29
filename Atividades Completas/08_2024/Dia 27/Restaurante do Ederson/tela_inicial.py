@@ -4,43 +4,44 @@ from tkinter import messagebox, ttk
 def abrir_pratos_entrada():
     pratos_entrada = Toplevel()
     pratos_entrada.title("Pratos de Entrada")
-    pratos_entrada.geometry("1900x1200")
+    pratos_entrada.geometry("1900x1080")
+    pratos_entrada.state("zoomed")
 
 def abrir_pratos_principais():
     pratos_principais = Toplevel()
     pratos_principais.title("Pratos Principais")
-    pratos_principais.geometry("1900x1200")
+    pratos_principais.geometry("1900x1080")
+    pratos_principais.state("zoomed")
 
 def abrir_bebidas_alcolicas():
     bebidas_alcolicas = Toplevel()
     bebidas_alcolicas.title("Bebidas Alcólicas")
-    bebidas_alcolicas.geometry("1900x1200")
+    bebidas_alcolicas.geometry("1900x1080")
+    bebidas_alcolicas.state("zoomed")
 
 def abrir_bebidas():
     bebidas = Toplevel()
     bebidas.title("Bebidas")
-    bebidas.geometry("1900x1200")
+    bebidas.geometry("1900x1080")
+    bebidas.state("zoomed")
 
 def abrir_sobremesas():
     sobremesas = Toplevel()
     sobremesas.title("Sobremesas")
-    sobremesas.geometry("1900x1200")
+    sobremesas.geometry("1900x1080")
+    sobremesas.state("zoomed")
 
 def abrir_menu_do_chef():
     menu_do_chef = Toplevel()
     menu_do_chef.title("Menu do Chef")
-    menu_do_chef.geometry("1900x1200")
+    menu_do_chef.geometry("1900x1080")
+    menu_do_chef.state("zoomed")
 
 def inicial_tela(usuario):
     root = Tk()
-    root.geometry("1920x1200")
+    root.geometry("1920x1080")
     root.title("Tela Inicial")
-
-    #Colocar uma logo
-
-
-
-
+    root.state("zoomed")
 
     Label(root, text=("Bem Vindo ao Restaurante do seu Ederson!"), font=("Arial", 20, "bold")).place(relx=0.5, rely=0.35, anchor="center")
     Label(root, text=(f"Olá {usuario}"), font=("Arial", 20, "bold")).place(relx=0.5, rely=0.4, anchor="center")
