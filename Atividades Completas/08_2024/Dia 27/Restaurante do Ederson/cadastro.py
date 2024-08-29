@@ -1,0 +1,40 @@
+from tkinter import *
+from tkinter import messagebox,ttk
+from tela_inicial import inicial_tela
+
+def verificacao():
+    global usuario
+    if usuario.get() == "" or senha.get() == "" or confirmar_senha.get() == "":
+        messagebox.showerror("Erro!","Por favor preencha todas as opções. ")
+    elif senha.get() != confirmar_senha.get():
+        messagebox.showerror("Erro!","Senhas não coincidem. ")
+    elif senha.get() == usuario.get():
+        messagebox.showerror("Erro!","Senha e usuário não podem ser iguais. ")
+    else:
+        messagebox.showinfo("Sucesso!", f"O usuário {usuario.get()} foi cadastrado. ")
+        usuario = usuario.get()
+        root.destroy()
+        inicial_tela(usuario)
+
+root = Tk()
+root.geometry("1920x1200")
+root.title("Cadastro")
+
+Label(root, text="Usuário", font=("Arial", 20, "bold")).place(relx=0.532, rely=0.25, anchor="e")
+usuario = Entry(root, font=("Arial", 20))
+usuario.place(relx=0.5, rely=0.3, anchor="center")
+
+Label(root, text="Senha", font=("Arial", 20, "bold")).place(relx=0.525, rely=0.4, anchor="e")
+senha = Entry(root, font=("Arial", 20), show="*")
+senha.place(relx=0.5, rely=0.45, anchor="center")
+
+Label(root, text="Confirmar Senha", font=("Arial", 20, "bold")).place(relx=0.563, rely=0.55, anchor="e")
+confirmar_senha = Entry(root, font=("Arial", 20), show="*")
+confirmar_senha.place(relx=0.5, rely=0.6, anchor="center")
+
+style = ttk.Style()
+style.configure('custom.TButton', font=('Arial', 15), padding=(10,5))
+btn = ttk.Button(root, text="Cadastrar", command=verificacao, style='custom.TButton')
+btn.place(relx=0.5, rely=0.77, anchor="center")
+
+root.mainloop()
