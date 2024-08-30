@@ -3,13 +3,13 @@ from tkinter import messagebox,ttk
 
 def verificacao():
     if usuario.get() == "" or senha.get() == "" or confirmar_senha.get() == "":
-        messagebox.showerror("Erro! Por favor preencha todas as opções. ")
+        messagebox.showerror("Erro!", "Por favor preencha todas as opções. ")
     elif senha.get() != confirmar_senha.get():
-        messagebox.showerror("Erro! Senhas não coincidem. ")
+        messagebox.showerror("Erro!", "Senhas não coincidem. ")
     elif senha.get() == usuario.get():
-        messagebox.showerror("Erro! Senha e usuário não podem ser iguais. ")
+        messagebox.showerror("Erro!", "Senha e usuário não podem ser iguais. ")
     else:
-        messagebox.showinfo(f"Sucesso! O usuário {usuario.get()} foi cadastrado. ")
+        messagebox.showinfo("Sucesso!", f"O usuário {usuario.get()} foi cadastrado. ")
 
 root = Tk()
 root.geometry("350x400")
