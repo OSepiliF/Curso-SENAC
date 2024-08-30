@@ -55,7 +55,6 @@ def inicial_tela(usuario):
     root.state("zoomed")
     root.configure(bg='lightgray')
 
-    #Logo
     img = PhotoImage(file="Imagens_Restaurante\\Logo_Restaurante.png")
     Label(root, image=img).place(relx=0.5, rely=0.25, anchor="center")
 
