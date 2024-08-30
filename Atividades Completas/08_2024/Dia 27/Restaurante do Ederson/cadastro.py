@@ -17,7 +17,6 @@ def verificacao():
         inicial_tela(usuario)
 
 root = Tk()
-root.geometry("1920x1080")
 root.title("Cadastro")
 root.state("zoomed")
 root.configure(bg='lightgray')
