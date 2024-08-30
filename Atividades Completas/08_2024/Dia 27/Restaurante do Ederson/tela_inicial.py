@@ -36,10 +36,7 @@ def inicial_tela(usuario):
     root.geometry("1920x1200")
     root.title("Tela Inicial")
 
-    #Colocar uma logo
-
-
-
+    #img = PhotoImage(file="").place(relx=0.5 , rely=0.1, anchor="center")
 
 
     Label(root, text=("Bem Vindo ao Restaurante do seu Ederson!"), font=("Arial", 20, "bold")).place(relx=0.5, rely=0.35, anchor="center")
