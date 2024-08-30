@@ -63,7 +63,7 @@ def inicial_tela(usuario):
     root.state("zoomed")
     root.configure(bg='lightgray')
 
-    img = PhotoImage(file="E:\\Documentos\\Atividade-SENAC-Teste\\Atividades Completas\\08_2024\\Dia 27\\Restaurante do Ederson\\Imagens_Restaurante\\Logo_Restaurante.png")
+    img = PhotoImage(file="Imagens_Restaurante\\Logo_Restaurante.png")
     Label(root, image=img).place(relx=0.5, rely=0.2, anchor="center")
 
     Label(root, text=("Bem Vindo ao Restaurante do seu Ederson!"), font=("Arial", 20, "bold"), bg='lightgray').place(relx=0.5, rely=0.4, anchor="center")
