@@ -2,8 +2,6 @@ drop database netflix;
 create database netflix;
 use netflix;
 
-
-
 create table cliente(
 id int auto_increment primary key,
 email varchar(255) not null,
