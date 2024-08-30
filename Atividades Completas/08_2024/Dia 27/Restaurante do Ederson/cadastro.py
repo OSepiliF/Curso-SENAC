@@ -19,25 +19,43 @@ def verificacao():
 root = Tk()
 root.title("Cadastro")
 root.state("zoomed")
-root.configure(bg='lightgray')
+root.configure(bg='#F3F3F3')
 
-Label(root, text=("Preencha os dados abaixo!"), font=("Arial", 20, "bold"), bg='lightgray').place(relx=0.5, rely=0.2, anchor="center")
+#Configuração da Barra de Titulo
+root.overrideredirect(True)
+title_bar = Frame(root, bg='black', bd=2)
+title_bar.pack(fill=X)
+title_label = Label(title_bar, text="Restaurante do Ederson", bg='black', fg='white', font=("Titan One", 12, "bold"))
+title_label.pack(side=LEFT, padx=10)
+close_button = Button(title_bar, text=" X ", bg='black', fg='red', command=root.destroy)
+close_button.pack(side=RIGHT, padx=10)
 
-Label(root, text=("Usuário"), font=("Arial", 15, "bold"), bg='lightgray').place(relx=0.5, rely=0.37, anchor="center")
-usuario = Entry(root, font=("Arial", 15))
-usuario.place(relx=0.5, rely=0.4, anchor="center")
+#Criar Retângulos
+canvas = Canvas(root, bg='#F3F3F3', highlightthickness=0)
+canvas.pack(fill=BOTH, expand=True)
+canvas.create_rectangle(650,100,1270,900, fill="lightgray", outline="")
 
-Label(root, text=("Senha"), font=("Arial", 15, "bold"), bg='lightgray').place(relx=0.5, rely=0.47, anchor="center")
-senha = Entry(root, font=("Arial", 15), show="*")
-senha.place(relx=0.5, rely=0.5, anchor="center")
+#Logo
+img = PhotoImage(file="Imagens_Restaurante\\Logo_Recortada.png")
+Label(root, image=img, bg='lightgray').place(relx=0.5, rely=0.25, anchor="center")
 
-Label(root, text=("Confirmar Senha"), font=("Arial", 15, "bold"), bg='lightgray').place(relx=0.5, rely=0.57, anchor="center")
-confirmar_senha = Entry(root, font=("Arial", 15), show="*")
-confirmar_senha.place(relx=0.5, rely=0.6, anchor="center")
+Label(root, text=("Preencha os dados abaixo:"), font=("Titan One", 18, "bold"), bg='lightgray').place(relx=0.5, rely=0.39, anchor="center")
+
+Label(root, text=("Usuário"), font=("Titan One", 15, "bold"), bg='lightgray').place(relx=0.5, rely=0.45, anchor="center")
+usuario = Entry(root, font=("Titan One", 15))
+usuario.place(relx=0.5, rely=0.48, anchor="center")
+
+Label(root, text=("Senha"), font=("Titan One", 15, "bold"), bg='lightgray').place(relx=0.5, rely=0.55, anchor="center")
+senha = Entry(root, font=("Titan One", 15), show="*")
+senha.place(relx=0.5, rely=0.58, anchor="center")
+
+Label(root, text=("Confirmar Senha"), font=("Titan One", 15, "bold"), bg='lightgray').place(relx=0.5, rely=0.65, anchor="center")
+confirmar_senha = Entry(root, font=("Titan One", 15), show="*")
+confirmar_senha.place(relx=0.5, rely=0.68, anchor="center")
 
 style = ttk.Style()
-style.configure('custom.TButton', font=('Arial', 15, "bold"), bg='lightgray', padding=(10,5), anchor="center")
+style.configure('custom.TButton', font=('Titan One', 15, "bold"), bg='lightgray', padding=(10,5), anchor="center")
 btn = ttk.Button(root, text="Cadastrar", command=verificacao, style='custom.TButton')
-btn.place(relx=0.5, rely=0.7, anchor="center")
+btn.place(relx=0.5, rely=0.75, anchor="center")
 
 root.mainloop()
