@@ -56,36 +56,36 @@ def inicial_tela(usuario):
     root.configure(bg='lightgray')
 
     img = PhotoImage(file="Imagens_Restaurante\\Logo_Restaurante.png")
-    Label(root, image=img).place(relx=0.5, rely=0.2, anchor="center")
+    Label(root, image=img).place(relx=0.5, rely=0.25, anchor="center")
 
-    Label(root, text=("Bem Vindo ao Restaurante do seu Ederson!"), font=("Arial", 20, "bold"), bg='lightgray').place(relx=0.5, rely=0.4, anchor="center")
-    Label(root, text=(f"Olá {usuario}"), font=("Arial", 20, "bold"), bg='lightgray').place(relx=0.5, rely=0.45, anchor="center")
+    Label(root, text=("Bem Vindo ao Restaurante do seu Ederson!"), font=("Arial", 20, "bold"), bg='lightgray').place(relx=0.5, rely=0.45, anchor="center")
+    Label(root, text=(f"Olá {usuario}"), font=("Arial", 20, "bold"), bg='lightgray').place(relx=0.5, rely=0.5, anchor="center")
 
     style = ttk.Style()
     style.configure('custom.TButton', font=('Arial', 10), padding=15, width=20)
 
     btn_pratos_entrada = ttk.Button(root, text="Pratos de Entrada", style='custom.TButton', command=abrir_pratos_entrada)
-    btn_pratos_entrada.place(relx=0.45, rely=0.52, anchor="center")
+    btn_pratos_entrada.place(relx=0.4, rely=0.6, anchor="center")
 
     btn_pratos_principais = ttk.Button(root, text="Pratos Principais", style='custom.TButton', command=abrir_pratos_principais)
-    btn_pratos_principais.place(relx=0.55, rely=0.52, anchor="center")
+    btn_pratos_principais.place(relx=0.5, rely=0.6, anchor="center")
 
     btn_bebidas_alcolicas = ttk.Button(root, text="Bebidas Alcólicas", style='custom.TButton', command=abrir_bebidas_alcolicas)
-    btn_bebidas_alcolicas.place(relx=0.45, rely=0.64, anchor="center")
+    btn_bebidas_alcolicas.place(relx=0.6, rely=0.6, anchor="center")
 
     btn_bebidas = ttk.Button(root, text="Bebidas", style='custom.TButton', command=abrir_bebidas)
-    btn_bebidas.place(relx=0.55, rely=0.64, anchor="center")
+    btn_bebidas.place(relx=0.4, rely=0.7, anchor="center")
 
     btn_sobremesas = ttk.Button(root, text="Sobremesas", style='custom.TButton', command=abrir_sobremesas)
-    btn_sobremesas.place(relx=0.45, rely=0.76, anchor="center")
+    btn_sobremesas.place(relx=0.5, rely=0.7, anchor="center")
 
     btn_menu_do_chef = ttk.Button(root, text="Menu do Chef", style='custom.TButton', command=abrir_menu_do_chef)
-    btn_menu_do_chef.place(relx=0.55, rely=0.76, anchor="center")
+    btn_menu_do_chef.place(relx=0.6, rely=0.7, anchor="center")
 
     bnt_carrinho = ttk.Button(root, text="Carrinho", style='custom.TButton', command=abrir_carrinho)
-    bnt_carrinho.place(relx=0.45, rely=0.88, anchor="center")
+    bnt_carrinho.place(relx=0.45, rely=0.8, anchor="center")
 
     bnt_sair = ttk.Button(root, text="Sair", style='custom.TButton', command=confirmar_sair)
-    bnt_sair.place(relx=0.55, rely=0.88, anchor="center")
+    bnt_sair.place(relx=0.55, rely=0.8, anchor="center")
 
     root.mainloop()
