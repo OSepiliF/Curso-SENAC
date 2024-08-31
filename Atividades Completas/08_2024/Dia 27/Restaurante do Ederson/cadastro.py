@@ -1,6 +1,6 @@
 from tkinter import *
 from tkinter import messagebox,ttk
-from tela_inicial import inicial_tela
+from tela_inicial import abrir_inicial_tela
 
 def verificacao():
     global usuario
@@ -14,7 +14,7 @@ def verificacao():
         messagebox.showinfo("Sucesso!", f"O usuário {usuario.get()} foi cadastrado. ")
         usuario = usuario.get()
         root.destroy()
-        inicial_tela(usuario)
+        abrir_inicial_tela(usuario)
 
 root = Tk()
 root.title("Cadastro")
@@ -23,11 +23,11 @@ root.configure(bg='#F3F3F3')
 
 #Configuração da Barra de Titulo
 root.overrideredirect(True)
-title_bar = Frame(root, bg='black', bd=2)
-title_bar.pack(fill=X)
-title_label = Label(title_bar, text="Restaurante do Ederson", bg='black', fg='white', font=("Titan One", 12, "bold"))
-title_label.pack(side=LEFT, padx=10)
-close_button = Button(title_bar, text=" X ", bg='black', fg='red', command=root.destroy)
+barra_titulo = Frame(root, bg='black', bd=2)
+barra_titulo.pack(fill=X)
+titulo_label = Label(barra_titulo, text="Restaurante do Ederson", font=("Titan One", 12, "bold"), bg='black', fg='white')
+titulo_label.pack(side=LEFT, padx=10)
+close_button = Button(barra_titulo, text=" X ", bg='black', fg='red', command=root.destroy)
 close_button.pack(side=RIGHT, padx=10)
 
 #Criar Retângulos
