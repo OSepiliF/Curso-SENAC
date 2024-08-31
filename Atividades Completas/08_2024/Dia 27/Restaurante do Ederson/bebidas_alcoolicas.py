@@ -30,6 +30,11 @@ def carregar_imagem(imagem_entrada):
     return img
 
 def abrir_quantidade(nome_produto, valor_produto):
+    escolher_quant = Toplevel()
+    escolher_quant.title(f"Adicionar {nome_produto}")
+    escolher_quant.geometry("300x150")
+    escolher_quant.configure(bg='#F3F3F3')
+
     def adicionar_quantidade():
         quantidade = quantidade_entry.get()
         if quantidade == "" or int(quantidade) > 0:
@@ -43,12 +48,7 @@ def abrir_quantidade(nome_produto, valor_produto):
             messagebox.showinfo("Carrinho", f"Você adicionou {quantidade} {nome_produto}(s) ao carrinho.\nValor total: R${total_valor:.2f}")
             escolher_quant.destroy()
         else:
-            messagebox.showerror("Erro", "Por favor, insira uma quantidade válida.")
-
-    escolher_quant = Toplevel()
-    escolher_quant.title(f"Adicionar {nome_produto}")
-    escolher_quant.geometry("300x150")
-    escolher_quant.configure(bg='#F3F3F3')
+            messagebox.showerror("Erro!", "Por favor, insira uma quantidade válida.")
 
     Label(escolher_quant, text=f"Quantidade de {nome_produto}", font=("Titan One", 12, "bold"), bg='#F3F3F3').pack(pady=10.5)
     quantidade_entry = Entry(escolher_quant, font=("Titan One", 10))
@@ -87,15 +87,14 @@ def abrir_bebidas_alcoolicas():
 
     imagens_refs = []
 
-    global img_path
     def criar_retorno(img_path, text, x, y, valor):
         img = carregar_imagem(img_path)
         imagens_refs.append(img)
         canvas.create_rectangle(x - 200, y - 150, x + 200, y + 250, fill="lightgray", outline="")
         canvas.create_image(x, y, anchor="center", image=img)
         canvas.create_text(x, y + 160, text=text, font=("Titan One", 13, "bold"), fill="black")
-        bnt_adicionar_quant = ttk.Button(bebidas_alcoolicas, text="Adicionar ao Carrinho", style='custom.TButton', width= 25, command=lambda: abrir_quantidade(text, valor))
-        bnt_adicionar_quant.place(x= x, y= y + 240, anchor="center")
+        bnt_adicionar_quant = ttk.Button(bebidas_alcoolicas, text="Adicionar ao Carrinho", style='custom.TButton', width=25, command=lambda: abrir_quantidade(text, valor))
+        bnt_adicionar_quant.place(x=x, y=y + 240, anchor="center")
 
     largura_janela = bebidas_alcoolicas.winfo_screenwidth()
     altura_janela = bebidas_alcoolicas.winfo_screenheight()
@@ -107,8 +106,18 @@ def abrir_bebidas_alcoolicas():
         valor = valores.obter_valor(text)
         coluna = i % 3
         linha = i // 3
-        x = espacamento_x * (coluna + 1) 
+        x = espacamento_x * (coluna + 1)
         y = espacamento_y * (linha + 1) - 170
         criar_retorno(img_red_path, text, x, y, valor)
 
+    frame_bnt_sair = Frame(bebidas_alcoolicas, bg='#F3F3F3', bd=2)
+    frame_bnt_sair.pack(side=BOTTOM, fill=X, padx=10, pady=10)
+    bnt_sair = ttk.Button(frame_bnt_sair, text="Voltar ao Menu", style='custom.TButton', command=bebidas_alcoolicas.destroy)
+    bnt_sair.pack(pady=5) 
     bebidas_alcoolicas.mainloop()
+
+if __name__ == "__main__":
+    root = Tk()
+    root.withdraw() 
+    abrir_bebidas_alcoolicas()
+    root.mainloop()
