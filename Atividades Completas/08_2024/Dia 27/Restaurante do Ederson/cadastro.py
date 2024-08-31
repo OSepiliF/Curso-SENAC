@@ -30,9 +30,9 @@ titulo_label.pack(side=LEFT, padx=10)
 close_button = Button(barra_titulo, text=" X ", bg='black', fg='red', command=root.destroy)
 close_button.pack(side=RIGHT, padx=10)
 
-canvas = Canvas(root, bg='#F3F3F3', highlightthickness=0)
-canvas.pack(fill=BOTH, expand=True)
-canvas.create_rectangle(650,100,1270,900, fill="lightgray", outline="")
+quadrado = Canvas(root, bg='#F3F3F3', highlightthickness=0)
+quadrado.pack(fill=BOTH, expand=True)
+quadrado.create_rectangle(650,100,1270,900, fill="lightgray", outline="")
 
 img = PhotoImage(file="Imagens_Restaurante\\Logo_Recortada.png")
 Label(root, image=img, bg='lightgray').place(relx=0.5, rely=0.25, anchor="center")
@@ -52,7 +52,7 @@ confirmar_senha = Entry(root, font=("Titan One", 15), show="*")
 confirmar_senha.place(relx=0.5, rely=0.68, anchor="center")
 
 style = ttk.Style()
-style.configure('custom.TButton', font=('Titan One', 15, "bold"), bg='lightgray', padding=(10,5), anchor="center")
+style.configure('custom.TButton', font=('Titan One', 15, "bold"), bg='lightgray', padding=(10.5), anchor="center")
 btn = ttk.Button(root, text="Cadastrar", command=verificacao, style='custom.TButton')
 btn.place(relx=0.5, rely=0.75, anchor="center")
 
