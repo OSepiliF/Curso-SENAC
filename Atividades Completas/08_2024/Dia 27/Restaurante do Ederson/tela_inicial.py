@@ -1,13 +1,13 @@
 from tkinter import *
 from tkinter import messagebox, ttk, PhotoImage, Label
 
+from carrinho import abrir_carrinho
 from bebidas_alcoolicas import abrir_bebidas_alcoolicas
-#from pratos_entrada import abrir_pratos_entrada
+
 #from pratos_principais import abrir_pratos_principais
 #from bebidas import abrir_bebidas
 #from sobremesas import abrir_sobremesas
 #from menu_do_chef import abrir_menu_do_chef
-#from carrinho import abrir_carrinho
 
 def abrir_pratos_entrada():
     pratos_entrada = Toplevel()
@@ -38,12 +38,6 @@ def abrir_menu_do_chef():
     menu_do_chef.title("Menu do Chef")
     menu_do_chef.state("zoomed")
     menu_do_chef.configure(bg='#F3F3F3')
-
-def abrir_carrinho():
-    carrinho = Toplevel()
-    carrinho.title("Carrinho")
-    carrinho.state("zoomed")
-    carrinho.configure(bg='#F3F3F3')
 
 def confirmar_sair():
     resposta = messagebox.askyesno("Confirmar Saída", "Você tem certeza que deseja sair?")
