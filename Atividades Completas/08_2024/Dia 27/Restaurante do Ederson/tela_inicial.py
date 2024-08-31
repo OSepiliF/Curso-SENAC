@@ -50,7 +50,7 @@ def confirmar_sair():
     if resposta:
         root.destroy()
 
-def inicial_tela(usuario):
+def abrir_inicial_tela(usuario):
     global root
     root = Tk()
     root.title("Tela Inicial")
@@ -59,14 +59,14 @@ def inicial_tela(usuario):
 
     # Configuração da Barra de Título
     root.overrideredirect(True)
-    title_bar = Frame(root, bg='black', bd=2)
-    title_bar.pack(fill=X)
-    title_label = Label(title_bar, text="Restaurante do Ederson", bg='black', fg='white', font=("Titan One", 12, "bold"))
-    title_label.pack(side=LEFT, padx=10)
-    close_button = Button(title_bar, text=" X ", bg='black', fg='red', command=root.destroy)
+    barra_titulo = Frame(root, bg='black', bd=2)
+    barra_titulo.pack(fill=X)
+    titulo_label = Label(barra_titulo, text="Menu", font=("Titan One", 12, "bold"), bg='black', fg='white')
+    titulo_label.pack(side=LEFT, padx=10)
+    close_button = Button(barra_titulo, text=" X ", bg='black', fg='red', command=root.destroy)
     close_button.pack(side=RIGHT, padx=10)
 
-    img = PhotoImage(file="Imagens_Restaurante/Logo_Restaurante.png")
+    img = PhotoImage(file="Imagens_Restaurante\\Logo_Restaurante.png")
     Label(root, image=img).place(relx=0.5, rely=0.25, anchor="center")
 
     Label(root, text=("Seja Bem Vindo ao Nosso Restaurante!"), font=("Titan One", 20, "bold"), bg='#F3F3F3').place(relx=0.5, rely=0.45, anchor="center")
