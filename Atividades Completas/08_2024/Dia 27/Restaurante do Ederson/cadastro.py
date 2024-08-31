@@ -30,12 +30,10 @@ titulo_label.pack(side=LEFT, padx=10)
 close_button = Button(barra_titulo, text=" X ", bg='black', fg='red', command=root.destroy)
 close_button.pack(side=RIGHT, padx=10)
 
-#Criar Retângulos
 canvas = Canvas(root, bg='#F3F3F3', highlightthickness=0)
 canvas.pack(fill=BOTH, expand=True)
 canvas.create_rectangle(650,100,1270,900, fill="lightgray", outline="")
 
-#Logo
 img = PhotoImage(file="Imagens_Restaurante\\Logo_Recortada.png")
 Label(root, image=img, bg='lightgray').place(relx=0.5, rely=0.25, anchor="center")
 
