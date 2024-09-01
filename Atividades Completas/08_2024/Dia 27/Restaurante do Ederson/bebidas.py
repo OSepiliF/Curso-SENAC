@@ -40,7 +40,7 @@ def abrir_quantidade(nome_produto, valor_produto):
         else:
             messagebox.showerror("Erro!", "Por favor, insira uma quantidade válida.")
 
-    Label(escolher_quant, text=f"Quantidade de {nome_produto}", font=("Titan One", 12, "bold"), bg='#F3F3F3').pack(pady=10.5)
+    Label(escolher_quant, text=f"Quant. de {nome_produto}", font=("Titan One", 12, "bold"), bg='#F3F3F3').pack(pady=10.5)
     quantidade_entry = Entry(escolher_quant, font=("Titan One", 10))
     quantidade_entry.pack(pady=6)
     Button(escolher_quant, text="Adicionar ao Carrinho", font=("Titan One", 10, "bold"), command=adicionar_quantidade).pack(pady=10.5)
