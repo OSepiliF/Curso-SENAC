@@ -8,14 +8,11 @@ class Valor_de_compra:
     def __init__(self):
         self.valores = {
             # Bebidas Alcoólicas
-            "caipirinha": 6, "chopp": 10, "espumante": 30, "heineken": 8, "skol": 5, "vinho": 60,
-
-            # Bebidas
-            "agua": 3, "coca-cola": 5, "fanta laranja": 5, "guarana antartica": 5, "suco de laranja": 7, "vitamina de frutas": 10
+            "Caipirinha - R$6,00": 6, "Chopp - R$10,00": 10, "Espumante - R$30,00": 30, "Heineken - R$8,00": 8, "Skol - R$5,00": 5, "Vinho - R$60,00": 60,
         }
 
     def obter_valor(self, nome_produto):
-        return self.valores.get(nome_produto.lower(), None)
+        return self.valores.get(nome_produto, None)
 
 def carregar_imagem(imagem_entrada):
     img = Image.open(imagem_entrada)
@@ -30,7 +27,7 @@ def abrir_quantidade(nome_produto, valor_produto):
 
     def adicionar_quantidade():
         quantidade = quantidade_entry.get()
-        if quantidade == "" or int(quantidade) > 0:
+        if quantidade != "" and int(quantidade) > 0:
             total_valor = int(quantidade) * valor_produto
             carrinho_de_compras.append({
                 'produto': nome_produto,
@@ -64,12 +61,12 @@ def abrir_bebidas_alcoolicas():
     valores = Valor_de_compra()
 
     imagens_redimensionadas = [
-        ("Imagens_Restaurante\\Alcoólicas_Caipirinha_red.png", "Caipirinha"),
-        ("Imagens_Restaurante\\Alcoólicas_Chopp_red.png", "Chopp"),
-        ("Imagens_Restaurante\\Alcoólicas_Espumante_red.png", "Espumante"),
-        ("Imagens_Restaurante\\Alcoólicas_Heineken_red.png", "Heineken"),
-        ("Imagens_Restaurante\\Alcoólicas_Skol_red.png", "Skol"),
-        ("Imagens_Restaurante\\Alcoólicas_Vinho_red.png", "Vinho")
+        ("Imagens_Restaurante\\Alcoólicas_Caipirinha_red.png", "Caipirinha - R$6,00"),
+        ("Imagens_Restaurante\\Alcoólicas_Chopp_red.png", "Chopp - R$10,00"),
+        ("Imagens_Restaurante\\Alcoólicas_Espumante_red.png", "Espumante - R$30,00"),
+        ("Imagens_Restaurante\\Alcoólicas_Heineken_red.png", "Heineken - R$8,00"),
+        ("Imagens_Restaurante\\Alcoólicas_Skol_red.png", "Skol - R$5,00"),
+        ("Imagens_Restaurante\\Alcoólicas_Vinho_red.png", "Vinho - R$60,00")
     ]
 
     canvas = Canvas(bebidas_alcoolicas, bg='#F3F3F3', highlightthickness=0)

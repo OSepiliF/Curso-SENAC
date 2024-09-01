@@ -4,10 +4,9 @@ from tkinter import messagebox, ttk, PhotoImage, Label
 from carrinho import abrir_carrinho
 from bebidas_alcoolicas import abrir_bebidas_alcoolicas
 from bebidas import abrir_bebidas
-
 #from pratos_principais import abrir_pratos_principais
-#from sobremesas import abrir_sobremesas
 #from menu_do_chef import abrir_menu_do_chef
+from sobremesas import abrir_sobremesas
 
 def abrir_pratos_entrada():
     pratos_entrada = Toplevel()

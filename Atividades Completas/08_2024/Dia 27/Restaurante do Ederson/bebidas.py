@@ -7,15 +7,12 @@ carrinho_de_compras = []
 class Valor_de_compra:
     def __init__(self):
         self.valores = {
-            # Bebidas Alcoólicas
-            "caipirinha": 6, "chopp": 10, "espumante": 30, "heineken": 8, "skol": 5, "vinho": 60,
-
             # Bebidas
-            "agua": 3, "coca-cola": 5, "fanta laranja": 5, "guarana antartica": 5, "suco de laranja": 7, "vitamina de frutas": 10
+            "Água - R$3,00": 3, "Coca-Cola - R$7,00": 5, "Fanta Laranja - R$5,00": 5, "Guarana Antartica - R$5,00": 5, "Suco de Laranja - R$7,00": 7, "Vitamina de Frutas - R$10,00": 10
         }
 
     def obter_valor(self, nome_produto):
-        return self.valores.get(nome_produto.lower(), None)
+        return self.valores.get(nome_produto, None)
 
 def carregar_imagem(imagem_entrada):
     img = Image.open(imagem_entrada)
@@ -30,7 +27,7 @@ def abrir_quantidade(nome_produto, valor_produto):
 
     def adicionar_quantidade():
         quantidade = quantidade_entry.get()
-        if quantidade == "" or int(quantidade) > 0:
+        if quantidade != "" and int(quantidade) > 0:
             total_valor = int(quantidade) * valor_produto
             carrinho_de_compras.append({
                 'produto': nome_produto,
@@ -64,12 +61,12 @@ def abrir_bebidas():
     valores = Valor_de_compra()
 
     imagens_redimensionadas = [
-        ("Imagens_Restaurante\\Bebidas_Agua_red.png", "Agua"),
-        ("Imagens_Restaurante\\Bebidas_Coca_red.png", "Coca-Cola"),
-        ("Imagens_Restaurante\\Bebidas_Fanta_red.png", "Fanta Laranja"),
-        ("Imagens_Restaurante\\Bebidas_Guarana_red.png", "Guarana Antartica"),
-        ("Imagens_Restaurante\\Bebidas_SucoLaranja_red.png", "Suco de Laranja"),
-        ("Imagens_Restaurante\\Bebidas_VitaminaFrutas_red.png", "Vitamina de Frutas")
+        ("Imagens_Restaurante\\Bebidas_Agua_red.png", "Água - R$3,00"),
+        ("Imagens_Restaurante\\Bebidas_Coca_red.png", "Coca-Cola - R$7,00"),
+        ("Imagens_Restaurante\\Bebidas_Fanta_red.png", "Fanta Laranja - R$5,00"),
+        ("Imagens_Restaurante\\Bebidas_Guarana_red.png", "Guarana Antartica - R$5,00"),
+        ("Imagens_Restaurante\\Bebidas_SucoLaranja_red.png", "Suco de Laranja - R$7,00"),
+        ("Imagens_Restaurante\\Bebidas_VitaminaFrutas_red.png", "Vitamina de Frutas - R$10,00")
     ]
 
     canvas = Canvas(bebidas, bg='#F3F3F3', highlightthickness=0)
