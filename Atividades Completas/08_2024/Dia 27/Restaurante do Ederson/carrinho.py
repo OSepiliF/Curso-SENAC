@@ -46,3 +46,7 @@ def abrir_carrinho():
 
 if __name__ == "__main__":
     abrir_carrinho()
+
+
+
+# Fazer a parte de 'PAGAMENTO FICTICIO' e o de RETIRAR produtos do carrinho.

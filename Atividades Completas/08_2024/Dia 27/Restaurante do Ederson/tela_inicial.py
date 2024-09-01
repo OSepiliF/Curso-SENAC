@@ -64,4 +64,3 @@ def abrir_inicial_tela(usuario):
     bnt_sair.place(relx=0.55, rely=0.8, anchor="center")
 
     root.mainloop()
-

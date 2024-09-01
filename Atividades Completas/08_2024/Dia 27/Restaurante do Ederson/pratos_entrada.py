@@ -108,5 +108,3 @@ if __name__ == "__main__":
     root.withdraw() 
     abrir_pratos_entrada()
     root.mainloop()
-
-
