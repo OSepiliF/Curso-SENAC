@@ -1,5 +1,6 @@
 from tkinter import *
 from bebidas_alcoolicas import carrinho_de_compras
+from bebidas import carrinho_de_compras
 
 def abrir_carrinho():
     carrinho = Toplevel()

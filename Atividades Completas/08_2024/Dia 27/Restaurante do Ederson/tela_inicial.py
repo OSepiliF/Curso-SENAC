@@ -3,9 +3,9 @@ from tkinter import messagebox, ttk, PhotoImage, Label
 
 from carrinho import abrir_carrinho
 from bebidas_alcoolicas import abrir_bebidas_alcoolicas
+from bebidas import abrir_bebidas
 
 #from pratos_principais import abrir_pratos_principais
-#from bebidas import abrir_bebidas
 #from sobremesas import abrir_sobremesas
 #from menu_do_chef import abrir_menu_do_chef
 
@@ -20,12 +20,6 @@ def abrir_pratos_principais():
     pratos_principais.title("Pratos Principais")
     pratos_principais.state("zoomed")
     pratos_principais.configure(bg='#F3F3F3')
-
-def abrir_bebidas():
-    bebidas = Toplevel()
-    bebidas.title("Bebidas")
-    bebidas.state("zoomed")
-    bebidas.configure(bg='#F3F3F3')
 
 def abrir_sobremesas():
     sobremesas = Toplevel()
