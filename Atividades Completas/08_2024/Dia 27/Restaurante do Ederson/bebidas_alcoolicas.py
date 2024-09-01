@@ -5,24 +5,17 @@ from tkinter import ttk, messagebox
 carrinho_de_compras = []
 
 class Valor_de_compra:
-    def __init__(self, valor_caipirinha=6, valor_chopp=10, valor_espumante=30, valor_heineken=8, valor_skol=5, valor_vinho=60):
-        self.valor_caipirinha = valor_caipirinha
-        self.valor_chopp = valor_chopp
-        self.valor_espumante = valor_espumante
-        self.valor_heineken = valor_heineken
-        self.valor_skol = valor_skol
-        self.valor_vinho = valor_vinho
+    def __init__(self):
+        self.valores = {
+            # Bebidas Alcoólicas
+            "caipirinha": 6, "chopp": 10, "espumante": 30, "heineken": 8, "skol": 5, "vinho": 60,
+
+            # Bebidas
+            "agua": 3, "coca-cola": 5, "fanta laranja": 5, "guarana antartica": 5, "suco de laranja": 7, "vitamina de frutas": 10
+        }
 
     def obter_valor(self, nome_produto):
-        return getattr(self, f"valor_{nome_produto.lower()}", None)
-
-def redimensionar_imagem(imagem_entrada, imagem_saida, tamanho=(380, 280)):
-    img = Image.open(imagem_entrada)
-    try:
-        img = img.resize(tamanho, Image.LANCZOS)
-        img.save(imagem_saida)
-    finally:
-        img.close()
+        return self.valores.get(nome_produto.lower(), None)
 
 def carregar_imagem(imagem_entrada):
     img = Image.open(imagem_entrada)
@@ -71,16 +64,13 @@ def abrir_bebidas_alcoolicas():
     valores = Valor_de_compra()
 
     imagens_redimensionadas = [
-        ("Imagens_Restaurante\\Alcoólicas_Caipirinha.png", "Imagens_Restaurante\\Alcoólicas_Caipirinha_red.png", "Caipirinha"),
-        ("Imagens_Restaurante\\Alcoólicas_Chopp.png", "Imagens_Restaurante\\Alcoólicas_Chopp_red.png", "Chopp"),
-        ("Imagens_Restaurante\\Alcoólicas_Espumante.png", "Imagens_Restaurante\\Alcoólicas_Espumante_red.png", "Espumante"),
-        ("Imagens_Restaurante\\Alcoólicas_Heineken.png", "Imagens_Restaurante\\Alcoólicas_Heineken_red.png", "Heineken"),
-        ("Imagens_Restaurante\\Alcoólicas_Skol.png", "Imagens_Restaurante\\Alcoólicas_Skol_red.png", "Skol"),
-        ("Imagens_Restaurante\\Alcoólicas_Vinho.png", "Imagens_Restaurante\\Alcoólicas_Vinho_red.png", "Vinho")
+        ("Imagens_Restaurante\\Alcoólicas_Caipirinha_red.png", "Caipirinha"),
+        ("Imagens_Restaurante\\Alcoólicas_Chopp_red.png", "Chopp"),
+        ("Imagens_Restaurante\\Alcoólicas_Espumante_red.png", "Espumante"),
+        ("Imagens_Restaurante\\Alcoólicas_Heineken_red.png", "Heineken"),
+        ("Imagens_Restaurante\\Alcoólicas_Skol_red.png", "Skol"),
+        ("Imagens_Restaurante\\Alcoólicas_Vinho_red.png", "Vinho")
     ]
-
-    for img_entrada, imagem_saida, _ in imagens_redimensionadas:
-        redimensionar_imagem(img_entrada, imagem_saida)
 
     canvas = Canvas(bebidas_alcoolicas, bg='#F3F3F3', highlightthickness=0)
     canvas.pack(fill=BOTH, expand=True)
@@ -102,13 +92,13 @@ def abrir_bebidas_alcoolicas():
     espacamento_x = largura_janela // 4
     espacamento_y = altura_janela // 2.5
 
-    for i, (img_path, img_red_path, text) in enumerate(imagens_redimensionadas):
+    for i, (img_path, text) in enumerate(imagens_redimensionadas):
         valor = valores.obter_valor(text)
         coluna = i % 3
         linha = i // 3
         x = espacamento_x * (coluna + 1)
         y = espacamento_y * (linha + 1) - 170
-        criar_retorno(img_red_path, text, x, y, valor)
+        criar_retorno(img_path, text, x, y, valor)
 
     frame_bnt_sair = Frame(bebidas_alcoolicas, bg='#F3F3F3', bd=2)
     frame_bnt_sair.pack(side=BOTTOM, fill=X, padx=10, pady=10)
