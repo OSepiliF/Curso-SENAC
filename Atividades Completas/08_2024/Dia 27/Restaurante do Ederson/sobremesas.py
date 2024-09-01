@@ -8,7 +8,7 @@ class Valor_de_compra:
     def __init__(self):
         self.valores = {
             # Sobremesas
-            "Brownie - R$8,00": 8, "Cheesecake - R$12,00": 12, "Tiramisu - R$15,00": 15, "Pudim - R$10,00": 10, "Mousse de Chocolate - R$9,00": 9, "Pavê - R$11,00": 11,
+            "Brownie - R$8,00": 8, "Cheesecake - R$12,00": 12, "Tiramisu - R$15,00": 15, "Pudim - R$10,00": 10, "Mousse de Chocolate - R$9,00": 9, "Pavê - R$11,00": 11
         }
 
     def obter_valor(self, nome_produto):
@@ -40,7 +40,7 @@ def abrir_quantidade(nome_produto, valor_produto):
         else:
             messagebox.showerror("Erro!", "Por favor, insira uma quantidade válida.")
 
-    Label(escolher_quant, text=f"Quantidade de {nome_produto}", font=("Titan One", 12, "bold"), bg='#F3F3F3').pack(pady=10.5)
+    Label(escolher_quant, text=f"Quant. de {nome_produto}", font=("Titan One", 12, "bold"), bg='#F3F3F3').pack(pady=10.5)
     quantidade_entry = Entry(escolher_quant, font=("Titan One", 10))
     quantidade_entry.pack(pady=6)
     Button(escolher_quant, text="Adicionar ao Carrinho", font=("Titan One", 10, "bold"), command=adicionar_quantidade).pack(pady=10.5)
@@ -80,7 +80,7 @@ def abrir_sobremesas():
         canvas.create_rectangle(x - 200, y - 150, x + 200, y + 250, fill="lightgray", outline="")
         canvas.create_image(x, y, anchor="center", image=img)
         canvas.create_text(x, y + 160, text=text, font=("Titan One", 13, "bold"), fill="black")
-        bnt_adicionar_quant = ttk.Button(sobremesas, text="Adicionar ao Carrinho", style='custom.TButton', width=25, command=lambda: abrir_quantidade(text, valor))
+        bnt_adicionar_quant = ttk.Button(sobremesas, text="Adicionar ao Carrinho", style='custom.TButton', width=25, command=lambda:abrir_quantidade(text, valor))
         bnt_adicionar_quant.place(x=x, y=y + 240, anchor="center")
 
     largura_janela = sobremesas.winfo_screenwidth()

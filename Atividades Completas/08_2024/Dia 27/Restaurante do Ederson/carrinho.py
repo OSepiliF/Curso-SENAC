@@ -1,9 +1,9 @@
 from tkinter import *
 from bebidas_alcoolicas import carrinho_de_compras as car_bebidas_alcoolicas
 from bebidas import carrinho_de_compras as car_bebidas
-# from menu_do_chef import carrinho_de_compras as car_menu_do_chef
-# from pratos_entrada import carrinho_de_compras as car_pratos_entrada
-# from pratos_principais import carrinho_de_compras as car_pratos_principais
+from menu_chef import carrinho_de_compras as car_menu_chef
+from pratos_entrada import carrinho_de_compras as car_pratos_entrada
+from pratos_principais import carrinho_de_compras as car_pratos_principais
 from sobremesas import carrinho_de_compras as car_sobremesas
 
 def abrir_carrinho():
@@ -23,7 +23,7 @@ def abrir_carrinho():
     canvas = Canvas(carrinho, bg='#F3F3F3', highlightthickness=0)
     canvas.pack(fill=BOTH, expand=True)
 
-    todos_itens_carrinho = car_bebidas_alcoolicas + car_bebidas + car_sobremesas # + car_menu_do_chef + car_pratos_entrada + car_pratos_principais + 
+    todos_itens_carrinho = car_bebidas_alcoolicas + car_bebidas + car_sobremesas + car_pratos_principais + car_pratos_entrada + car_menu_chef   
 
     total = 0
     y_set = 20

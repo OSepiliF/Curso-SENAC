@@ -7,8 +7,8 @@ carrinho_de_compras = []
 class Valor_de_compra:
     def __init__(self):
         self.valores = {
-            # Bebidas Alcoólicas
-            "Caipirinha - R$6,00": 6, "Chopp - R$10,00": 10, "Espumante - R$30,00": 30, "Heineken - R$8,00": 8, "Skol - R$5,00": 5, "Vinho - R$60,00": 60,
+            # Menu do Chef
+            "Risoto de Cogumelos - R$30,00": 30, "Filé Mignon ao Molho - R$35,00": 35, "Canelone de Espinafre - R$29,00": 29, "Salmão Grelhado - R$32,00": 32, "Espaguete à Carbonara - R$27,00": 27, "Pizza Gourmet - R$40,00": 40
         }
 
     def obter_valor(self, nome_produto):
@@ -45,31 +45,31 @@ def abrir_quantidade(nome_produto, valor_produto):
     quantidade_entry.pack(pady=6)
     Button(escolher_quant, text="Adicionar ao Carrinho", font=("Titan One", 10, "bold"), command=adicionar_quantidade).pack(pady=10.5)
 
-def abrir_bebidas_alcoolicas():
-    bebidas_alcoolicas = Toplevel()
-    bebidas_alcoolicas.state("zoomed")
-    bebidas_alcoolicas.configure(bg='#F3F3F3')
+def abrir_menu_chef():
+    menu_chef = Toplevel()
+    menu_chef.state("zoomed")
+    menu_chef.configure(bg='#F3F3F3')
 
-    bebidas_alcoolicas.overrideredirect(True)
-    barra_titulo = Frame(bebidas_alcoolicas, bg='black', bd=2)
+    menu_chef.overrideredirect(True)
+    barra_titulo = Frame(menu_chef, bg='black', bd=2)
     barra_titulo.pack(fill=X)
-    titulo_label = Label(barra_titulo, text="Bebidas Alcoólicas", font=("Titan One", 12, "bold"), bg='black', fg='white')
+    titulo_label = Label(barra_titulo, text="Menu do Chef", font=("Titan One", 12, "bold"), bg='black', fg='white')
     titulo_label.pack(side=LEFT, padx=10)
-    close_button = Button(barra_titulo, text=" X ", bg='black', fg='red', command=bebidas_alcoolicas.destroy)
+    close_button = Button(barra_titulo, text=" X ", bg='black', fg='red', command=menu_chef.destroy)
     close_button.pack(side=RIGHT, padx=10)
 
     valores = Valor_de_compra()
 
     imagens_redimensionadas = [
-        ("Imagens_Restaurante\\Alcoólicas_Caipirinha_red.png", "Caipirinha - R$6,00"),
-        ("Imagens_Restaurante\\Alcoólicas_Chopp_red.png", "Chopp - R$10,00"),
-        ("Imagens_Restaurante\\Alcoólicas_Espumante_red.png", "Espumante - R$30,00"),
-        ("Imagens_Restaurante\\Alcoólicas_Heineken_red.png", "Heineken - R$8,00"),
-        ("Imagens_Restaurante\\Alcoólicas_Skol_red.png", "Skol - R$5,00"),
-        ("Imagens_Restaurante\\Alcoólicas_Vinho_red.png", "Vinho - R$60,00")
+        ("Imagens_Restaurante\\Menu_Chef_Risoto_Cogumelos_red.png", "Risoto de Cogumelos - R$30,00"),
+        ("Imagens_Restaurante\\Menu_Chef_File_Mignon_red.png", "Filé Mignon ao Molho - R$35,00"),
+        ("Imagens_Restaurante\\Menu_Chef_Canelone_Berinjela_red.png", "Canelone de Berinjela - R$29,00"),
+        ("Imagens_Restaurante\\Menu_Chef_Salmao_Grelhado_red.png", "Salmão Grelhado - R$32,00"),
+        ("Imagens_Restaurante\\Menu_Chef_Espaguete_Carbonara_red.png", "Espaguete à Carbonara - R$27,00"),
+        ("Imagens_Restaurante\\Menu_Chef_Pizza_Gourmet_red.png", "Pizza Gourmet - R$40,00")
     ]
 
-    canvas = Canvas(bebidas_alcoolicas, bg='#F3F3F3', highlightthickness=0)
+    canvas = Canvas(menu_chef, bg='#F3F3F3', highlightthickness=0)
     canvas.pack(fill=BOTH, expand=True)
 
     imagens_refs = []
@@ -80,11 +80,11 @@ def abrir_bebidas_alcoolicas():
         canvas.create_rectangle(x - 200, y - 150, x + 200, y + 250, fill="lightgray", outline="")
         canvas.create_image(x, y, anchor="center", image=img)
         canvas.create_text(x, y + 160, text=text, font=("Titan One", 13, "bold"), fill="black")
-        bnt_adicionar_quant = ttk.Button(bebidas_alcoolicas, text="Adicionar ao Carrinho", style='custom.TButton', width=25, command=lambda: abrir_quantidade(text, valor))
+        bnt_adicionar_quant = ttk.Button(menu_chef, text="Adicionar ao Carrinho", style='custom.TButton', width=25, command=lambda:abrir_quantidade(text, valor))
         bnt_adicionar_quant.place(x=x, y=y + 240, anchor="center")
 
-    largura_janela = bebidas_alcoolicas.winfo_screenwidth()
-    altura_janela = bebidas_alcoolicas.winfo_screenheight()
+    largura_janela = menu_chef.winfo_screenwidth()
+    altura_janela = menu_chef.winfo_screenheight()
 
     espacamento_x = largura_janela // 4
     espacamento_y = altura_janela // 2.5
@@ -97,14 +97,14 @@ def abrir_bebidas_alcoolicas():
         y = espacamento_y * (linha + 1) - 170
         criar_retorno(img_path, text, x, y, valor)
 
-    frame_bnt_sair = Frame(bebidas_alcoolicas, bg='#F3F3F3', bd=2)
+    frame_bnt_sair = Frame(menu_chef, bg='#F3F3F3', bd=2)
     frame_bnt_sair.pack(side=BOTTOM, fill=X, padx=10, pady=10)
-    bnt_sair = ttk.Button(frame_bnt_sair, text="Voltar ao Menu", style='custom.TButton', command=bebidas_alcoolicas.destroy)
+    bnt_sair = ttk.Button(frame_bnt_sair, text="Voltar ao Menu", style='custom.TButton', command=menu_chef.destroy)
     bnt_sair.pack(pady=5) 
-    bebidas_alcoolicas.mainloop()
+    menu_chef.mainloop()
 
 if __name__ == "__main__":
     root = Tk()
     root.withdraw() 
-    abrir_bebidas_alcoolicas()
+    abrir_menu_chef()
     root.mainloop()

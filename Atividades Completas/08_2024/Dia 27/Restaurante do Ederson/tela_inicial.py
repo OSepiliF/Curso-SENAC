@@ -4,33 +4,10 @@ from tkinter import messagebox, ttk, PhotoImage, Label
 from carrinho import abrir_carrinho
 from bebidas_alcoolicas import abrir_bebidas_alcoolicas
 from bebidas import abrir_bebidas
-#from pratos_principais import abrir_pratos_principais
-#from menu_do_chef import abrir_menu_do_chef
+from pratos_principais import abrir_pratos_principais
+from menu_chef import abrir_menu_chef
 from sobremesas import abrir_sobremesas
-
-def abrir_pratos_entrada():
-    pratos_entrada = Toplevel()
-    pratos_entrada.title("Pratos de Entrada")
-    pratos_entrada.state("zoomed")
-    pratos_entrada.configure(bg='#F3F3F3')
-
-def abrir_pratos_principais():
-    pratos_principais = Toplevel()
-    pratos_principais.title("Pratos Principais")
-    pratos_principais.state("zoomed")
-    pratos_principais.configure(bg='#F3F3F3')
-
-def abrir_sobremesas():
-    sobremesas = Toplevel()
-    sobremesas.title("Sobremesas")
-    sobremesas.state("zoomed")
-    sobremesas.configure(bg='#F3F3F3')
-
-def abrir_menu_do_chef():
-    menu_do_chef = Toplevel()
-    menu_do_chef.title("Menu do Chef")
-    menu_do_chef.state("zoomed")
-    menu_do_chef.configure(bg='#F3F3F3')
+from pratos_entrada import abrir_pratos_entrada
 
 def confirmar_sair():
     resposta = messagebox.askyesno("Confirmar Saída", "Você tem certeza que deseja sair?")
@@ -77,7 +54,7 @@ def abrir_inicial_tela(usuario):
     btn_sobremesas = ttk.Button(root, text="Sobremesas", style='custom.TButton', command=abrir_sobremesas)
     btn_sobremesas.place(relx=0.5, rely=0.7, anchor="center")
 
-    btn_menu_do_chef = ttk.Button(root, text="Menu do Chef", style='custom.TButton', command=abrir_menu_do_chef)
+    btn_menu_do_chef = ttk.Button(root, text="Menu do Chef", style='custom.TButton', command=abrir_menu_chef)
     btn_menu_do_chef.place(relx=0.6, rely=0.7, anchor="center")
 
     bnt_carrinho = ttk.Button(root, text="Carrinho", style='custom.TButton', command=abrir_carrinho)
