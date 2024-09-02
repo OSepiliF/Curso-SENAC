@@ -75,11 +75,13 @@ def abrir_bebidas():
     imagens_refs = []
 
     def criar_retorno(img_path, text, x, y, valor):
+
         img = carregar_imagem(img_path)
         imagens_refs.append(img)
         canvas.create_rectangle(x - 200, y - 150, x + 200, y + 250, fill="lightgray", outline="")
         canvas.create_image(x, y, anchor="center", image=img)
         canvas.create_text(x, y + 160, text=text, font=("Titan One", 13, "bold"), fill="black")
+
         bnt_adicionar_quant = ttk.Button(bebidas, text="Adicionar ao Carrinho", style='custom.TButton', width=25, command=lambda:abrir_quantidade(text, valor))
         bnt_adicionar_quant.place(x=x, y=y + 240, anchor="center")
 
