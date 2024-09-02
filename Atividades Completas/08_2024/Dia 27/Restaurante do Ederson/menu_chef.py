@@ -8,7 +8,7 @@ class Valor_de_compra:
     def __init__(self):
         self.valores = {
             # Menu do Chef
-            "Risoto de Cogumelos - R$30,00": 30, "Filé Mignon ao Molho - R$35,00": 35, "Canelone de Espinafre - R$29,00": 29, "Salmão Grelhado - R$32,00": 32, "Espaguete à Carbonara - R$27,00": 27, "Pizza Gourmet - R$40,00": 40
+            "Risoto de Cogumelos - R$30,00": 30, "Filé Mignon ao Molho - R$35,00": 35, "Canelone de Berinjela - R$29,00": 29, "Salmão Grelhado - R$32,00": 32, "Espaguete à Carbonara - R$27,00": 27, "Pizza Gourmet - R$40,00": 40
         }
 
     def obter_valor(self, nome_produto):
