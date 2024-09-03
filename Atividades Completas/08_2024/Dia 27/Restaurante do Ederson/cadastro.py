@@ -21,7 +21,6 @@ def verificacao():
 cadastro = Tk()
 cadastro.title("Cadastro")
 cadastro.state("zoomed")
-cadastro.configure(bg='#F3F3F3')
 cadastro.overrideredirect(True)
 
 #Plano de Fundo
@@ -63,7 +62,7 @@ confirmar_senha = Entry(cadastro, font=("Titan One", 15), show="*")
 confirmar_senha.place(relx=0.5, rely=0.68, anchor="center")
 
 style = ttk.Style()
-style.configure('custom.TButton', font=('Titan One', 15, "bold"), bg='lightgray', padding=(10.5), anchor="center")
+style.configure('custom.TButton', font=('Titan One', 12, "bold"), padding=(10.5), anchor="center")
 btn = ttk.Button(cadastro, text="Cadastrar", command=verificacao, style='custom.TButton')
 btn.place(relx=0.5, rely=0.75, anchor="center")
 

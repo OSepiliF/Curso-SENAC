@@ -48,19 +48,8 @@ def abrir_quantidade(nome_produto, valor_produto):
 def abrir_sobremesas():
     sobremesas = Toplevel()
     sobremesas.state("zoomed")
-    sobremesas.configure(bg='#F3F3F3')
-
-    #Plano de Fundo
-    img_bg = (r"Imagens_Restaurante\\Madeira.jpg")
-    bg_image = Image.open(img_bg)
-    screen_width = sobremesas.winfo_screenwidth()
-    screen_height = sobremesas.winfo_screenheight()
-    bg_image = bg_image.resize((screen_width, screen_height), Image.Resampling.LANCZOS)
-    bg_image_tk = ImageTk.PhotoImage(bg_image)
-    bg_label = Label(sobremesas, image=bg_image_tk)
-    bg_label.place(relwidth=1, relheight=1)
-
     sobremesas.overrideredirect(True)
+
     barra_titulo = Frame(sobremesas, bg='black', bd=2)
     barra_titulo.pack(fill=X)
     titulo_label = Label(barra_titulo, text="Sobremesas", font=("Titan One", 12, "bold"), bg='black', fg='white')
@@ -87,7 +76,7 @@ def abrir_sobremesas():
     def criar_retorno(img_path, text, x, y, valor):
         img = carregar_imagem(img_path)
         imagens_refs.append(img)
-        canvas.create_rectangle(x - 200, y - 150, x + 200, y + 250, fill="lightgray", outline="")
+        canvas.create_rectangle(x - 200, y - 150, x + 200, y + 250, fill="lightgray")
         canvas.create_image(x, y, anchor="center", image=img)
         canvas.create_text(x, y + 160, text=text, font=("Titan One", 13, "bold"), fill="black")
         bnt_adicionar_quant = ttk.Button(sobremesas, text="Adicionar ao Carrinho", style='custom.TButton', width=25, command=lambda:abrir_quantidade(text, valor))
@@ -107,8 +96,8 @@ def abrir_sobremesas():
         y = espacamento_y * (linha + 1) - 170
         criar_retorno(img_path, text, x, y, valor)
 
-    frame_bnt_sair = Frame(sobremesas, bg='#F3F3F3', bd=2)
-    frame_bnt_sair.pack(side=BOTTOM, fill=X, padx=10, pady=10)
+    frame_bnt_sair = Frame(sobremesas)
+    frame_bnt_sair.pack(side=BOTTOM, padx=10, pady=10)
     bnt_sair = ttk.Button(frame_bnt_sair, text="Voltar ao Menu", style='custom.TButton', command=sobremesas.destroy)
     bnt_sair.pack(pady=5) 
     sobremesas.mainloop()

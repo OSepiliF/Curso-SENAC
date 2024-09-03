@@ -23,7 +23,6 @@ def abrir_quantidade(nome_produto, valor_produto):
     escolher_quant = Toplevel()
     escolher_quant.title(f"Adicionar {nome_produto}")
     escolher_quant.geometry("300x150")
-    escolher_quant.configure(bg='#F3F3F3')
 
     def adicionar_quantidade():
         quantidade = quantidade_entry.get()
@@ -48,18 +47,7 @@ def abrir_quantidade(nome_produto, valor_produto):
 def abrir_bebidas_alcoolicas():
     bebidas_alcoolicas = Toplevel()
     bebidas_alcoolicas.state("zoomed")
-    bebidas_alcoolicas.configure(bg='#F3F3F3')
     bebidas_alcoolicas.overrideredirect(True)
-
-    #Plano de Fundo
-    img_bg = (r"Imagens_Restaurante\\Madeira.jpg")
-    bg_image = Image.open(img_bg)
-    screen_width = bebidas_alcoolicas.winfo_screenwidth()
-    screen_height = bebidas_alcoolicas.winfo_screenheight()
-    bg_image = bg_image.resize((screen_width, screen_height), Image.Resampling.LANCZOS)
-    bg_image_tk = ImageTk.PhotoImage(bg_image)
-    bg_label = Label(bebidas_alcoolicas, image=bg_image_tk)
-    bg_label.place(relwidth=1, relheight=1)
 
     barra_titulo = Frame(bebidas_alcoolicas, bg='black', bd=2)
     barra_titulo.pack(fill=X)
@@ -79,7 +67,7 @@ def abrir_bebidas_alcoolicas():
         ("Imagens_Restaurante\\Alcoólicas_Vinho_red.png", "Vinho - R$60,00")
     ]
 
-    canvas = Canvas(bebidas_alcoolicas, bg='#F3F3F3', highlightthickness=0)
+    canvas = Canvas(bebidas_alcoolicas, highlightthickness=0)
     canvas.pack(fill=BOTH, expand=True)
 
     imagens_refs = []
@@ -107,10 +95,11 @@ def abrir_bebidas_alcoolicas():
         y = espacamento_y * (linha + 1) - 170
         criar_retorno(img_path, text, x, y, valor)
 
-    frame_bnt_sair = Frame(bebidas_alcoolicas, bg='#F3F3F3', bd=2)
-    frame_bnt_sair.pack(side=BOTTOM, fill=X, padx=10, pady=10)
+    frame_bnt_sair = Frame(bebidas_alcoolicas)
+    frame_bnt_sair.pack(side=BOTTOM, padx=10, pady=10)
     bnt_sair = ttk.Button(frame_bnt_sair, text="Voltar ao Menu", style='custom.TButton', command=bebidas_alcoolicas.destroy)
     bnt_sair.pack(pady=5) 
+
     bebidas_alcoolicas.mainloop()
 
 if __name__ == "__main__":
