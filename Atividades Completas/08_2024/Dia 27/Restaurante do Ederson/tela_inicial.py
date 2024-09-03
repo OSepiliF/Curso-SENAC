@@ -1,5 +1,6 @@
 from tkinter import *
 from tkinter import messagebox, ttk, PhotoImage, Label
+from PIL import Image, ImageTk
 
 from carrinho import abrir_carrinho
 from bebidas_alcoolicas import abrir_bebidas_alcoolicas
@@ -21,6 +22,16 @@ def abrir_inicial_tela(usuario):
     root.state("zoomed")
     root.configure(bg='#F3F3F3')
 
+    #Plano de Fundo
+    img_bg = (r"Imagens_Restaurante\\Madeira.jpg")
+    bg_image = Image.open(img_bg)
+    screen_width = root.winfo_screenwidth()
+    screen_height = root.winfo_screenheight()
+    bg_image = bg_image.resize((screen_width, screen_height), Image.Resampling.LANCZOS)
+    bg_image_tk = ImageTk.PhotoImage(bg_image)
+    bg_label = Label(root, image=bg_image_tk)
+    bg_label.place(relwidth=1, relheight=1)
+
     # Configuração da Barra de Título
     root.overrideredirect(True)
     barra_titulo = Frame(root, bg='black', bd=2)
@@ -33,8 +44,8 @@ def abrir_inicial_tela(usuario):
     img = PhotoImage(file="Imagens_Restaurante\\Logo_Restaurante.png")
     Label(root, image=img).place(relx=0.5, rely=0.25, anchor="center")
 
-    Label(root, text=("Seja Bem Vindo ao Nosso Restaurante!"), font=("Titan One", 20, "bold"), bg='#F3F3F3').place(relx=0.5, rely=0.45, anchor="center")
-    Label(root, text=(f"Olá {usuario}"), font=("Titan One", 20, "bold"), bg='#F3F3F3').place(relx=0.5, rely=0.5, anchor="center")
+    Label(root, text=("Seja Bem Vindo ao Nosso Restaurante!"), font=("Titan One", 20, "bold")).place(relx=0.5, rely=0.45, anchor="center")
+    Label(root, text=(f"Olá {usuario}"), font=("Titan One", 20, "bold")).place(relx=0.5, rely=0.5, anchor="center")
 
     style = ttk.Style()
     style.configure('custom.TButton', font=('Titan One', 12), padding=15, width=16)

@@ -50,6 +50,16 @@ def abrir_sobremesas():
     sobremesas.state("zoomed")
     sobremesas.configure(bg='#F3F3F3')
 
+    #Plano de Fundo
+    img_bg = (r"Imagens_Restaurante\\Madeira.jpg")
+    bg_image = Image.open(img_bg)
+    screen_width = sobremesas.winfo_screenwidth()
+    screen_height = sobremesas.winfo_screenheight()
+    bg_image = bg_image.resize((screen_width, screen_height), Image.Resampling.LANCZOS)
+    bg_image_tk = ImageTk.PhotoImage(bg_image)
+    bg_label = Label(sobremesas, image=bg_image_tk)
+    bg_label.place(relwidth=1, relheight=1)
+
     sobremesas.overrideredirect(True)
     barra_titulo = Frame(sobremesas, bg='black', bd=2)
     barra_titulo.pack(fill=X)
