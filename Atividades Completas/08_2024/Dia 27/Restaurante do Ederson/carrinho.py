@@ -52,7 +52,7 @@ def abrir_carrinho():
     carrinho = Toplevel()
     carrinho.title("Carrinho")
     carrinho.state("zoomed")
-    carrinho.configure(bg='#F3F3F3')
+    carrinho.overrideredirect(True)
 
     #Plano de Fundo
     img_bg = (r"Imagens_Restaurante\\Madeira.jpg")
@@ -64,7 +64,6 @@ def abrir_carrinho():
     bg_label = Label(carrinho, image=bg_image_tk)
     bg_label.place(relwidth=1, relheight=1)
 
-    carrinho.overrideredirect(True)
     barra_titulo = Frame(carrinho, bg='black', bd=2)
     barra_titulo.pack(fill=X)
     titulo_label = Label(barra_titulo, text="Carrinho", font=("Titan One", 12, "bold"), bg='black', fg='white')
@@ -72,7 +71,7 @@ def abrir_carrinho():
     close_button = Button(barra_titulo, text=" X ", bg='black', fg='red', command=carrinho.destroy)
     close_button.pack(side=RIGHT, padx=10)
 
-    canvas = Canvas(carrinho, bg='#F3F3F3', highlightthickness=0)
+    canvas = Canvas(carrinho, bg='#F3F3F3')
     canvas.pack(fill=BOTH, expand=True)
 
     todos_itens_carrinho = (car_bebidas_alcoolicas + car_bebidas + car_sobremesas + car_pratos_principais + car_pratos_entrada + car_menu_chef)

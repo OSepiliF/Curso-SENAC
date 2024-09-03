@@ -48,18 +48,7 @@ def abrir_quantidade(nome_produto, valor_produto):
 def abrir_bebidas():
     bebidas = Toplevel()
     bebidas.state("zoomed")
-    bebidas.configure(bg='#F3F3F3')
     bebidas.overrideredirect(True)
-
-    #Plano de Fundo
-    img_bg = (r"Imagens_Restaurante\\Madeira.jpg")
-    bg_image = Image.open(img_bg)
-    screen_width = bebidas.winfo_screenwidth()
-    screen_height = bebidas.winfo_screenheight()
-    bg_image = bg_image.resize((screen_width, screen_height), Image.Resampling.LANCZOS)
-    bg_image_tk = ImageTk.PhotoImage(bg_image)
-    bg_label = Label(bebidas, image=bg_image_tk)
-    bg_label.place(relwidth=1, relheight=1)
 
     barra_titulo = Frame(bebidas, bg='black', bd=2)
     barra_titulo.pack(fill=X)
@@ -88,7 +77,7 @@ def abrir_bebidas():
 
         img = carregar_imagem(img_path)
         imagens_refs.append(img)
-        canvas.create_rectangle(x - 200, y - 150, x + 200, y + 250, fill="lightgray", outline="")
+        canvas.create_rectangle(x - 200, y - 150, x + 200, y + 250, fill="lightgray")
         canvas.create_image(x, y, anchor="center", image=img)
         canvas.create_text(x, y + 160, text=text, font=("Titan One", 13, "bold"), fill="black")
 
@@ -109,8 +98,8 @@ def abrir_bebidas():
         y = espacamento_y * (linha + 1) - 170
         criar_retorno(img_path, text, x, y, valor)
 
-    frame_bnt_sair = Frame(bebidas, bg='#F3F3F3', bd=2)
-    frame_bnt_sair.pack(side=BOTTOM, fill=X, padx=10, pady=10)
+    frame_bnt_sair = Frame(bebidas)
+    frame_bnt_sair.pack(side=BOTTOM, padx=10, pady=10)
     bnt_sair = ttk.Button(frame_bnt_sair, text="Voltar ao Menu", style='custom.TButton', command=bebidas.destroy)
     bnt_sair.pack(pady=5) 
     bebidas.mainloop()
