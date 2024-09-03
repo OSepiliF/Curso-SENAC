@@ -1,5 +1,6 @@
 from tkinter import *
 from tkinter import messagebox
+from PIL import Image, ImageTk
 from bebidas_alcoolicas import carrinho_de_compras as car_bebidas_alcoolicas
 from bebidas import carrinho_de_compras as car_bebidas
 from menu_chef import carrinho_de_compras as car_menu_chef
@@ -52,6 +53,16 @@ def abrir_carrinho():
     carrinho.title("Carrinho")
     carrinho.state("zoomed")
     carrinho.configure(bg='#F3F3F3')
+
+    #Plano de Fundo
+    img_bg = (r"Imagens_Restaurante\\Madeira.jpg")
+    bg_image = Image.open(img_bg)
+    screen_width = carrinho.winfo_screenwidth()
+    screen_height = carrinho.winfo_screenheight()
+    bg_image = bg_image.resize((screen_width, screen_height), Image.Resampling.LANCZOS)
+    bg_image_tk = ImageTk.PhotoImage(bg_image)
+    bg_label = Label(carrinho, image=bg_image_tk)
+    bg_label.place(relwidth=1, relheight=1)
 
     carrinho.overrideredirect(True)
     barra_titulo = Frame(carrinho, bg='black', bd=2)

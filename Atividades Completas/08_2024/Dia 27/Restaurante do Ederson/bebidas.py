@@ -49,8 +49,18 @@ def abrir_bebidas():
     bebidas = Toplevel()
     bebidas.state("zoomed")
     bebidas.configure(bg='#F3F3F3')
-
     bebidas.overrideredirect(True)
+
+    #Plano de Fundo
+    img_bg = (r"Imagens_Restaurante\\Madeira.jpg")
+    bg_image = Image.open(img_bg)
+    screen_width = bebidas.winfo_screenwidth()
+    screen_height = bebidas.winfo_screenheight()
+    bg_image = bg_image.resize((screen_width, screen_height), Image.Resampling.LANCZOS)
+    bg_image_tk = ImageTk.PhotoImage(bg_image)
+    bg_label = Label(bebidas, image=bg_image_tk)
+    bg_label.place(relwidth=1, relheight=1)
+
     barra_titulo = Frame(bebidas, bg='black', bd=2)
     barra_titulo.pack(fill=X)
     titulo_label = Label(barra_titulo, text="Bebidas", font=("Titan One", 12, "bold"), bg='black', fg='white')

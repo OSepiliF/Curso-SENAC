@@ -50,6 +50,16 @@ def abrir_pratos_entrada():
     pratos_entrada.state("zoomed")
     pratos_entrada.configure(bg='#F3F3F3')
 
+    #Plano de Fundo
+    img_bg = (r"Imagens_Restaurante\\Madeira.jpg")
+    bg_image = Image.open(img_bg)
+    screen_width = pratos_entrada.winfo_screenwidth()
+    screen_height = pratos_entrada.winfo_screenheight()
+    bg_image = bg_image.resize((screen_width, screen_height), Image.Resampling.LANCZOS)
+    bg_image_tk = ImageTk.PhotoImage(bg_image)
+    bg_label = Label(pratos_entrada, image=bg_image_tk)
+    bg_label.place(relwidth=1, relheight=1)
+
     pratos_entrada.overrideredirect(True)
     barra_titulo = Frame(pratos_entrada, bg='black', bd=2)
     barra_titulo.pack(fill=X)
