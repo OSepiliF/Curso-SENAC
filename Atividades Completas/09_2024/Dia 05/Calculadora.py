@@ -32,8 +32,8 @@ def botoes():
         for coluna in range(num_colunas):
             index = linha * num_colunas + coluna
             if index < len(lista):
-                
-                botao = ttk.Button(frame_buttons, style='custom.TButton', command=printada.insert('end', lista[index]), text=f"{lista[index]}")
+                # , command=printada.insert('end', lista[index])
+                botao = ttk.Button(frame_buttons, style='custom.TButton', text=f"{lista[index]}")
                 x = 30 + coluna * (largura_botao + 10)  
                 y = 160 + linha * (altura_botao + 10)    
                 botao.place(x=x, y=y, width=largura_botao, height=altura_botao) 
