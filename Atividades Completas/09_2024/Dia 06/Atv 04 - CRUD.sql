@@ -20,7 +20,7 @@ insert into Professor(nome, especialidade, dtNasc) values
 select * from Professor;
 
 -- B.
-alter table Professor add column titulares varchar(50);
+alter table Professor add column titulares enum('monitor','assistente','titular');
 
 -- C.
 update Professor set titulares = 'monitor' where idProfessor = 1;
@@ -35,7 +35,7 @@ insert into Professor(nome, especialidade, dtNasc, titulares) values
 	('Roberto','Português','1997-02-21','Titular');
     
 -- E.
-delete from Professor where idProfesso = 5;
+delete from Professor where idProfessor = 5;
 
 -- F.
 select nome from Professor where titulares = 'titular';
