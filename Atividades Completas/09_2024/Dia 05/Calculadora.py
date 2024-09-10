@@ -57,6 +57,8 @@ def criar_botoes():
                     conteudo_bt = '*'
                 elif conteudo_bt == '√':
                     conteudo_bt = '**0.5'
+                elif conteudo_bt == ',':
+                    conteudo_bt = '.'
 
                 botao = ttk.Button(painel_bt, style='custom.TButton', text=lista_bt[index], command= lambda texto=conteudo_bt: processar_bt(texto))
                 x = 30 + coluna * (largura_botao + 10)  
