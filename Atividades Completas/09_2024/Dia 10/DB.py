@@ -1,9 +1,9 @@
 import mysql.connector
 dataBase = mysql.connector.connect(
-                     host = "10.28.2.36",
+                     host = "10.28.2.39",
                      user = "suporte",
                      password = "suporte",
-                     database = "registros_bd")  
+                     database = "registros")  
  
 savequery = "select * from registros.login"
  
