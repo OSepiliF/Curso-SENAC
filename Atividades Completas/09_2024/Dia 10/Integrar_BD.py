@@ -1,5 +1,5 @@
 from tkinter import *
-from tkinter import ttk
+from tkinter import ttk, messagebox
 import mysql.connector
 
 def submitact():
@@ -7,37 +7,53 @@ def submitact():
     passw = senha_entry.get()
     text = texto_entry.get()
 
-    print(f"The name entered by you is {user} {passw} {text}")
+    if user == '' or passw == '' or text == '':
+        messagebox.showerror('Erro!',"Todos os campos devem ser preenchidos.")
+        return
 
     logintodb(user, passw, text)
 
 def logintodb(user, passw, text):
-    if passw:
-        # db = mysql.connector.connect(host="10.28.2.36",
-        #                             user='suporte',
-        #                             password='suporte',
-        #                             db="registros_db")
+    db = mysql.connector.connect(host="10.28.2.36",
+                                user='suporte',
+                                password='suporte',
+                                db="registros_db")
 
-        db = mysql.connector.connect(host="localhost",
-                                    user='root',
-                                    password='suporte',
-                                    db="registros_db")
-        cursor = db.cursor()
+    # db = mysql.connector.connect(host="localhost",
+    #                             user='root',
+    #                             password='suporte',
+    #                             db="registros_db")
+    
+    cursor = db.cursor()
 
-        update_db = "UPDATE usuarios SET texto = %s WHERE usuario = %s"
+    verif_exist = 'select * from usuarios where usuario = %s'
+    cursor.execute(verif_exist, (user,))
+    result = cursor.fetchone()
 
+    if result:
+        if result[2] == passw:
+            update_db = 'update usuarios set texto = %s where usuario = %s'
+            try:
+                cursor.execute(update_db, (text, user))
+                db.commit()
+                messagebox.showinfo('Sucesso!','Texto atualizado.')
+                #abrir tela
+            except:
+                messagebox.showerror('Erro!','Erro em atualizar o texto.')
+        else:
+            messagebox.showerror('Erro!','Senha incorreta.')
+    else:
+        verif_create_user = 'insert into usuarios (usuario, senha, texto) values (%s, %s, %s)'
         try:
-            cursor.execute(update_db, (text, user))
+            cursor.execute(verif_create_user, (user, passw, text))
             db.commit()
+            messagebox.showinfo('Sucesso!','Cadastro Realizado')
+            #abrir tela
+        except:
+            messagebox.showerror('Erro!','Usuário não foi cadastrado.')
 
-            print("Query Executed successfully")
-
-        except mysql.connector.Error as err:
-            db.rollback()
-            print(f"Error occurred: {err}")
-        finally:
-            cursor.close()
-            db.close()
+    cursor.close()
+    db.close()
 
 def abrir_tela_cadastro():
     global usuario_entry, senha_entry, texto_entry
