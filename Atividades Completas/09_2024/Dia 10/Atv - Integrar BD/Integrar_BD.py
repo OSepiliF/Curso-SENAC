@@ -25,9 +25,9 @@ def insert_text(user, passw):
         if result:
             if result[2] == passw:
                 tela_texto = Toplevel()
-                tela_texto.geometry('400x200')
+                tela_texto.geometry('410x210')
                 tela_texto.title('Digite o texto')
-                tela_texto.config(bg='grey18')
+                tela_texto.config(bg='grey2')
 
                 frame_text = Frame(tela_texto, bg='grey18', width=400, height=200)
                 frame_text.place(relx=0.5, rely=0.5, anchor='center')
@@ -58,14 +58,14 @@ def abrir_tela_cadastro():
     root.destroy()
 
     tela_cadastro = Tk()
-    tela_cadastro.geometry('400x500')
+    tela_cadastro.geometry('600x600')
     tela_cadastro.title('Cadastro')
-    tela_cadastro.config(bg='grey18')
+    tela_cadastro.config(bg='grey2')
 
     frame_cadastro = Frame(tela_cadastro, bg='grey18', width=400, height=500)
     frame_cadastro.place(relx=0.5, rely=0.5, anchor='center')    
     
-    Label(frame_cadastro, text="Preencha os dados abaixo:", font=("Titan One", 18, "bold"), bg='grey18', fg='white').place(relx=0.5, rely=0.15, anchor="center")
+    Label(frame_cadastro, text="Cadastro de Usuário:", font=("Titan One", 18, "bold"), bg='grey18', fg='white').place(relx=0.5, rely=0.15, anchor="center")
 
     Label(frame_cadastro, text='Usuário', font=('Titan One', 15, "bold"), bg='grey18', fg='white').place(relx=0.5, rely=0.30, anchor="center")
     usuario_entry = Entry(frame_cadastro, font=('Titan One', 15, "bold"))
@@ -82,8 +82,15 @@ def abrir_tela_cadastro():
     style = ttk.Style()
     style.configure('custom.TButton', font=('Titan One', 12, "bold"), padding=(10.5), anchor="center") 
 
+    btn_voltar = ttk.Button(frame_cadastro, text="Voltar", command=voltar_ao_login, style='custom.TButton')
+    btn_voltar.place(relx=0.5, rely=0.9, anchor="center")
+    
     btn_cadastrar = ttk.Button(frame_cadastro, text="Cadastrar", command=confirmar_cadastro, style='custom.TButton')
-    btn_cadastrar.place(relx=0.5, rely=0.9, anchor="center")
+    btn_cadastrar.place(relx=0.5, rely=0.77, anchor="center")
+
+def voltar_ao_login():
+    tela_cadastro.destroy()
+    abrir_tela_login()
 
 def confirmar_cadastro():
     user = usuario_entry.get()
@@ -137,11 +144,11 @@ def confirmar_cadastro():
 
 def abrir_tela_login():
     global usuario_entry, senha_entry, root
-
+    
     root = Tk()
-    root.geometry('400x500')
+    root.geometry('600x600')
     root.title('Login')
-    root.config(bg='grey18')
+    root.config(bg='grey2')
 
     frame_root = Frame(root, bg='grey18', width=400, height=500)
     frame_root.place(relx=0.5, rely=0.5, anchor='center')
@@ -202,9 +209,9 @@ def inserir_texto(user, text, tela_login):
         db.close()
         
         abrir_usuario = Toplevel()
-        abrir_usuario.geometry('400x500')
+        abrir_usuario.geometry('600x600')
         abrir_usuario.title('Informações do Usuário')
-        abrir_usuario.config(bg='grey18')
+        abrir_usuario.config(bg='grey2')
 
         frame_usuario = Frame(abrir_usuario, bg='grey18', width=400, height=500)
         frame_usuario.place(relx=0.5, rely=0.5, anchor='center')
@@ -220,6 +227,7 @@ def inserir_texto(user, text, tela_login):
         
         btn_voltar = ttk.Button(frame_usuario, text="Voltar", command=abrir_usuario.destroy, style='custom.TButton')
         btn_voltar.place(relx=0.5, rely=0.9, anchor="center")
+
         tela_login.destroy()
 
 if __name__ == "__main__":
