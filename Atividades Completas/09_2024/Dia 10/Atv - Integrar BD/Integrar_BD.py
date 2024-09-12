@@ -35,11 +35,11 @@ def insert_text(user, passw):
                 Label(frame_text, text="Texto", font=("Titan One", 15, "bold"), bg='grey18', fg='white').place(relx=0.5, rely=0.2, anchor="center")
                 texto_entry = Entry(frame_text, font=("Titan One", 15))
                 texto_entry.place(relx=0.5, rely=0.4, anchor="center")
-
+                
                 style = ttk.Style()
                 style.configure('custom.TButton', font=('Titan One', 12, "bold"), padding=(10.5), anchor="center")
 
-                text_btn = ttk.Button(frame_text, text="Inserir", command=lambda: inserir_texto(user, texto_entry.get(), tela_texto), style='custom.TButton')
+                text_btn = ttk.Button(frame_text, text="Inserir", command=lambda: abrir_tela_perfil(user, texto_entry.get().strip(), tela_texto), style='custom.TButton')
                 text_btn.place(relx=0.5, rely=0.7, anchor="center")
             else:
                 messagebox.showerror('Erro!', 'Senha incorreta.')
@@ -93,9 +93,9 @@ def voltar_ao_login():
     abrir_tela_login()
 
 def confirmar_cadastro():
-    user = usuario_entry.get()
-    passw = senha_entry.get()
-    passw_confirm = confirm_senha_entry.get()
+    user = usuario_entry.get().strip()
+    passw = senha_entry.get().strip()
+    passw_confirm = confirm_senha_entry.get().strip()
 
     if user == '' or passw == '' or passw_confirm == '':
         messagebox.showerror('Erro!', "Todos os campos devem ser preenchidos.")
@@ -186,7 +186,7 @@ def confirmar_login():
 
     insert_text(user, passw)
 
-def inserir_texto(user, text, tela_login):
+def abrir_tela_perfil(user, text, tela_login):
     try:
         # db = mysql.connector.connect(host="localhost",
         #                              user='root',
@@ -208,12 +208,12 @@ def inserir_texto(user, text, tela_login):
         cursor.close()
         db.close()
         
-        abrir_usuario = Toplevel()
-        abrir_usuario.geometry('600x600')
-        abrir_usuario.title('Informações do Usuário')
-        abrir_usuario.config(bg='grey2')
+        abrir_perfil = Toplevel()
+        abrir_perfil.geometry('600x600')
+        abrir_perfil.title('Informações do Usuário')
+        abrir_perfil.config(bg='grey2')
 
-        frame_usuario = Frame(abrir_usuario, bg='grey18', width=400, height=500)
+        frame_usuario = Frame(abrir_perfil, bg='grey18', width=400, height=500)
         frame_usuario.place(relx=0.5, rely=0.5, anchor='center')
 
         img = PhotoImage(file="Imagem_BD\\User_Anônimo.png")
@@ -221,11 +221,10 @@ def inserir_texto(user, text, tela_login):
         img_label.place(relx=0.5, rely=0.26, anchor="center")
         img_label.image = img
 
-        Label(frame_usuario, text=f"Usuário: {user}", font=("Titan One", 18, "bold"), bg='grey18', fg='white').place(relx=0.5, rely=0.55, anchor="center")
-        Label(frame_usuario, text=f"Senha: {passw}", font=("Titan One", 18, "bold"), bg='grey18', fg='white').place(relx=0.5, rely=0.65, anchor="center")
-        Label(frame_usuario, text=f"Texto: {text}", font=("Titan One", 18, "bold"), bg='grey18', fg='white').place(relx=0.5, rely=0.75, anchor="center")
+        Label(frame_usuario, text=f"Usuário\n {user}", font=("Titan One", 18, "bold"), bg='grey18', fg='white').place(relx=0.5, rely=0.58, anchor="center")
+        Label(frame_usuario, text=f"Texto\n {text}", font=("Titan One", 18, "bold"), bg='grey18', fg='white').place(relx=0.5, rely=0.75, anchor="center")
         
-        btn_voltar = ttk.Button(frame_usuario, text="Voltar", command=abrir_usuario.destroy, style='custom.TButton')
+        btn_voltar = ttk.Button(frame_usuario, text="Voltar", command=abrir_perfil.destroy, style='custom.TButton')
         btn_voltar.place(relx=0.5, rely=0.9, anchor="center")
 
         tela_login.destroy()
