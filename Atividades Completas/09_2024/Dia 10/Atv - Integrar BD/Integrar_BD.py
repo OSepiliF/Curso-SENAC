@@ -16,10 +16,16 @@ def confirmar_login():
 def login_db(user, passw):
     global tela_login
     try:
-        db = mysql.connector.connect(host="localhost",
-                                     user='root',
+        # db = mysql.connector.connect(host="localhost",
+        #                              user='root',
+        #                              password='suporte',
+        #                              db="registros_db")   
+
+        db = mysql.connector.connect(host="10.28.2.36",
+                                     user='suporte',
                                      password='suporte',
                                      db="registros_db")
+
         cursor = db.cursor()
 
         verif_exist = 'select * from usuarios where usuario = %s'
@@ -58,8 +64,13 @@ def login_db(user, passw):
 
 def inserir_texto(user, text, tela_login):
     try:
-        db = mysql.connector.connect(host="localhost",
-                                     user='root',
+        # db = mysql.connector.connect(host="localhost",
+        #                              user='root',
+        #                              password='suporte',
+        #                              db="registros_db")   
+
+        db = mysql.connector.connect(host="10.28.2.36",
+                                     user='suporte',
                                      password='suporte',
                                      db="registros_db")
         cursor = db.cursor()
@@ -89,7 +100,6 @@ def inserir_texto(user, text, tela_login):
         
         btn_voltar = ttk.Button(abrir_usuario, text="Voltar", command=abrir_usuario.destroy, style='custom.TButton')
         btn_voltar.place(relx=0.5, rely=0.9, anchor="center")
-        
         tela_login.destroy()
 
 def confirmar_cadastro():
@@ -110,8 +120,13 @@ def confirmar_cadastro():
         return
 
     try:
-        db = mysql.connector.connect(host="localhost",
-                                     user='root',
+        # db = mysql.connector.connect(host="localhost",
+        #                              user='root',
+        #                              password='suporte',
+        #                              db="registros_db")   
+
+        db = mysql.connector.connect(host="10.28.2.36",
+                                     user='suporte',
                                      password='suporte',
                                      db="registros_db")
         cursor = db.cursor()
