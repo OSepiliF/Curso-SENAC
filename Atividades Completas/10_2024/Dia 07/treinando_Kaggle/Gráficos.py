@@ -9,10 +9,10 @@ peso = df.loc[0:11145, ['player_weight']]
 
 plt.title(u'NBA Players')
 plt.ylabel(u'Altura')
-plt.xlabel(u'peso')
+plt.xlabel(u'Peso')
 
 # Limita o tamanho do gráfico
-plt.axis((0,10,0,10))
+# plt.axis((0,10,0,10))
 
 while True:
     try:
@@ -31,7 +31,7 @@ R: '''))
 
     if escolha == 1:
         # ------------------ Linha ------------------
-        plt.plot((1,2,3,4,5),(1,2,3,4,5),'r--')
+        plt.plot((altura),(peso),'r--')
         plt.show()
     
     elif escolha == 2:
@@ -43,7 +43,7 @@ R: '''))
 
     elif escolha == 3:
         # ------------------ Pontos ------------------
-        plt.scatter((1,2,3,4,5),(1,2,3,4,5)) 
+        plt.scatter((altura),(peso)) 
         plt.show()
 
     elif escolha == 4:
