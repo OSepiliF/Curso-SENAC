@@ -1,17 +1,9 @@
-# import pandas as pd
-# import matplotlib.pyplot as plt
-# import numpy as np
-
-# df = pd.read_csv("C:\\Users\\FilipeSimoes\\Documents\\GitHub\\Atividades-SENAC\\Atividades Completas\\10_2024\\Dia 10\\Atv_Matplotlib\\imdb_top_1000.csv")
-
-
-
-        
 import pandas as pd
 import matplotlib.pyplot as plt
 
 
 df = pd.read_csv("C:\\Users\\FilipeSimoes\\Documents\\GitHub\\Atividades-SENAC\\Atividades Completas\\10_2024\\Dia 10\\Atv_Matplotlib\\imdb_top_1000.csv")
+df = pd.read_csv('C:\\Users\\filip\\OneDrive\\Documentos\\GitHub\\Atividade-SENAC\\Atividades Completas\\10_2024\\Dia 10\\Atv_Matplotlib\\imdb_top_1000.csv')
 
 # Extraindo os dados
 titulo = df.loc[0:1000, ['Series_Title']]
@@ -35,13 +27,14 @@ while True:
 
 
 R:'''))
-
-plt.bar(duracao, titulo)
-plt.xticks(rotation=(-90), fontsize=6)  
-plt.ylabel('Título', fontsize=12)
-plt.xlabel('Duração (min)', fontsize=12)
-plt.title('Duração dos Filmes', fontsize=14)
-plt.show()
+    if escolha_duracao == 1:
+        plt.bar(duracao, titulo)
+        plt.xticks(rotation=(-90), fontsize=6)  
+        plt.ylabel('Título', fontsize=12)
+        plt.xlabel('Duração (min)', fontsize=12)
+        plt.title('Duração dos Filmes', fontsize=14)
+        plt.show()
+        break
 
 
 
