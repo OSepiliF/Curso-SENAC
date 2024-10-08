@@ -103,6 +103,7 @@ Escolha uma opção: '''))
         plt.pie(genero_soma, labels=genero_soma.index, explode=espaco, autopct="%.2f%%", textprops={'fontsize': 10}, rotatelabels=True)
         plt.text(0, 0, 'Gêneros Mais Assistidos', ha='center', va='center', fontsize=14, fontweight='bold')
         plt.show()
+        continue
 
     elif escolher == 3:
         df['Gross'] = df['Gross'].str.replace(',', '').astype(float) # Transformar em float
@@ -118,7 +119,7 @@ Escolha uma opção: '''))
         plt.title('Filmes de Maior Receita', fontsize=14)
         plt.grid(True)
         plt.show()
-        break
+        continue
 
     elif escolher == 4:
         print("Saindo...                                                      . . .\n")
