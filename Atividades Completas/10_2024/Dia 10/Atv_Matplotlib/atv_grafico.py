@@ -1,8 +1,7 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 
-# df = pd.read_csv('C:\\Users\\filip\\OneDrive\\Documentos\\GitHub\\Atividade-SENAC\\Atividades Completas\\10_2024\\Dia 10\\Atv_Matplotlib\\imdb_top_1000.csv')
-df = pd.read_csv('C:\\Users\FilipeSimoes\\Documents\\GitHub\\Atividades-SENAC\\Atividades Completas\\10_2024\Dia 10\\Atv_Matplotlib\\imdb_top_1000.csv')
+df = pd.read_csv(r'Atividades Completas\\10_2024\\Dia 10\\Atv_Matplotlib\\imdb_top_1000.csv')
 
 df['Gross'] = df['Gross'].str.replace(',', '').astype(float) 
 top_receitas = df[['Gross', 'Series_Title']].nlargest(20, 'Gross')
