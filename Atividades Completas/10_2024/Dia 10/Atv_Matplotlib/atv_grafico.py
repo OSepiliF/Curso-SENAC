@@ -11,7 +11,7 @@ while True:
         escolher = int(input('''  
 
 =============================================================
-                                         |     Grafico      |
+                                         |     Gráfico      |
 =============================================================   
 | 1 | Ver a duração dos filmes.          |      Linha       |
 | 2 | Ver os gêneros mais assistidos.    |      Pizza       |
@@ -38,6 +38,7 @@ Escolha uma opção: '''))
 | 4 | Voltar                  
 
 Escolha uma opção: '''))
+                
             except ValueError:
                 print("Opção inválida. Por favor, escolha uma opção válida. ")
                 continue
