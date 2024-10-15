@@ -10,32 +10,36 @@
             overflow: hidden;
             background-color: #f0f0f0;
         }
+
         .caminhao {
             animation: move 12s linear infinite;
         }
+
+        .fumaça {
+            animation: fumaça 3s linear infinite;
+            position: absolute;
+        }
+
+        .terra {
+            animation: terra 1s linear infinite;
+            position: absolute;
+        }
+
         @keyframes move {
             0% { transform: translateX(-100%); }
             100% { transform: translateX(100%); }
         }
-        .fumaça {
-            position: absolute;
-            animation: fumaça 3s infinite; 
-            transform: translateX(238%);
-        }
 
         @keyframes fumaça {
-            0% {
-                opacity: 0;
-            }
-            10% {
-                opacity: 1;
-            }
-            20% {
-                opacity: 0;
-            }
-            100% {
-                opacity: 0;
-            }
+            0% { opacity: 0; transform: translateX(238%); }
+            30% { opacity: 1; transform: translateX(130%); }
+            100% { opacity: 0; transform: translateX(-20%); }
+        }
+
+        @keyframes terra {
+            0% { opacity: 0; transform: translateX(30%); }
+            50% { opacity: 1; transform: translateX(10%); }
+            100% { opacity: 0; transform: translateX(-50%); }
         }
 
     </style>
@@ -48,11 +52,12 @@
     <div class="caminhao">
         <pre>
             <div class="fumaça">OOO ooo ...</div>
-
+            
             |""""""""""""""""""""""|\|____
             | <a href="https://www.ms.senac.br" target="_blank">Cursos do Senac MS!</a>  |||"|""\___
-            |______________________|||_|______|
+            <div class="terra">^^..^ ^^^ . ^</div>|______________________|||_|______|
             !(@)'(@)""""""""**!(@)(@)****!(@)
+
         </pre>
     </div>
 
