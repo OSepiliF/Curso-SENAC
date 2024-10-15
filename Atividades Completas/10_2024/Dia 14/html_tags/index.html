@@ -5,23 +5,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Teste HTML</title>
     <link rel="shortcut icon" href="credito.png">
+    <style>
+        body {
+            overflow: hidden;
+            background-color: #f0f0f0;
+        }
+        .caminhao {
+            animation: move 12s linear infinite;
+        }
+        @keyframes move {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+        }
+        .fumaça {
+            position: absolute;
+            animation: fumaça 3s infinite; 
+            transform: translateX(238%);
+        }
+
+        @keyframes fumaça {
+            0% {
+                opacity: 0;
+            }
+            10% {
+                opacity: 1;
+            }
+            20% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 0;
+            }
+        }
+
+    </style>
 </head>
 <body>
+
     <h1>Explorando o Senac MS</h1>
-
-    
-
     <p><b>Educação que transforma!</b></p>
 
-    <!-- Caminhão passando no marquee -->
-    <marquee direction="right" scrollamount="10">
+    <div class="caminhao">
         <pre>
-              ...                  .....          
-                        ........             |""""""""""""""""""""""|\|____
-    ....         ....                   .... | <a href="https://www.ms.senac.br" target="_blank">Cursos do Senac MS!</a>  |||"|""\___
-                        .....                |______________________|||_|______|
-                                ......       !(@)'(@)""""""""**!(@)(@)****!(@)
+            <div class="fumaça">OOO ooo ...</div>
+
+            |""""""""""""""""""""""|\|____
+            | <a href="https://www.ms.senac.br" target="_blank">Cursos do Senac MS!</a>  |||"|""\___
+            |______________________|||_|______|
+            !(@)'(@)""""""""**!(@)(@)****!(@)
         </pre>
-    </marquee>
+    </div>
+
 </body>
 </html>
