@@ -1,0 +1,41 @@
+html {
+    width: 100%;
+    height: 100%;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    flex-direction: column;  
+}
+
+.texto {
+    position: absolute;
+    margin-top: 300px;
+    margin-right: -870px;
+}
+
+.minha-imagem {
+    border-radius: 50%;
+    width:400px;
+    height:400px;
+    position: absolute;
+    margin-top: 265px;
+    margin-left: -300px;
+}
+
+.botoes {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 500px;
+    margin-left: 700px;
+}
+
+button {
+    font-size: 15px;     
+    border-radius: 50%; 
+    width: 100px;    
+    height: 100px;   
+    cursor: pointer;
+}
