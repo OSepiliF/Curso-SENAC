@@ -10,7 +10,7 @@ body{
 
 .texto {
     position: absolute;
-    margin-top: 550px;
+    margin-top: 400px;
     font-family: 'Times New Roman', Times, serif;
     font-size: 18px;
     text-align: center;
@@ -19,8 +19,8 @@ body{
 .minha-imagem {
     border-radius: 50%;
     position: absolute;
-    width:330px;
-    height:330px;
+    width:200px;
+    height:200px;
     margin-top: 200px;
 }
 
@@ -28,7 +28,7 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100%;
+    width: 150%;
     padding: 20px;
     background-color: rgb(54, 17, 54);
     color: white;
