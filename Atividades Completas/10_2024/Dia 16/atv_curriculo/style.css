@@ -12,16 +12,16 @@ body{
 .texto {
     position: absolute;
     margin-top: 300px;
-    margin-right: -870px;
+    margin-right: -770px;
 }
 
 .minha-imagem {
     border-radius: 50%;
-    width:400px;
-    height:400px;
+    width:300px;
+    height:300px;
     position: absolute;
     margin-top: 265px;
-    margin-left: -300px;
+    margin-left: -500px;
 }
 
 .botoes {
@@ -29,7 +29,7 @@ body{
     align-items: center;
     justify-content: center;
     margin-top: 500px;
-    margin-left: 700px;
+    margin-left: 600px;
 }
 
 button {
