@@ -6,11 +6,14 @@ body{
     font-family: 'Times New Roman', Times, serif;
     font-size: 18px;
     color: white;
+    background-image: url("./../bg.png");
+    background-size: 100%;
+    background-position: center;
 }
 
 .texto {
     position: absolute;
-    margin-top: 400px;
+    margin-top: 550px;
     font-family: 'Times New Roman', Times, serif;
     font-size: 18px;
     text-align: center;
@@ -19,8 +22,8 @@ body{
 .minha-imagem {
     border-radius: 50%;
     position: absolute;
-    width:200px;
-    height:200px;
+    width:330px;
+    height:330px;
     margin-top: 200px;
 }
 
@@ -28,7 +31,7 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 150%;
+    width: 100%;
     padding: 20px;
     background-color: rgb(54, 17, 54);
     color: white;
@@ -52,3 +55,4 @@ body{
     background-color: rgb(54, 17, 54); 
     border-radius: 2%;
 }
+

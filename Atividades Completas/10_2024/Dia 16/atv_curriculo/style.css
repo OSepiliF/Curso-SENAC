@@ -6,6 +6,9 @@ body{
     font-family: 'Times New Roman', Times, serif;
     font-size: 18px;
     color: white;
+    background-image: url("./bg.png");
+    background-size: 100%;
+    background-position: center;
 }
 
 .texto {
@@ -52,3 +55,4 @@ body{
     background-color: rgb(54, 17, 54); 
     border-radius: 2%;
 }
+
