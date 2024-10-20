@@ -1,16 +1,113 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Atv_form</title>
+    <title>Cadastro Completo</title>
 </head>
 <body>
-    <form>
+    <form action="send.php" method="post">
+        <h1>Cadastro Completo</h1>
 
+        <fieldset style="height: 220px; width: 450px;">
+            <legend>Dados Pessoais</legend>
+            Nome Completo: <input type="text" name="nome" size="50" required> <br> <br>
+            Data de Nascimento: <input type="date" name="data_nascimento" required> <br> <br>
+            CPF: <input type="text" name="cpf" size="14" required> <br> <br>
+            E-mail: <input type="email" name="email" size="30" required> <br> <br>
+            Telefone: <input type="tel" name="telefone" size="15" required> <br> <br>
+        </fieldset> <p> 
 
+        <fieldset style="height: 210px; width: 450px;">
+            <legend>Endereço</legend>
+            Rua: <input type="text" name="rua" size="50" required> <br> <br>
+            Número: <input type="number" name="numero" required> <br> <br>
+            Bairro: <input type="text" name="bairro" size="30" required> <br> <br>
+            Cidade: <input type="text" name="cidade" size="30" required> <br> <br>
+            Estado: <input type="text" name="estado" size="2" required> <br> <br>
+        </fieldset> <p>
 
+        <fieldset style="height: 210px; width: 450px;">
+            <legend>Dados Financeiros</legend>
+            Renda Mensal: <input type="number" name="renda" required> <br> <br>
+            Tipo de Conta: 
+            <select name="tipo_conta" required>
+                <option value="corrente">Corrente</option>
+                <option value="poupanca">Poupança</option>
+                <option value="investimento">Investimento</option>
+            </select> <br> <br>
+            Nome do Banco: <input type="text" name="banco" size="30" required> <br> <br>
+            Número da Conta: <input type="text" name="numero_conta" size="20" required> <br> <br>
+            Agência: <input type="text" name="agencia" size="10" required> <br> <br>
+        </fieldset> <p>
 
+        <fieldset style="height: 210px; width: 450px;">
+            <legend>Dados Comerciais</legend>
+            Nome da Empresa: <input type="text" name="empresa" size="50" required> <br> <br>
+            CNPJ: <input type="text" name="cnpj" size="18" required> <br> <br>
+            Cargo: <input type="text" name="cargo" size="30" required> <br> <br>
+            Tempo de Serviço: <input type="text" name="tempo_servico" size="20" required> <br> <br>
+            Telefone Comercial: <input type="tel" name="telefone_comercial" size="15" required> <br> <br>
+        </fieldset> <p>
+
+        <fieldset style="height: 210px; width: 450px;">
+            <legend>Cadastro Veículo</legend>
+            Marca: <input type="text" name="marca_veiculo" size="30" required> <br> <br>
+            Modelo: <input type="text" name="modelo_veiculo" size="30" required> <br> <br>
+            Ano: <input type="number" name="ano_veiculo" required> <br> <br>
+            Placa: <input type="text" name="placa" size="8" required> <br> <br>
+            Cor: <input type="text" name="cor_veiculo" size="15" required> <br> <br>
+        </fieldset> <p>
+
+        <fieldset style="height: 240px; width: 450px;">
+            <legend>Cadastro Imóvel</legend>
+            Tipo: 
+            <select name="tipo_imovel" required>
+                <option value="casa">Casa</option>
+                <option value="apartamento">Apartamento</option>
+                <option value="terreno">Terreno</option>
+            </select> <br> <br>
+            Endereço do Imóvel: <input type="text" name="endereco_imovel" size="50" required> <br> <br>
+            Valor: <input type="number" name="valor_imovel" required> <br> <br>
+            Área (m²): <input type="number" name="area_imovel" required> <br> <br>
+            Proprietário: <input type="text" name="proprietario_imovel" size="50" required> <br> <br>
+        </fieldset> <p>
+
+        <fieldset style="height: 220px; width: 450px;">
+            <legend>Dados Cônjuge</legend>
+            Nome: <input type="text" name="nome_conjuge" size="50" required> <br> <br>
+            Data de Nascimento: <input type="date" name="data_nascimento_conjuge" required> <br> <br>
+            CPF: <input type="text" name="cpf_conjuge" size="14" required> <br> <br>
+            E-mail: <input type="email" name="email_conjuge" size="30" required> <br> <br>
+            Telefone: <input type="tel" name="telefone_conjuge" size="15" required> <br> <br>
+        </fieldset> <p>
+
+        <fieldset style="height: 260px; width: 450px;">
+            <legend>Dados Filhos</legend>
+            Nome do Filho: <input type="text" name="nome_filho" size="50" required> <br> <br>
+            Data de Nascimento: <input type="date" name="data_nascimento_filho" required> <br> <br>
+            Nome do Filho: <input type="text" name="nome_filho2" size="50"> <br> <br>
+            Data de Nascimento: <input type="date" name="data_nascimento_filho2"> <br> <br>
+            Nome do Filho: <input type="text" name="nome_filho3" size="50"> <br> <br>
+        </fieldset> <p>
+
+        <fieldset style="height: 230px; width: 450px;">
+            <legend>Dados Formação Escolar</legend>
+            Instituição: <input type="text" name="instituicao" size="50" required> <br> <br>
+            Curso: <input type="text" name="curso" size="30" required> <br> <br>
+            Ano de Conclusão: <input type="number" name="ano_conclusao" required> <br> <br>
+            Grau de Escolaridade: 
+            <select name="grau_escolaridade" required>
+                <option value="fundamental">Fundamental</option>
+                <option value="medio">Médio</option>
+                <option value="superior">Superior</option>
+                <option value="pos_graduacao">Pós-graduação</option>
+            </select> <br> <br>
+            Certificado: <input type="file" name="certificado"> <br> <br>
+        </fieldset> <p>
+
+        <button type="submit">Enviar Cadastro</button>
+        <button type="reset">Limpar Formulário</button>
     </form>
 </body>
 </html>
