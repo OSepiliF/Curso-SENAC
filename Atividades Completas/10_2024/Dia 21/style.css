@@ -22,8 +22,8 @@ h2 {
 }
 
 .video {
-    height: 430px;
-    width: 770px;
+    margin-right: 50%;
+    margin-left: 50%;
     border: 10px double;
     border-color: deeppink;
     box-sizing: content-box;
@@ -36,6 +36,8 @@ h2 {
     font-size: medium;
     font-weight: bold;
     text-align: center;
+    margin-left: 1%;
+    margin-right: 1%;
     padding: 30%;
     padding-top: 0%;
     padding-bottom: 0%;
@@ -47,4 +49,7 @@ h2 {
     font-size: large;
     color: rgb(0, 247, 255);
     box-shadow: 20px 10px 100px black;
+    padding-top: 0%;
+    padding-bottom: 0%;
+    text-decoration:wavy;
 }
