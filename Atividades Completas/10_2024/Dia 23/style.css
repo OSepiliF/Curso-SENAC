@@ -1,0 +1,156 @@
+body {
+    background: linear-gradient(rgb(255, 255, 255),rgb(128, 220, 236),rgb(71, 164, 187));
+    background-attachment: fixed;
+    font-style:inherit;
+}
+
+div {
+    display: inline-block;
+    margin: -250px;
+    margin-block-start: 5%;
+    margin-inline-start: 15%;
+}
+
+.mona1 {
+    width:min-content;
+    box-shadow: inset;
+    box-sizing:border-box;
+    box-shadow: 10px 25px 30px 0px black;
+    border-radius: 20px;
+}
+
+.mona1 img {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    padding: 0%;
+}
+
+.mona1 p {
+    font-size: 1rem;
+    color: rgb(89, 240, 98);
+    background-color: rgb(42, 49, 240);
+    line-height: 2;
+    text-align: justify;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    padding: 20px;
+    margin-top: -4px;
+    margin-bottom: -10px;
+    border: 2px solid black;
+}
+
+.mona2 {
+    width:min-content;
+    box-shadow: inset;
+    box-sizing:border-box;
+    box-shadow: 10px 25px 30px 0px black;
+    border-radius: 20px;
+}
+
+.mona2 img {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    padding: 0%;
+}
+
+.mona2 p {
+    font-size: 1rem;
+    color: rgb(234, 72, 0);
+    background-color: rgb(173, 216, 230);
+    line-height: 2;
+    text-align: justify;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    padding: 20px;
+    margin-top: -4px;
+    margin-bottom: -10px;
+    border: 2px solid black;
+}
+
+.mona3 {
+    width:min-content;
+    box-shadow: inset;
+    box-sizing:border-box;
+    box-shadow: 10px 25px 30px 0px black;
+    border-radius: 20px;
+}
+
+.mona3 img {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    padding: 0%;
+}
+
+.mona3 p {
+    font-size: 1rem;
+    color: rgb(0, 128, 83);
+    background-color: rgb(95, 159, 160);
+    line-height: 2;
+    text-align: justify;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    padding: 20px;
+    margin-top: -4px;
+    margin-bottom: -10px;
+    border: 2px solid black;
+}
+
+.mona4 {
+    width:min-content;
+    box-shadow: inset;
+    box-sizing:border-box;
+    box-shadow: 10px 25px 30px 0px black;
+    border-radius: 20px;
+}
+
+.mona4 img {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    padding: 0%;
+}
+
+.mona4 p {
+    font-size: 1rem;
+    color: rgb(64, 224, 183);
+    background-color: rgb(255, 127, 80);
+    line-height: 2;
+    text-align: justify;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    padding: 20px;
+    margin-top: -4px;
+    margin-bottom: -10px;
+    border: 2px solid black;
+}
+
+.mona5 {
+    width:min-content;
+    box-shadow: inset;
+    box-sizing:border-box;
+    box-shadow: 10px 25px 30px 0px black;
+    border-radius: 20px;
+}
+
+.mona5 img {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    padding: 0%;
+}
+
+.mona5 p {
+    font-size: 1rem;
+    color: rgb(128, 128, 128);
+    background-color: rgb(119, 12, 12);
+    line-height: 2;
+    text-align: justify;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    padding: 20px;
+    margin-top: -4px;
+    margin-bottom: -10px;
+    border: 2px solid black;
+}
+
+
+
+
