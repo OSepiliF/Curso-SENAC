@@ -1,0 +1,22 @@
+body{
+    background-color:rgb(23, 189, 34);
+    background-attachment: fixed;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+body button {
+    margin-top: 25%;
+}
+
+body:hover{
+    background-color: blueviolet;
+}
+
+body:active{
+    background-color: rgb(255, 0, 0);
+}
+
+
+
