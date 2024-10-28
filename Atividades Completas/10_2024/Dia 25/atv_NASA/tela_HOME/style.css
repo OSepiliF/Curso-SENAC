@@ -2,28 +2,33 @@ body {
     margin: 0px;
 }
 
-.header {
+.grid_header {
     justify-content: center;
     align-items: center;
-    display: flex;
-    column-gap: 100px;
-    background-color: rgb(0, 0, 0);
-    color: white;
-    font-size: large;   
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto auto;
+    background-color: rgb(0, 0, 0);   
+    position: fixed;
+    z-index: 1000;
+    grid-column-gap: 100px;
+    width: 100%;
 }
 
-.header img {
-    max-width: 60px;
+.grid_header img {
+    max-width: 70px;
 }
 
-.header a {
-    padding: 20px 70px;
+.grid_header a {
     cursor: pointer;
-    border-radius: 10px;
+    text-decoration: none;
+    color: white;
+    font-size: x-large;
+    padding-left: 60px;
+    padding-right: 60px;
 }
 
 .imagem{
-    background-image: url("./arquivo/central_comando.jpg");
+    background-image: url("./images/central_comando.jpg");
     background-size: cover;
     width: 100%;
     height: 740px;
@@ -59,7 +64,7 @@ body {
     color: rgb(0, 0, 0);
     font-size: 20px;
     justify-content: center;
-    margin-right: 58%;
+    margin-right: 71%;
 }
  
 .grid_principal {
@@ -112,7 +117,7 @@ body {
     width: 600px;
     height: 400px;
     background-color: rgba(0, 0, 0, 0.7);
-    background-image: url("./arquivo/aquecimento.jpg");
+    background-image: url("./images/aquecimento.jpg");
     background-size: cover;
     background-position: center;
     color: aliceblue;
@@ -120,6 +125,7 @@ body {
     flex-direction: column;
     justify-content: center;
     text-align: center;
+    transition: transform 0.3s;
     grid-column-start: 2; 
     grid-row-start: 1; 
 }
@@ -128,7 +134,7 @@ body {
     width: 400px; 
     height: 400px;
     background-color: rgba(0, 0, 0, 0.7);
-    background-image: url("./arquivo/planeta-terra.jpg");
+    background-image: url("./images/planeta-terra.jpg");
     background-size: cover;
     background-position: center;
     color: aliceblue;
@@ -145,7 +151,7 @@ body {
 .text3 {
     width: 300px;
     height: 195px;
-    background-image: url("./arquivo/espaco.jpg");
+    background-image: url("./images/espaco.jpg");
     background-size: cover;
     background-position: center;
     color: aliceblue;
@@ -154,6 +160,7 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
+    transition: transform 0.3s;
     grid-column-start: 4; 
     grid-row-start: 1; 
 }
@@ -161,7 +168,7 @@ body {
 .text4 {
     width: 300px;
     height: 195px;
-    background-image: url("./arquivo/foguete.jpg");
+    background-image: url("./images/foguete.jpg");
     background-size: cover;
     background-position: center;
     color: aliceblue;
@@ -170,6 +177,7 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
+    transition: transform 0.3s;
     grid-column-start: 4; 
     grid-row-start: 1;
     margin-top: 205px;
@@ -214,6 +222,7 @@ body {
     justify-content: center; 
     height: 300px; 
     box-sizing: border-box; 
+    transition: transform 0.3s;
 }
 
 .circulo1:hover,.circulo2:hover,.circulo3:hover,.circulo4:hover, .circulo5:hover {

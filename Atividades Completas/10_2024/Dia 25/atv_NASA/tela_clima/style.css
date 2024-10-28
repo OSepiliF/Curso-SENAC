@@ -1,0 +1,84 @@
+body {
+    margin: 0px;
+}
+
+.grid_header {
+    justify-content: center;
+    align-items: center;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto auto;
+    background-color: rgb(0, 0, 0);   
+    position: fixed;
+    z-index: 1000;
+    grid-column-gap: 100px;
+    width: 100%;
+}
+
+.grid_header img {
+    max-width: 70px;
+}
+
+.grid_header a {
+    cursor: pointer;
+    text-decoration: none;
+    color: white;
+    font-size: x-large;
+    padding-left: 60px;
+    padding-right: 60px;
+}
+
+.LHorizontal {
+    width: 100%;
+    height: 10px;
+    background-color: rgb(73, 73, 73); 
+    margin-bottom: 8px; 
+}
+
+.grid_clima {
+    display: grid;
+    grid-template-columns: auto;
+    justify-items: center;
+    align-items: center;
+    margin-left: 45%;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    margin-right: 15%;
+}
+
+.grid_clima img {
+    width: 850px;
+    height: 500px;
+    
+}
+
+.grid_clima h1 {
+    margin-top: 10%;
+}
+
+.grid_clima h5 {
+    margin-top: 0%;
+
+}
+
+.grid_clima p {
+    text-align: left;
+}
+
+
+
+/* Roda-pé: */
+.grid_contato {
+    align-items: center;
+    column-gap: 100px;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    font-size: large;
+    display:grid;
+    grid-template-columns: auto auto auto auto auto;
+    padding: 100px;
+    align-items: start;
+}
+
+.text_1, .text_2, .text_3, .text_4, .text_5 {
+    text-align: center;
+}
