@@ -2,6 +2,7 @@ body {
     margin: 0px;
 }
 
+
 .grid_header {
     justify-content: center;
     align-items: center;
@@ -15,14 +16,14 @@ body {
 }
 
 .grid_header img {
-    max-width: 70px;
+    max-width: 50px;
 }
 
 .grid_header a {
     cursor: pointer;
     text-decoration: none;
     color: white;
-    font-size: x-large;
+    font-size: large;
     padding-left: 60px;
     padding-right: 60px;
 }

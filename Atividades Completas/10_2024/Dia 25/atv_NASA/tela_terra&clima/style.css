@@ -1,8 +1,6 @@
 body {
-    margin: 0px;
-    background-color: #17171b;
+    margin: auto;
 }
-
 
 .grid_header {
     justify-content: center;
@@ -20,6 +18,19 @@ body {
     max-width: 50px;
 }
 
+.grid-master {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto;
+    gap: 50px;
+}
+
+.autor {
+    align-self: start;
+    margin: 16%;
+    margin-left: 26%;
+}
+
 .grid_header a {
     cursor: pointer;
     text-decoration: none;
@@ -29,18 +40,6 @@ body {
     padding-right: 60px;
 }
 
-.destaque {
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    color: darkviolet;
-    font-size: 30px;
-    justify-content: center;
-    margin-top: 8%;
-    margin-left: 20%;
-    margin-right: 20%;
-}
-
 .LHorizontal {
     width: 100%;
     height: 10px;
@@ -48,49 +47,66 @@ body {
     margin-bottom: 8px; 
 }
 
-.grid_textImage {
-    grid-template-columns: auto auto;
-    align-items: center;
+.destaque {
     justify-content: center;
-    display: grid;
-    margin-top: 0%;
-    margin-left: 10%;
-    margin-right: 10%;
-    margin-bottom: 20%;
-    grid-column-gap: 10%;
-}
-
-.imagem1 img, .imagem2 img, .imagem3 img, .imagem4 img{
-    display: flex; 
-    flex-direction: column; 
     align-items: center;
-    justify-content: center; 
-    height: 450px;
-    width: 700px;
-    box-sizing: border-box; 
-    margin-top: 30%;
+    text-align: center;
+    color: black;
+    font-size: 30px;
+    justify-content: center;
+    margin-top: 8%;
+    margin-left: 20%;
+    margin-right: 20%;
 }
 
-.imagem1 h3, .imagem2 h3, .imagem3 h3, .imagem4 h3 {
-    color: rgb(92, 92, 92);
-    margin-top: 0px;
-    font-size: medium;
+.grid_terraclima {
+    display: grid;
+    grid-template-columns: auto;
+    justify-items: center;
+    align-items: center;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    
+    column-gap: 5%;
 }
 
-.text1 h1, .text2 h1, .text3 h1, .text4 h1 {
-    font-size: 60px;
-    color: darkviolet;
+.img_autor {
+    width: 20% !important;
+    height: 20% !important;
+    grid-column-start: 1;
 }
 
-.text1 h2, .text2 h2, .text3 h2, .text4 h2 {
-    font-size: larger;
-    color: white;
+.text1, .text2, .text3, .text4, .text5 {
+    grid-column-start: 2;
 }
 
-.text1 h3, .text2 h3, .text3 h3, .text4 h3 {
-    font-size: larger;
-    color: rgb(92, 92, 92);
+.grid_terraclima img {
+    width: 712px;
+    height: 400px;
 }
+
+.grid_terraclima h1 {
+    margin-top: 10%;
+    text-align: center;
+}
+
+.grid_terraclima h5 {
+    margin-top: 0%;
+    color: rgb(73, 73, 73);
+
+}
+
+.grid_terraclima p {
+    text-align: justify;
+    max-width: 720px;
+    font-size: 16px;
+    font-family: 'Public Sans Web', sans-serif;
+    font-style: normal;
+    
+}
+
+
 
 /* Roda-pé: */
 .grid_contato {
