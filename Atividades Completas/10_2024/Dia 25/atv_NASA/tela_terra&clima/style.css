@@ -1,5 +1,6 @@
 body {
     margin: auto;
+    background-color: #17171b;
 }
 
 .grid_header {
@@ -17,8 +18,6 @@ body {
 .grid_header img {
     max-width: 50px;
 }
-
-
 
 .grid_header a {
     cursor: pointer;
@@ -40,7 +39,7 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
-    color: black;
+    color: darkviolet;
     font-size: 30px;
     justify-content: center;
     margin-top: 8%;
@@ -57,72 +56,95 @@ body {
     justify-content: center;
     align-items: center;
     
-    column-gap: 5%;
 }
 
 .grid-master {
     display: grid;
     grid-template-columns: auto auto;
     grid-template-rows: auto;
-    gap: 50px;
+    margin-bottom: 10%;
+}
+
+.autor {
+    align-self: start;
+    margin: 10%;
+    margin-left: 40%;
+    color: white;
 }
 
 .img_autor {
     width: 20%;
     height: 20%;
     grid-column-start: 1;
+    color: white;
 }
 
-.autor {
-    align-self: start;
-    margin: 16%;
-    margin-left: 26%;
-}
-
-.text1, .text2, .text3, .text4, .text5 {
+.text1, .text2, .text3 {
     grid-column-start: 2;
 }
 
 .grid_terraclima img {
-    width: 712px;
-    height: 400px;
+    width: 812px;
+    height: 500px;
 }
 
 .grid_terraclima h1 {
     margin-top: 10%;
     text-align: center;
+    color: darkviolet;
 }
 
 .grid_terraclima h5 {
     margin-top: 0%;
     color: rgb(73, 73, 73);
-
+    
+    
 }
 
 .grid_terraclima p {
     text-align: justify;
-    max-width: 720px;
+    max-width: 800px;
     font-size: 16px;
     font-family: 'Public Sans Web', sans-serif;
     font-style: normal;
-    
+    color: white;
+    line-height: 25px;
 }
 
-
-
-/* Roda-pé: */
-.grid_contato {
-    align-items: center;
-    column-gap: 100px;
-    background-color: rgb(0, 0, 0);
+.grid_footer {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    column-gap: 20px;
+    background-color: black;
     color: white;
     font-size: large;
-    display:grid;
-    grid-template-columns: auto auto auto auto auto;
-    padding: 100px;
+    padding: 30px; 
     align-items: start;
+}
+
+.grid_footer2 {
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+
+.text_1 a, .text_2 a, .text_3 a, .text_4 a, .text_5 a {
+    cursor: pointer;
+    text-decoration: none;
+    color: white;
+}
+
+.text_1 img {
+    max-width: 60px;
+}
+
+.text_2 img, .text_3 img {
+    max-width: 50px;
+    background: white;
+    border-radius: 100%;
+    border: 1px solid;
 }
 
 .text_1, .text_2, .text_3, .text_4, .text_5 {
     text-align: center;
+    max-width: 400px;
 }
