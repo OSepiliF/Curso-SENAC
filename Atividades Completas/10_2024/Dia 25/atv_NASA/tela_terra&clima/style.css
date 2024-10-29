@@ -18,18 +18,7 @@ body {
     max-width: 50px;
 }
 
-.grid-master {
-    display: grid;
-    grid-template-columns: auto auto;
-    grid-template-rows: auto;
-    gap: 50px;
-}
 
-.autor {
-    align-self: start;
-    margin: 16%;
-    margin-left: 26%;
-}
 
 .grid_header a {
     cursor: pointer;
@@ -71,10 +60,23 @@ body {
     column-gap: 5%;
 }
 
+.grid-master {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto;
+    gap: 50px;
+}
+
 .img_autor {
-    width: 20% !important;
-    height: 20% !important;
+    width: 20%;
+    height: 20%;
     grid-column-start: 1;
+}
+
+.autor {
+    align-self: start;
+    margin: 16%;
+    margin-left: 26%;
 }
 
 .text1, .text2, .text3, .text4, .text5 {
