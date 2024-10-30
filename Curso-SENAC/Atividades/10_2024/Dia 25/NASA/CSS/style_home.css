@@ -2,38 +2,33 @@ body {
     margin: 0px;
 }
 
-<<<<<<< HEAD:Atividades Completas/10_2024/Dia 25/NASA/CSS/style_home.css
 .grid_header {
-=======
-.header {
->>>>>>> be125cf77694aae7a45a1793eec7fac35886200b:Atividades Completas/10_2024/Dia 25/atv_NASA/tela_HOME/style.css
     justify-content: center;
     align-items: center;
-    display: flex;
-    column-gap: 100px;
-    background-color: rgb(0, 0, 0);
-    color: white;
-    font-size: large;   
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto auto;
+    background-color: rgb(0, 0, 0);   
+    position: fixed;
+    z-index: 1000;
+    grid-column-gap: 100px;
+    width: 100%;
 }
 
-.header img {
-    max-width: 60px;
+.grid_header img {
+    max-width: 50px;
 }
 
-.header a {
-    padding: 20px 70px;
+.grid_header a {
     cursor: pointer;
-    border-radius: 10px;
+    text-decoration: none;
+    color: white;
+    font-size: large;
+    padding-left: 60px;
+    padding-right: 60px;
 }
 
-<<<<<<< HEAD:Atividades Completas/10_2024/Dia 25/NASA/CSS/style_home.css
 .bg_video {
     position: relative;
-=======
-.imagem{
-    background-image: url("./arquivo/central_comando.jpg");
-    background-size: cover;
->>>>>>> be125cf77694aae7a45a1793eec7fac35886200b:Atividades Completas/10_2024/Dia 25/atv_NASA/tela_HOME/style.css
     width: 100%;
     height: 100vh;
     overflow: hidden;
@@ -80,10 +75,6 @@ body {
     color: rgb(0, 0, 0);
     font-size: 20px;
     justify-content: center;
-<<<<<<< HEAD:Atividades Completas/10_2024/Dia 25/NASA/CSS/style_home.css
-=======
-    margin-right: 58%;
->>>>>>> be125cf77694aae7a45a1793eec7fac35886200b:Atividades Completas/10_2024/Dia 25/atv_NASA/tela_HOME/style.css
 }
  
 .grid_principal {
@@ -100,16 +91,13 @@ body {
     width: 600px;
     height: 400px;
     background-color: rgba(0, 0, 0, 0.7);
-<<<<<<< HEAD:Atividades Completas/10_2024/Dia 25/NASA/CSS/style_home.css
     background-image: url("../img/imagens_home/aquecimento.jpg");
-=======
-    background-image: url("./arquivo/aquecimento.jpg");
->>>>>>> be125cf77694aae7a45a1793eec7fac35886200b:Atividades Completas/10_2024/Dia 25/atv_NASA/tela_HOME/style.css
     background-size: cover;
     background-position: center;
     color: aliceblue;
     justify-content: center;
     text-align: center;
+    transition: transform 0.3s;
     grid-column-start: 2; 
     grid-row-start: 1; 
     display: grid;
@@ -119,11 +107,7 @@ body {
     width: 400px; 
     height: 400px;
     background-color: rgba(0, 0, 0, 0.7);
-<<<<<<< HEAD:Atividades Completas/10_2024/Dia 25/NASA/CSS/style_home.css
     background-image: url("../img/imagens_home/planeta-terra.jpg");
-=======
-    background-image: url("./arquivo/planeta-terra.jpg");
->>>>>>> be125cf77694aae7a45a1793eec7fac35886200b:Atividades Completas/10_2024/Dia 25/atv_NASA/tela_HOME/style.css
     background-size: cover;
     background-position: center;
     color: aliceblue;
@@ -139,17 +123,14 @@ body {
 .text3 {
     width: 300px;
     height: 195px;
-<<<<<<< HEAD:Atividades Completas/10_2024/Dia 25/NASA/CSS/style_home.css
     background-image: url("../img/imagens_home/espaco.jpg");
-=======
-    background-image: url("./arquivo/espaco.jpg");
->>>>>>> be125cf77694aae7a45a1793eec7fac35886200b:Atividades Completas/10_2024/Dia 25/atv_NASA/tela_HOME/style.css
     background-size: cover;
     background-position: center;
     color: aliceblue;
     justify-content: center;
     align-items: center;
     text-align: center;
+    transition: transform 0.3s;
     grid-column-start: 4; 
     grid-row-start: 1; 
     display: grid;
@@ -158,17 +139,14 @@ body {
 .text4 {
     width: 300px;
     height: 195px;
-<<<<<<< HEAD:Atividades Completas/10_2024/Dia 25/NASA/CSS/style_home.css
     background-image: url("../img/imagens_home/foguete.jpg");
-=======
-    background-image: url("./arquivo/foguete.jpg");
->>>>>>> be125cf77694aae7a45a1793eec7fac35886200b:Atividades Completas/10_2024/Dia 25/atv_NASA/tela_HOME/style.css
     background-size: cover;
     background-position: center;
     color: aliceblue;
     justify-content: center;
     align-items: center;
     text-align: center;
+    transition: transform 0.3s;
     grid-column-start: 4; 
     grid-row-start: 1;
     display: grid;
@@ -212,13 +190,10 @@ body {
 .circulo1, .circulo2, .circulo3, .circulo4, .circulo5 {
     border-radius: 50%; 
     box-sizing: border-box; 
-<<<<<<< HEAD:Atividades Completas/10_2024/Dia 25/NASA/CSS/style_home.css
     transition: transform 0.3s;
     display: grid;
     justify-content: center;
     align-items: center;
-=======
->>>>>>> be125cf77694aae7a45a1793eec7fac35886200b:Atividades Completas/10_2024/Dia 25/atv_NASA/tela_HOME/style.css
 }
 
 .circulo1:hover,.circulo2:hover,.circulo3:hover,.circulo4:hover, .circulo5:hover {
