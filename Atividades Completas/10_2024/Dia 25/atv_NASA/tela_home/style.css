@@ -32,8 +32,7 @@ body {
     width: 100%;
     height: 100vh;
     overflow: hidden;
-    display: flex;
-    flex-direction: column;
+    display: grid;
     color: white;
     justify-content: center;
     align-items: center;
@@ -72,7 +71,7 @@ body {
 .destaque {
     justify-content: center;
     align-items: center;
-    display: flex;
+    display: grid;
     color: rgb(0, 0, 0);
     font-size: 20px;
     justify-content: center;
@@ -96,13 +95,12 @@ body {
     background-size: cover;
     background-position: center;
     color: aliceblue;
-    display: flex;
-    flex-direction: column;
     justify-content: center;
     text-align: center;
     transition: transform 0.3s;
     grid-column-start: 2; 
     grid-row-start: 1; 
+    display: grid;
 }
 
 .text2 {
@@ -113,14 +111,13 @@ body {
     background-size: cover;
     background-position: center;
     color: aliceblue;
-    display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
     transition: transform 0.3s;
     grid-column-start: 3; 
     grid-row-start: 1; 
+    display: grid;
 }
 
 .text3 {
@@ -130,14 +127,13 @@ body {
     background-size: cover;
     background-position: center;
     color: aliceblue;
-    display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
     transition: transform 0.3s;
     grid-column-start: 4; 
     grid-row-start: 1; 
+    display: grid;
 }
 
 .text4 {
@@ -147,14 +143,13 @@ body {
     background-size: cover;
     background-position: center;
     color: aliceblue;
-    display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
     transition: transform 0.3s;
     grid-column-start: 4; 
     grid-row-start: 1;
+    display: grid;
     margin-top: 205px;
 }
 
@@ -166,17 +161,19 @@ body {
     color: inherit;
     margin: 1%;
     color: aqua;
+    margin-top: 15%;
+    margin-bottom: 0%;
 }
 
 .text1 h1, .text2 h1, .text3 h1, .text4 h1 {
-    font-size: 1.4em;
+    font-size: 30px;
     margin: 1%;
     color: rgb(194, 10, 185);
 }
 
-.text1 h2, .text2 h2, .text3 h2, .text4 h2 {
+.text1 h3, .text2 h3, .text3 h3, .text4 h3 {
     font-size: 1em;
-    margin: 1%;
+    margin-bottom: 10%;
 }
 
 .grid_circulos {
@@ -186,17 +183,17 @@ body {
     margin-right: 10%;
     margin-bottom: 4%;
     box-sizing: border-box;
+    align-items: center;
+    justify-content: center;
 }
 
 .circulo1, .circulo2, .circulo3, .circulo4, .circulo5 {
-    border-radius: 50%;
-    display: flex; 
-    flex-direction: column; 
-    align-items: center;
-    justify-content: center; 
-    height: 300px; 
+    border-radius: 50%; 
     box-sizing: border-box; 
     transition: transform 0.3s;
+    display: grid;
+    justify-content: center;
+    align-items: center;
 }
 
 .circulo1:hover,.circulo2:hover,.circulo3:hover,.circulo4:hover, .circulo5:hover {
@@ -208,6 +205,10 @@ body {
     height: 150px;
     border-radius: 100%;
     object-fit: cover;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
 }
 
 .circulo1 h1, .circulo2 h1, .circulo3 h1, .circulo4 h1, .circulo5 h1{

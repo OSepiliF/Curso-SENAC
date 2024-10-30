@@ -3,7 +3,6 @@ body {
     background-color: #17171b;
 }
 
-
 .grid_header {
     justify-content: center;
     align-items: center;
@@ -49,10 +48,11 @@ body {
 }
 
 .grid_email {
-    display: flex;
+    position: relative;
     justify-content: center;
     align-items: center;       
     height: auto;    
+    display: grid;
     color: rgb(177, 174, 174);   
     font-size: larger; 
     margin: 2%;  
