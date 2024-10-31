@@ -1,0 +1,11 @@
+cd Pasta/Selecionada – Navega até a pasta do repositório.
+
+git checkout main ou git checkout (nome da branch) – Muda para a branch principal ou outra específica.
+
+git pull – Baixa e mescla as últimas atualizações do repositório remoto.
+
+git add . – Adiciona todas as mudanças no diretório para serem rastreadas.
+
+git commit -m "mensagem" – Confirma as mudanças com uma mensagem de descrição.
+
+git push – Envia as mudanças locais para o repositório remoto.
