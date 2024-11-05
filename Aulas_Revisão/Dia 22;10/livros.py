@@ -1,4 +1,6 @@
 from usuario import Usuario
+from main import Database
+
 
 class Livros():
     def __init__(self, titulo, autor, genero, cod_livro):
@@ -25,3 +27,23 @@ class Livros():
         
         self.usuario = None
         self.status = 'Disponivel'
+
+    def create(self):
+        return 'insert into livro(titulo, autor, genero) values()'
+    
+    def read(self):
+        return 'select * from livro'
+
+class Controller_Livros:
+    
+    def cadastrar_livro():
+        db = Database() 
+        db.conectar()   
+        livro = Livros()
+        livro.create
+
+        db.cursor.execute()
+    
+
+
+    

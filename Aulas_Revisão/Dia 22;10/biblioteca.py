@@ -2,7 +2,7 @@ from livros import Livros
 from usuario import Usuario
 
 class Biblioteca:
-    acervo = []
+    acervo:list[Livros] = []
     @staticmethod
     def emprestar(usuario: Usuario, livros: list[Livros]) -> bool:
         for item in livros:
