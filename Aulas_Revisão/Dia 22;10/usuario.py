@@ -1,14 +1,16 @@
-class Usuario:
-    max_emprestimo = 3
+import mysql.connector
+from atividade import connect_sql
+from biblioteca import biblioteca
 
-    def __init__(self, nome_user, cpf, telefone):
-        self.nome_user = nome_user
+class usuario:
+    def __init__(self,nome,cpf,telefone):
+        self.nome = nome
         self.cpf = cpf
         self.telefone = telefone
-        self.lista_livros = []
 
-    def pegar_emprestado(self, livros):
-        if len(self.lista_livros) >= self.max_emprestimo:
-            return "Limite de emprestimo atingido."
-        
-        self.lista_livros.append(livros.titulo)
+    def usando_usuario(self):
+        self.usuario_atributos = mysql.DataFrame({
+            'nome':self.nome,
+            'cpf':self.cpf,
+            'telefone':self.telefone
+            })
