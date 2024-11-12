@@ -1,8 +1,7 @@
 import mysql.connector
-from atividade import connect_sql
-from biblioteca import biblioteca
+from main import Database
 
-class usuario:
+class Usuario:
     def __init__(self,nome,cpf,telefone):
         self.nome = nome
         self.cpf = cpf
@@ -14,3 +13,15 @@ class usuario:
             'cpf':self.cpf,
             'telefone':self.telefone
             })
+        
+    def create(self):
+        return f'insert into usuario(nome, cpf, telefone) values("{self.nome}", "{self.cpf}", "{self.telefone}")'
+    
+    def read(self):
+        return f'select * from usuario where cpf = {self.cpf}'
+    
+    def update(self):
+        return f'update usuario set telefone = {self.telefone} where cpf = {self.cpf}'
+    
+    def delete(self):
+        return f'delete from usuario where cpf = {self.cpf}'
