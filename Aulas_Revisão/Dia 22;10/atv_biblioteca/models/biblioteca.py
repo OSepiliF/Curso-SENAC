@@ -1,5 +1,4 @@
 import mysql.connector
-from livros import Livros
 from usuario import Usuario
 
 class Biblioteca:
@@ -33,3 +32,5 @@ class Biblioteca:
         
         self.usuario = None
         self.status = 'Disponivel'
+
+Biblioteca.__name__ = 'Biblioteca'

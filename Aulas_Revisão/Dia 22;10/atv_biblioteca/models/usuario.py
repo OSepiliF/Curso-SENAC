@@ -25,3 +25,5 @@ class Usuario:
     
     def delete(self):
         return f'delete from usuario where cpf = {self.cpf}'
+    
+Usuario.__name__ = 'Usuario'

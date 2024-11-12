@@ -1,5 +1,5 @@
-from usuario import Usuario
-from main import Database
+from models.main import Database
+from models.usuario import Usuario
 
 class Controller_Usuario:
     def cadastrar_usuario(self):

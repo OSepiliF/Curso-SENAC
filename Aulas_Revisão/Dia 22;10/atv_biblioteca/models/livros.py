@@ -1,4 +1,3 @@
-from usuario import Usuario
 from main import Database
 
 class Livros:
@@ -22,3 +21,5 @@ class Livros:
     
     def delete(self):
         return f'delete from livro where codigo = {self.cod_livro}'
+    
+Livros.__name__ = "Livros"

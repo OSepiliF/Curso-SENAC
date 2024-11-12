@@ -1,4 +1,6 @@
 import mysql.connector
+from usuario import Usuario
+from livros import Livros
 
 class Database:
     def __init__(self, host, user, password, database):
@@ -23,4 +25,6 @@ class Database:
         self.cursor = self.conexao.cursor()
 
     def desconectar(self):
-        self.conexao.close()        
+        self.conexao.close()    
+
+Database.__name__ = 'Database'    

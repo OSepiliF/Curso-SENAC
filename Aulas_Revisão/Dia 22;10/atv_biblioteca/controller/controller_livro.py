@@ -1,5 +1,5 @@
-from livros import Livros
-from main import Database
+from models.main import Database
+from models.livros import Livros
 
 class Controller_Livro:
    def cadastrar_livro(self):
