@@ -1,4 +1,4 @@
-from models.main import Database
+from config.database import Database
 from models.livros import Livros
 
 class Controller_Livro:
@@ -11,6 +11,7 @@ class Controller_Livro:
       db.cursor.execute(livros.create())
       db.conexao.commit()
       db.desconectar()
+   
    
    def procurar_livro(self):
       db = Database("10.28.2.36","suporte","suporte","biblioteca")

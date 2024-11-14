@@ -1,4 +1,4 @@
-from main import Database
+from config.database import Database
 
 class Livros:
     def __init__(self, autor, titulo, genero, cod_livro):

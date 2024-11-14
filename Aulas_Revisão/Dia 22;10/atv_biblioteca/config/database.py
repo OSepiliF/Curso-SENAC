@@ -1,6 +1,6 @@
 import mysql.connector
-from usuario import Usuario
-from livros import Livros
+from models.usuario import Usuario
+from models.livros import Livros
 
 class Database:
     def __init__(self, host, user, password, database):

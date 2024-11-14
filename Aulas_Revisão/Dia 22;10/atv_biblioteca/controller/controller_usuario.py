@@ -1,4 +1,4 @@
-from models.main import Database
+from config.database import Database
 from models.usuario import Usuario
 
 class Controller_Usuario:

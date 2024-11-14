@@ -1,5 +1,5 @@
 import mysql.connector
-from main import Database
+from config.database import Database
 
 class Usuario:
     def __init__(self,nome,cpf,telefone):
