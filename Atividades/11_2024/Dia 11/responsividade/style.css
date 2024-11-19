@@ -1,0 +1,49 @@
+* {
+    margin: 0%;
+}
+
+@media (max-width: 767px){
+    .grid-principal {
+        display: grid;
+        grid-template-columns: auto;
+        text-align: center;
+        margin: 3%;
+        background-color: blueviolet;
+    }
+    
+    .grid-container {
+        display: grid;
+        grid-template-columns: auto;
+        text-align: center;
+        background-color:darkblue;
+        gap: 2px;
+    }
+    
+    .grid-container div {
+        background-color: cornflowerblue;
+        border: 1px black solid;
+    }
+}
+
+@media (min-width: 768px) {
+    .grid-principal {
+    display: grid;
+    grid-template-columns: auto;
+    text-align: center;
+    margin: 3%;
+    background-color: aqua;
+    }
+
+    .grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    text-align: center;
+    background-color:darkblue;
+    gap: 2px;
+    }
+
+    .grid-container div {
+    background-color: cornflowerblue;
+    border: 1px black solid;
+    }
+}
