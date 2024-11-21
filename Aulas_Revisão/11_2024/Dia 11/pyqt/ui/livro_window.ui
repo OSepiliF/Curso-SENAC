@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>797</width>
-    <height>506</height>
+    <width>450</width>
+    <height>440</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -17,28 +17,57 @@
    <widget class="QWidget" name="verticalLayoutWidget">
     <property name="geometry">
      <rect>
-      <x>60</x>
-      <y>40</y>
-      <width>681</width>
-      <height>296</height>
+      <x>30</x>
+      <y>10</y>
+      <width>391</width>
+      <height>317</height>
      </rect>
     </property>
     <layout class="QVBoxLayout" name="verticalLayout">
      <item>
+      <widget class="QLabel" name="label_5">
+       <property name="font">
+        <font>
+         <pointsize>20</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="mouseTracking">
+        <bool>false</bool>
+       </property>
+       <property name="autoFillBackground">
+        <bool>false</bool>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Plain</enum>
+       </property>
+       <property name="text">
+        <string>CADASTRO DE LIVRO</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item>
       <widget class="QLabel" name="label">
        <property name="font">
         <font>
-         <pointsize>15</pointsize>
+         <pointsize>12</pointsize>
          <weight>50</weight>
          <italic>false</italic>
          <bold>false</bold>
+         <underline>false</underline>
+         <strikeout>false</strikeout>
+         <kerning>true</kerning>
         </font>
        </property>
        <property name="layoutDirection">
         <enum>Qt::LeftToRight</enum>
        </property>
        <property name="text">
-        <string>Autor</string>
+        <string>Autor *</string>
        </property>
       </widget>
      </item>
@@ -49,7 +78,7 @@
        </property>
        <property name="font">
         <font>
-         <pointsize>20</pointsize>
+         <pointsize>15</pointsize>
         </font>
        </property>
       </widget>
@@ -58,7 +87,7 @@
       <widget class="QLabel" name="label_2">
        <property name="font">
         <font>
-         <pointsize>15</pointsize>
+         <pointsize>12</pointsize>
          <weight>50</weight>
          <italic>false</italic>
          <bold>false</bold>
@@ -68,7 +97,7 @@
         <enum>Qt::LeftToRight</enum>
        </property>
        <property name="text">
-        <string>Titulo</string>
+        <string>Titulo *</string>
        </property>
       </widget>
      </item>
@@ -76,7 +105,7 @@
       <widget class="QLineEdit" name="lineEdit_titulo">
        <property name="font">
         <font>
-         <pointsize>20</pointsize>
+         <pointsize>15</pointsize>
         </font>
        </property>
        <property name="text">
@@ -88,7 +117,7 @@
       <widget class="QLabel" name="label_3">
        <property name="font">
         <font>
-         <pointsize>15</pointsize>
+         <pointsize>12</pointsize>
          <weight>50</weight>
          <italic>false</italic>
          <bold>false</bold>
@@ -98,7 +127,7 @@
         <enum>Qt::LeftToRight</enum>
        </property>
        <property name="text">
-        <string>Gênero</string>
+        <string>Gênero *</string>
        </property>
       </widget>
      </item>
@@ -106,7 +135,7 @@
       <widget class="QLineEdit" name="lineEdit_genero">
        <property name="font">
         <font>
-         <pointsize>20</pointsize>
+         <pointsize>15</pointsize>
         </font>
        </property>
       </widget>
@@ -115,7 +144,7 @@
       <widget class="QLabel" name="label_4">
        <property name="font">
         <font>
-         <pointsize>15</pointsize>
+         <pointsize>12</pointsize>
          <weight>50</weight>
          <italic>false</italic>
          <bold>false</bold>
@@ -125,16 +154,30 @@
         <enum>Qt::LeftToRight</enum>
        </property>
        <property name="text">
-        <string>Código</string>
+        <string>Código / ISBN *</string>
        </property>
       </widget>
      </item>
      <item>
-      <widget class="QSpinBox" name="spinBox_codigo">
+      <widget class="QLineEdit" name="lineEdit_codigo">
        <property name="font">
         <font>
-         <pointsize>20</pointsize>
+         <pointsize>15</pointsize>
         </font>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_6">
+       <property name="text">
+        <string>Preenchimento obrigatório: *</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_error">
+       <property name="text">
+        <string/>
        </property>
       </widget>
      </item>
@@ -143,41 +186,46 @@
    <widget class="QWidget" name="horizontalLayoutWidget">
     <property name="geometry">
      <rect>
-      <x>320</x>
-      <y>360</y>
-      <width>421</width>
-      <height>71</height>
+      <x>30</x>
+      <y>330</y>
+      <width>391</width>
+      <height>61</height>
      </rect>
     </property>
     <layout class="QHBoxLayout" name="horizontalLayout">
      <item>
-      <widget class="QComboBox" name="box_disponivel">
-       <property name="font">
-        <font>
-         <pointsize>16</pointsize>
-        </font>
+      <widget class="QPushButton" name="botao_cancelar">
+       <property name="maximumSize">
+        <size>
+         <width>160</width>
+         <height>30</height>
+        </size>
        </property>
-       <item>
-        <property name="text">
-         <string>Disponível</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>Indisponível</string>
-        </property>
-       </item>
-      </widget>
-     </item>
-     <item>
-      <widget class="QPushButton" name="botao_adicionar">
        <property name="font">
         <font>
-         <pointsize>16</pointsize>
+         <pointsize>12</pointsize>
         </font>
        </property>
        <property name="text">
-        <string>Adicionar</string>
+        <string>Cancelar</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="botao_cadastrar">
+       <property name="maximumSize">
+        <size>
+         <width>160</width>
+         <height>30</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>Cadastrar</string>
        </property>
       </widget>
      </item>
@@ -189,12 +237,30 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>797</width>
+     <width>450</width>
      <height>21</height>
     </rect>
    </property>
+   <widget class="QMenu" name="menuCadastro_Livro">
+    <property name="title">
+     <string>Cadastro Livro</string>
+    </property>
+    <addaction name="actionCadastra"/>
+    <addaction name="actionListar"/>
+   </widget>
+   <addaction name="menuCadastro_Livro"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionCadastra">
+   <property name="text">
+    <string>Cadastrar</string>
+   </property>
+  </action>
+  <action name="actionListar">
+   <property name="text">
+    <string>Listar</string>
+   </property>
+  </action>
  </widget>
  <resources/>
  <connections/>

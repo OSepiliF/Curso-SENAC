@@ -6,7 +6,8 @@ create table usuario(
 	id_usuario int auto_increment primary key,
     nome varchar(100),
     cpf char(13),
-    telefone char(20)
+    telefone char(20),
+    senha varchar(40)
 );
 
 create table livro (
