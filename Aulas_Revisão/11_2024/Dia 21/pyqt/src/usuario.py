@@ -2,7 +2,7 @@ import sys
 from PyQt5 import uic
 from PyQt5.QtWidgets import QApplication, QMainWindow
 
-ui_file = "Aulas_Revisão/11_2024/Dia 11/pyqt/ui/usuario_window.ui"
+ui_file = "Aulas_Revisão/1_2024/Dia 21/pyqt/ui/usuario_window.ui"
 
 class UsuarioWindow(QMainWindow):
     def __init__(self):
