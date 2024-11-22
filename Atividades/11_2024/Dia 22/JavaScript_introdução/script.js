@@ -34,8 +34,22 @@
 // String.toUpperCase() - Maiúsculia
 // String.toLowerCase() - Minúscula
 
-// Funções 
+// - Funções 
 // function myFunction(p1, p2) {
 //     return p1 * p2
 // }
 // x = myFunction (10, 20);
+
+// - Selecionando elementos
+// window.onload = function() {
+//     var p1 = window.document.getElementsByTagName('p')[1]
+//     p1.style.background='blue'
+//     p1.innerHTML='Teste'
+// }
+
+// - Eventos HTML
+function a() {
+    var a = window.document.getElementById('a')
+    a.innerText='Certa Resposta'
+    a.style.backgroundColor='green'
+}
