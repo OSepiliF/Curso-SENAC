@@ -1,7 +1,7 @@
 function atividade_1() {
     var temp_F = window.prompt('Qual é a temperatura em Fahrenheit? ')
     temp_C = (5/9) * (temp_F - 32)
-    window.alert("Temperatura em Celcius: " + temp_C + "°")
+    window.alert("Temperatura em Celcius: " + temp_C.toFixed(2) + "°")
 }
 
 function atividade_2() {
@@ -25,6 +25,5 @@ function atividade_3() {
 
     valor_equivalente = valor_reais / valor_dolar
 
-    window.alert(`Valor em dólar fica: ${valor_equivalente}`)
+    window.alert(`Valor em dólar fica: ${valor_equivalente.toFixed(2)}`)
 }
-

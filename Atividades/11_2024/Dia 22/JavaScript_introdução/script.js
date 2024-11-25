@@ -48,8 +48,8 @@
 // }
 
 // - Eventos HTML
-function a() {
-    var a = window.document.getElementById('a')
-    a.innerText='Certa Resposta'
-    a.style.backgroundColor='green'
-}
+// function a() {
+//     var a = window.document.getElementById('a')
+//     a.innerText='Certa Resposta'
+//     a.style.backgroundColor='green'
+// }
