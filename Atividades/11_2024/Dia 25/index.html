@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="retangulo">
+        <div class="grid_principal">
+            <!-- Nome -->
+            <h1>Login</h1>
+            <div class="input_nome">
+                <input type="text" placeholder="Nome" class="input_nome_required">
+                <span class="span-nome-required">Nome deve ser maior que 3 caracteres!</span>
+                <span class="span-nome-valid">Nome válido!</span>
+                <span class="span-nome-senha-iguais">Nome e Senha não podem ser iguais!</span>
+            </div>
+        
+            <!-- Senha -->
+            <div class="input_senha">
+                <input type="password" placeholder="Senha" class="input_senha_required">
+                <span class="span-senha-required">Senha deve ter pelo menos 6 caracteres!</span>
+                <span class="span-senha-valid">Senha válida!</span>
+                <span class="span-nome-senha-iguais">Nome e Senha não podem ser iguais!</span>
+            </div>
+        
+            <!-- Confirmar Senha -->
+            <div class="input_confirm_senha">
+                <input type="password" placeholder="Confirmar Senha" class="input_confirm_senha_required">
+                <span class="span-confirm-senha-required">Senhas não coincidem!</span>
+                <span class="span-confirm-senha-valid">Senhas coincidem!</span>
+            </div>
+        
+            <!-- Botão Confirmar -->
+            <div class="botao_confirm">
+                <button onclick="validar_botao()" class="botao_confirmar" oninput="botao_confirmar">Confirmar</button>
+            </div>
+        </div>
+    </div>
+        
+    </div>  
+    <script src="./script.js"></script>
+</body>
+</html>
