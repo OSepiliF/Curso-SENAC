@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./script.js"></script>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="retangulo">
+        <div class="grid_principal">
+            <!-- E-mail -->
+            <h1>Login</h1>
+            <div class="input_email">
+                <input type="text" placeholder="Digite seu Email" class="input_email_required required" id="emailInput" oninput="emailValidate()">
+                <span class="span-required" style="display:none;">O email deve ter o padrão email@empresa.com.br</span>
+                <span class="span-valid" style="display:none;">Email válido</span>
+            </div>
+            
+            <!-- Botão Confirmar -->
+            <div class="botao_confirm">
+                <button onclick="validar_botao()" class="botao_confirmar">Confirmar</button>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./script.js"></script>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <header>
+        <h1>e-SAJ | Consulta de Processos de 1º Grau</h1>
+    </header>
+    <div class="grid_preencha">
+        <h1>Preencha o Número de Processo Unificado (NPU) no formato: 0000000-00.2023.8.26.0000 </h1>
+        <input type="text" placeholder="Digite o NPU" class="input_npu_required" oninput="npuValidate()">
+        <span class="span-required" style="display:none;">Inválido</span>
+        <span class="span-valid" style="display:none;">Válido</span>
+    </div>
+</body>
+</html>

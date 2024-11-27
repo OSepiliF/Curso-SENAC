@@ -22,10 +22,7 @@ h1 {
 .retangulo {
     display: flex;
     justify-content: center;
-    align-content: center;
     align-items: center;
-    justify-self: center;
-    align-self: center;
     background-color: rgb(20, 36, 36);
     width: 500px;
     height: 600px;
@@ -34,13 +31,13 @@ h1 {
 
 .grid_principal {
     display: grid;
-    grid-template-columns: 1fr; 
+    grid-template-columns: 1fr;
     justify-items: center;
     align-items: center;
-    row-gap: 10%;       
+    row-gap: 10%;
 }
 
-.input_nome input, .input_senha input, .input_confirm_senha input {
+input {
     padding: 10px;
     font-size: 16px;
     width: 100%;
@@ -53,14 +50,6 @@ span {
     display: none;
     font-size: 12px;
     margin-top: 5px;
-}
-
-.span-nome-required, .span-senha-required, .span-nome-senha-iguais {
-    color: red;
-}
-
-.span-nome-valid, .span-senha-valid, .span-confirm-senha-valid {
-    color: green;
 }
 
 button {
