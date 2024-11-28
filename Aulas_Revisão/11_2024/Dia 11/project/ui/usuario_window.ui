@@ -72,7 +72,7 @@
       </widget>
      </item>
      <item>
-      <widget class="QLineEdit" name="lineEdit_nomecompleto">
+      <widget class="QLineEdit" name="nome_completo">
        <property name="enabled">
         <bool>true</bool>
        </property>
@@ -102,7 +102,7 @@
       </widget>
      </item>
      <item>
-      <widget class="QLineEdit" name="lineEdit_cpf">
+      <widget class="QLineEdit" name="cpf">
        <property name="font">
         <font>
          <pointsize>15</pointsize>
@@ -132,7 +132,7 @@
       </widget>
      </item>
      <item>
-      <widget class="QLineEdit" name="lineEdit_telefone">
+      <widget class="QLineEdit" name="telefone">
        <property name="font">
         <font>
          <pointsize>15</pointsize>
@@ -160,7 +160,7 @@
           </widget>
          </item>
          <item>
-          <widget class="QLineEdit" name="lineEdit_senha">
+          <widget class="QLineEdit" name="senha">
            <property name="font">
             <font>
              <pointsize>12</pointsize>
@@ -185,7 +185,7 @@
           </widget>
          </item>
          <item>
-          <widget class="QLineEdit" name="lineEdit_confirmarsenha">
+          <widget class="QLineEdit" name="confirmar_senha">
            <property name="font">
             <font>
              <pointsize>12</pointsize>

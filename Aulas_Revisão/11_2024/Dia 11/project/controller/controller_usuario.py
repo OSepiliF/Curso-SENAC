@@ -1,42 +1,39 @@
+import mysql.connector
 from config.database import Database
+from models.usuario import Usuario
 
 class Controller_Usuario:
-    def __init__(self):
+    def __init__(self, window):
+        self.window = window
         self.db = Database("10.28.2.36", "suporte", "suporte", "biblioteca")
 
-    def cadastrar(self):
-        nome_completo = self.view.lineEdit_nomecompleto.text()
-        cpf = self.view.lineEdit_cpf.text()
-        telefone = self.view.lineEdit_telefone.text()
-        senha = self.view.lineEdit_senha.text()
-        confirmar_senha = self.view.lineEdit_confirmarsenha.text()
-
+    def cadastrar(self, nome_completo, cpf, telefone, senha, confirmar_senha, label_error):
         if nome_completo == '' or cpf == '' or telefone == '' or senha == '' or confirmar_senha == '':
-            self.view.label_error.setStyleSheet('color: red;')
-            self.view.label_error.setText('Verifique se todos os campos estão preenchidos!')
-
+            label_error.setStyleSheet('color: red;')
+            label_error.setText("Verifique se todos os campos estão preenchidos!")
         elif senha != confirmar_senha:
-            self.view.label_error.setStyleSheet('color: orange;')
-            self.view.label_error.setText('Ambos os campos da senha devem ser iguais!')
-
+            label_error.setStyleSheet('color: orange;')  
+            label_error.setText("Ambos os campos da senha devem ser iguais!")
         else:
-            self.db.conectar()
+            try:
+                print(nome_completo,cpf,telefone,senha,confirmar_senha, label_error)
+                self.db.conectar()
 
-            if self.db.verificar_usuario(cpf):
-                self.view.label_error.setStyleSheet('color: red;')
-                self.view.label_error.setText('Usuário já existente!')
+                if self.usuario.verificar_usuario(cpf): 
+                    label_error.setStyleSheet('color: red;')  
+                    label_error.setText("Usuário já existente!")
+                else:
+                    self.usuario.cadastrar_usuario(nome_completo, cpf, telefone, senha) 
+                    label_error.setStyleSheet('color: green;') 
+                    label_error.setText("Cadastro efetuado com sucesso!")
 
-            else:
-                self.db.cadastrar_usuario(nome_completo, cpf, telefone)
-                self.view.label_error.setStyleSheet('color: green;')
-                self.view.label_error.setText('Cadastro Efetuado com Sucesso!')
+            except mysql.connector.Error as err:
+                print(f"Erro ao conectar ao banco de dados: {err}")
+                label_error.setStyleSheet('color: red;')  
+                label_error.setText("Erro ao conectar ao banco de dados.")
+            finally:
+                self.db.desconectar()
 
-                self.view.lineEdit_nomecompleto.clear()
-                self.view.lineEdit_cpf.clear()
-                self.view.lineEdit_telefone.clear()
-                self.view.lineEdit_senha.clear()
-                self.view.lineEdit_confirmarsenha.clear()
-
-            self.db.desconectar()
-
-Controller_Usuario.__name__ = 'Controller_Usuario'
+    def cancelar(self):
+        self.db.desconectar()
+        self.window.close()

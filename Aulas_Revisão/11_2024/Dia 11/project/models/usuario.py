@@ -1,44 +1,24 @@
 import mysql.connector
 
 class Usuario:
-    def __init__(self, host, user, password, dbname):
-        self.host = host
-        self.user = user
-        self.password = password
-        self.dbname = dbname
-        self.conexao = None
-        self.cursor = None
-
-    def conectar(self):
-        try:
-            self.conexao = mysql.connector.connect(
-                host=self.host,
-                user=self.user,
-                password=self.password,
-                database=self.dbname
-            )
-            self.cursor = self.conexao.cursor()
-
-        except mysql.connector.Error:
-            print(f"Erro ao conectar ao banco de dados")
-
-    def desconectar(self):
-        if self.conexao:
-            self.conexao.close()
-
-    def verificar_usuario(self, cpf):
-        try:
-            self.cursor.execute("SELECT cpf FROM usuario WHERE cpf = %s", (cpf,))
-            return self.cursor.fetchone()  
+    def __init__(self, cursor, conexao):
+        self.cursor = cursor  
+        self.conexao = conexao  
         
-        except mysql.connector.Error:
-            print(f"Erro ao verificar usuário")
-
-    def cadastrar_usuario(self, nome, cpf, telefone):
+    def verificar_usuario(self, cpf):
+        query = "SELECT * FROM usuario WHERE cpf = %s"
+        self.cursor.execute(query, (cpf,))
+        result = self.cursor.fetchone()
+        print('Verificou o Usuário.')  
+        return result is not None
+        
+    def cadastrar_usuario(self, nome_completo, cpf, telefone, senha):
         try:
-            self.cursor.execute("INSERT INTO usuario (nome, cpf, telefone) VALUES (%s, %s, %s)", 
-                                (nome, cpf, telefone))
-            self.conexao.commit()
+            query = "INSERT INTO usuario (nome_completo, cpf, telefone, senha) VALUES (%s, %s, %s, %s)"
+            self.cursor.execute(query, (nome_completo, cpf, telefone, senha))
+            self.conexao.commit() 
+            print('Cadastrou o Usuário.')
 
-        except mysql.connector.Error:
-            print(f"Erro ao cadastrar usuário")
+        except mysql.connector.Error as err:
+            print(f"Erro ao cadastrar usuário: {err}")
+            self.conexao.rollback()  

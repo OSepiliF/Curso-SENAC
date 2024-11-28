@@ -2,14 +2,12 @@ import sys
 from PyQt5 import uic
 from PyQt5.QtWidgets import QApplication, QMainWindow
 
-ui_file = "Aulas_Revisão/11_2024/Dia 11/pyqt/ui/main_window.ui"
+ui_file = "Aulas_Revisão/11_2024/Dia 11/project/ui/main_window.ui"
 
 class LivroWindow(QMainWindow):
     def __init__(self):
         super().__init__()
         uic.loadUi(ui_file, self)
-        self.botao_cadastrar.clicked.connect(self.cadastrar)
-        self.botao_cancelar.clicked.connect(self.cancelar)
 
 if __name__ == '__main__':
     app = QApplication(sys.argv)
