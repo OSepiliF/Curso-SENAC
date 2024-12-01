@@ -1,33 +1,35 @@
-drop database if exists biblioteca;
-create database biblioteca;
-use biblioteca;
+DROP DATABASE IF EXISTS biblioteca;
+CREATE DATABASE biblioteca;
+USE biblioteca;
 
-create table usuario (
-    id_usuario int auto_increment primary key,
-    nome varchar(100),
-    cpf char(11),
-    telefone char(20),
-    senha varchar(40)
+CREATE TABLE usuario (
+    id_usuario INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(100),
+    cpf CHAR(11),
+    telefone CHAR(20),
+    senha VARCHAR(40)
 );
 
-create table livro (
-    id_livro int auto_increment primary key,
-    titulo varchar(80),
-    autor varchar(50),
-    genero varchar(50),
+CREATE TABLE livro (
+    id_livro INT AUTO_INCREMENT PRIMARY KEY,
+    titulo VARCHAR(80),
+    autor VARCHAR(50),
+    genero VARCHAR(50),
     status ENUM('disponível', 'emprestado') DEFAULT 'disponível', 
-    codigo int, 
-    usuario int,
-    foreign key(usuario) references usuario(id_usuario)
+    codigo INT, 
+    usuario INT,
+    FOREIGN KEY(usuario) REFERENCES usuario(id_usuario)
 );
 
-create table emprestimo (
-    id_emprestimo int auto_increment primary key,
-    id_livro int, 
-    id_usuario int,
-    foreign key(id_livro) references livro(id_livro),
-    foreign key(id_usuario) references usuario(id_usuario) 
+CREATE TABLE emprestimo (
+    id_emprestimo INT AUTO_INCREMENT PRIMARY KEY,
+    id_usuario INT,
+    id_livro INT,
+    devolvido BOOLEAN DEFAULT FALSE,
+    FOREIGN KEY(id_usuario) REFERENCES usuario(id_usuario),
+    FOREIGN KEY(id_livro) REFERENCES livro(id_livro)
 );
 
-select * from livro;
-select * from livro join usuario on livro.usuario = usuario.id_usuario;
+SELECT * FROM usuario;
+SELECT * FROM livro;
+SELECT * FROM emprestimo;
