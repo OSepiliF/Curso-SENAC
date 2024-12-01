@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>450</width>
-    <height>420</height>
+    <height>450</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -18,14 +18,14 @@
     <property name="geometry">
      <rect>
       <x>30</x>
-      <y>300</y>
+      <y>330</y>
       <width>391</width>
       <height>61</height>
      </rect>
     </property>
     <layout class="QHBoxLayout" name="horizontalLayout">
      <item>
-      <widget class="QPushButton" name="botao_login">
+      <widget class="QPushButton" name="botao_voltar">
        <property name="maximumSize">
         <size>
          <width>160</width>
@@ -38,12 +38,12 @@
         </font>
        </property>
        <property name="text">
-        <string>Login</string>
+        <string>Voltar</string>
        </property>
       </widget>
      </item>
      <item>
-      <widget class="QPushButton" name="botao_cadastrar">
+      <widget class="QPushButton" name="botao_disponiveis">
        <property name="maximumSize">
         <size>
          <width>160</width>
@@ -56,7 +56,25 @@
         </font>
        </property>
        <property name="text">
-        <string>Cadastrar</string>
+        <string>Disponíveis</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="botao_meusLivros">
+       <property name="maximumSize">
+        <size>
+         <width>160</width>
+         <height>30</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>Meu Livros</string>
        </property>
       </widget>
      </item>
@@ -68,7 +86,7 @@
       <x>30</x>
       <y>10</y>
       <width>391</width>
-      <height>281</height>
+      <height>321</height>
      </rect>
     </property>
     <layout class="QVBoxLayout" name="verticalLayout">
@@ -91,7 +109,7 @@
         <enum>QFrame::Plain</enum>
        </property>
        <property name="text">
-        <string>LOGIN DE USUÁRIO</string>
+        <string>LISTA</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -99,72 +117,7 @@
       </widget>
      </item>
      <item>
-      <widget class="QLabel" name="label">
-       <property name="font">
-        <font>
-         <pointsize>12</pointsize>
-         <weight>50</weight>
-         <italic>false</italic>
-         <bold>false</bold>
-         <underline>false</underline>
-         <strikeout>false</strikeout>
-         <kerning>true</kerning>
-        </font>
-       </property>
-       <property name="layoutDirection">
-        <enum>Qt::LeftToRight</enum>
-       </property>
-       <property name="text">
-        <string>Nome Completo *</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QLineEdit" name="nome">
-       <property name="enabled">
-        <bool>true</bool>
-       </property>
-       <property name="font">
-        <font>
-         <pointsize>15</pointsize>
-        </font>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QLabel" name="label_6">
-       <property name="font">
-        <font>
-         <pointsize>12</pointsize>
-        </font>
-       </property>
-       <property name="text">
-        <string>Senha *</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QLineEdit" name="senha">
-       <property name="font">
-        <font>
-         <pointsize>15</pointsize>
-        </font>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QLabel" name="label_4">
-       <property name="text">
-        <string>Preenchimento obrigatório: *</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QLabel" name="label_error">
-       <property name="text">
-        <string/>
-       </property>
-      </widget>
+      <widget class="QListWidget" name="listWidget"/>
      </item>
     </layout>
    </widget>
@@ -178,12 +131,6 @@
      <height>21</height>
     </rect>
    </property>
-   <widget class="QMenu" name="menuLogin_Usu_rio">
-    <property name="title">
-     <string>Login Usuário</string>
-    </property>
-   </widget>
-   <addaction name="menuLogin_Usu_rio"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>

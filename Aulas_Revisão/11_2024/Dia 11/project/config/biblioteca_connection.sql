@@ -15,7 +15,7 @@ create table livro (
     titulo varchar(80),
     autor varchar(50),
     genero varchar(50),
-    status ENUM('disponível', 'emprestado') DEFAULT 'disponível', 
+    status ENUM('disponível', 'emprestado') default 'disponível', 
     codigo int, 
     usuario int,
     foreign key(usuario) references usuario(id_usuario)
@@ -23,11 +23,13 @@ create table livro (
 
 create table emprestimo (
     id_emprestimo int auto_increment primary key,
-    id_livro int, 
     id_usuario int,
-    foreign key(id_livro) references livro(id_livro),
-    foreign key(id_usuario) references usuario(id_usuario) 
+    id_livro int,
+    devolvido boolean default false,
+    foreign key(id_usuario) references usuario(id_usuario),
+    foreign key(id_livro) references livro(id_livro)
 );
 
+select * from usuario;
 select * from livro;
-select * from livro join usuario on livro.usuario = usuario.id_usuario;
+select * from emprestimo;

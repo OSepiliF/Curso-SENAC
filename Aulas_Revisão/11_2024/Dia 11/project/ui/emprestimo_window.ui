@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>450</width>
-    <height>425</height>
+    <height>450</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -25,7 +25,7 @@
     </property>
     <layout class="QHBoxLayout" name="horizontalLayout">
      <item>
-      <widget class="QPushButton" name="botao_cadastrar">
+      <widget class="QPushButton" name="botao_voltar">
        <property name="maximumSize">
         <size>
          <width>160</width>
@@ -38,12 +38,12 @@
         </font>
        </property>
        <property name="text">
-        <string>Cadastrar</string>
+        <string>Voltar</string>
        </property>
       </widget>
      </item>
      <item>
-      <widget class="QPushButton" name="botao_cancelar">
+      <widget class="QPushButton" name="botao_devolver">
        <property name="maximumSize">
         <size>
          <width>160</width>
@@ -56,7 +56,25 @@
         </font>
        </property>
        <property name="text">
-        <string>Cancelar</string>
+        <string>Devolver</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="botao_pegar">
+       <property name="maximumSize">
+        <size>
+         <width>160</width>
+         <height>30</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>Pegar</string>
        </property>
       </widget>
      </item>
@@ -115,12 +133,12 @@
         <enum>Qt::LeftToRight</enum>
        </property>
        <property name="text">
-        <string> Nome *</string>
+        <string>Titulo *</string>
        </property>
       </widget>
      </item>
      <item>
-      <widget class="QLineEdit" name="lineEdit_nomecompleto">
+      <widget class="QLineEdit" name="titulo">
        <property name="enabled">
         <bool>true</bool>
        </property>
@@ -145,12 +163,12 @@
         <enum>Qt::LeftToRight</enum>
        </property>
        <property name="text">
-        <string>Senha *</string>
+        <string>Autor </string>
        </property>
       </widget>
      </item>
      <item>
-      <widget class="QLineEdit" name="lineEdit_senha">
+      <widget class="QLineEdit" name="autor">
        <property name="font">
         <font>
          <pointsize>15</pointsize>
@@ -175,12 +193,12 @@
         <enum>Qt::LeftToRight</enum>
        </property>
        <property name="text">
-        <string>Titulo Do Livro *</string>
+        <string>Gênero</string>
        </property>
       </widget>
      </item>
      <item>
-      <widget class="QLineEdit" name="lineEdit_titulo">
+      <widget class="QLineEdit" name="genero">
        <property name="font">
         <font>
          <pointsize>15</pointsize>
@@ -200,6 +218,12 @@
      </item>
      <item>
       <widget class="QLabel" name="label_error">
+       <property name="maximumSize">
+        <size>
+         <width>16777215</width>
+         <height>13</height>
+        </size>
+       </property>
        <property name="text">
         <string/>
        </property>

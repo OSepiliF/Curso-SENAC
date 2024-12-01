@@ -51,6 +51,36 @@
       </widget>
      </item>
      <item>
+      <widget class="QLabel" name="label_2">
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+         <weight>50</weight>
+         <italic>false</italic>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="layoutDirection">
+        <enum>Qt::LeftToRight</enum>
+       </property>
+       <property name="text">
+        <string>Titulo *</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="titulo">
+       <property name="font">
+        <font>
+         <pointsize>15</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item>
       <widget class="QLabel" name="label">
        <property name="font">
         <font>
@@ -72,7 +102,7 @@
       </widget>
      </item>
      <item>
-      <widget class="QLineEdit" name="lineEdit_autor">
+      <widget class="QLineEdit" name="autor">
        <property name="enabled">
         <bool>true</bool>
        </property>
@@ -80,36 +110,6 @@
         <font>
          <pointsize>15</pointsize>
         </font>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QLabel" name="label_2">
-       <property name="font">
-        <font>
-         <pointsize>12</pointsize>
-         <weight>50</weight>
-         <italic>false</italic>
-         <bold>false</bold>
-        </font>
-       </property>
-       <property name="layoutDirection">
-        <enum>Qt::LeftToRight</enum>
-       </property>
-       <property name="text">
-        <string>Titulo *</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QLineEdit" name="lineEdit_titulo">
-       <property name="font">
-        <font>
-         <pointsize>15</pointsize>
-        </font>
-       </property>
-       <property name="text">
-        <string/>
        </property>
       </widget>
      </item>
@@ -132,7 +132,7 @@
       </widget>
      </item>
      <item>
-      <widget class="QLineEdit" name="lineEdit_genero">
+      <widget class="QLineEdit" name="genero">
        <property name="font">
         <font>
          <pointsize>15</pointsize>
@@ -159,7 +159,7 @@
       </widget>
      </item>
      <item>
-      <widget class="QLineEdit" name="lineEdit_codigo">
+      <widget class="QLineEdit" name="codigo">
        <property name="font">
         <font>
          <pointsize>15</pointsize>
@@ -176,6 +176,12 @@
      </item>
      <item>
       <widget class="QLabel" name="label_error">
+       <property name="maximumSize">
+        <size>
+         <width>16777215</width>
+         <height>13</height>
+        </size>
+       </property>
        <property name="text">
         <string/>
        </property>
@@ -194,7 +200,7 @@
     </property>
     <layout class="QHBoxLayout" name="horizontalLayout">
      <item>
-      <widget class="QPushButton" name="botao_cancelar">
+      <widget class="QPushButton" name="botao_voltar">
        <property name="maximumSize">
         <size>
          <width>160</width>
@@ -207,7 +213,7 @@
         </font>
        </property>
        <property name="text">
-        <string>Cancelar</string>
+        <string>Voltar</string>
        </property>
       </widget>
      </item>

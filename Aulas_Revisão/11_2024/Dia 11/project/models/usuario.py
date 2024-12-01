@@ -9,10 +9,20 @@ class Usuario:
         cpf = ''.join(filter(str.isdigit, cpf))  
         return len(cpf) == 11  
         
-    def verificar_usuario(self, cpf):
-        query = "SELECT * FROM usuario WHERE cpf = %s"
-        self.cursor.execute(query, (cpf,))
-        return self.cursor.fetchone() is not None 
+    def verificar_usuario(self, nome, cpf):
+        if nome:
+            query = "SELECT * FROM usuario WHERE nome = %s"
+            self.cursor.execute(query, (nome,))
+
+        elif cpf:
+            query = "SELECT * FROM usuario WHERE cpf = %s"
+            self.cursor.execute(query, (cpf,))
+
+        else:
+            return False
+
+        return self.cursor.fetchone() is not None
+
         
     def cadastrar_usuario(self, nome, cpf, telefone, senha):
         if not self.validar_cpf(cpf):
@@ -29,4 +39,4 @@ class Usuario:
         except mysql.connector.Error as err:
             print(f"Erro ao cadastrar usuário: {err}")
             self.conexao.rollback()  
-            return False
+            
