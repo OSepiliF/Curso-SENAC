@@ -10,16 +10,21 @@ class Emprestimo:
         self.cursor.execute(query, (id_usuario,))
         return self.cursor.fetchone()[0]
 
-    def verificar_disponibilidade(self, titulo):
-        query = "SELECT status FROM livro WHERE titulo = %s"
-        self.cursor.execute(query, (titulo,))
+    def verificar_disponibilidade(self, titulo, autor, genero):
+        query = "SELECT status FROM livro WHERE titulo = %s AND autor = %s AND genero = %s"
+        self.cursor.execute(query, (titulo, autor, genero))
         livro = self.cursor.fetchone()
         return livro and livro[0] == 'disponível'
 
-    def registrar_emprestimo(self, id_usuario, titulo, autor):
+
+    def registrar_emprestimo(self, id_usuario, titulo, autor, genero):
         try:
-            query_livro = "SELECT id_livro FROM livro WHERE titulo = %s AND autor = %s AND status = 'disponível'"
-            self.cursor.execute(query_livro, (titulo, autor))
+            query_livro = """
+                SELECT id_livro 
+                FROM livro 
+                WHERE titulo = %s AND autor = %s AND genero = %s AND status = 'disponível'
+            """
+            self.cursor.execute(query_livro, (titulo, autor, genero))
             livro = self.cursor.fetchone()
 
             if not livro:
@@ -33,7 +38,7 @@ class Emprestimo:
 
             if livros_emprestados >= 3:
                 return False 
-  
+    
             query_emprestimo = "INSERT INTO emprestimo (id_usuario, id_livro) VALUES (%s, %s)"
             self.cursor.execute(query_emprestimo, (id_usuario, id_livro))
 
@@ -42,10 +47,12 @@ class Emprestimo:
 
             self.conexao.commit() 
             return True  
+        
         except mysql.connector.Error as e:
             self.conexao.rollback()  
             print(f"Erro ao registrar empréstimo: {e}")
-            return False 
+            return False
+
 
     def devolver(self, id_usuario, codigo_livro):
         try:

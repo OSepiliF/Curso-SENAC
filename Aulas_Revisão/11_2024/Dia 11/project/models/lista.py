@@ -6,18 +6,20 @@ class Lista:
     def buscar_meus_livros(self, id_usuario):
         if self.cursor is None:
             raise Exception("Conexão com o banco de dados não foi estabelecida.")
-        
+
         query = """
-            SELECT livro.titulo, livro.autor, livro.genero 
+            SELECT livro.titulo, livro.autor, livro.genero, livro.codigo
             FROM livro
-            JOIN emprestimo ON livro.codigo = emprestimo.id_livro
+            JOIN emprestimo ON livro.id_livro = emprestimo.id_livro
             WHERE emprestimo.id_usuario = %s AND emprestimo.devolvido = 0
         """
-        
+
         self.cursor.execute(query, (id_usuario,))
         result = self.cursor.fetchall()
-        return [{"titulo": row[0], "autor": row[1], "genero": row[2]} for row in result]
-    
+        return [
+            {"titulo": row[0], "autor": row[1], "genero": row[2], "codigo": row[3]} 
+            for row in result
+        ]
 
     def verificar_livro(self, titulo, autor, genero):
         if self.cursor is None:
@@ -32,7 +34,13 @@ class Lista:
         if self.cursor is None:
             raise Exception("Conexão com o banco de dados não foi estabelecida.")
         
-        query = "SELECT titulo, autor, genero FROM livro WHERE usuario IS NULL AND status = 'disponível'"
+        query = "SELECT titulo, autor, genero, codigo FROM livro WHERE usuario IS NULL AND status = 'disponível'"
         self.cursor.execute(query)
         result = self.cursor.fetchall()
-        return [{"titulo": row[0], "autor": row[1], "genero": row[2]} for row in result]
+        return [
+            {"titulo": row[0], "autor": row[1], "genero": row[2], "codigo": row[3]} 
+            for row in result
+        ]
+
+
+

@@ -30,5 +30,6 @@ class EmprestimoWindow(QMainWindow):
 
         self.controller_emprestimo.devolver_emprestimo(titulo, autor, genero, label_error)
 
+
     def voltar(self):
         self.controller_emprestimo.voltar()

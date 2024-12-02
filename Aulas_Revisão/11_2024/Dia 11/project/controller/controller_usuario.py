@@ -5,8 +5,8 @@ from models.usuario import Usuario
 class Controller_Usuario:
     def __init__(self, window):
         self.window = window
-        self.db = Database("10.28.2.36", "suporte", "suporte", "biblioteca")
-        # self.db = Database("localhost", "root", "suporte", "biblioteca")
+        # self.db = Database("10.28.2.36", "suporte", "suporte", "biblioteca")
+        self.db = Database("localhost", "root", "suporte", "biblioteca")
         self.usuario = None 
 
     def cadastrar(self, nome, cpf, telefone, senha, confirmar_senha, label_error):

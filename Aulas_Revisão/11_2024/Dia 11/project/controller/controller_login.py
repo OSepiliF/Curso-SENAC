@@ -6,8 +6,8 @@ from models.login import Login
 class Controller_Login:
     def __init__(self, window):
         self.window = window
-        self.db = Database("10.28.2.36", "suporte", "suporte", "biblioteca")
-        # self.db = Database("localhost", "root", "suporte", "biblioteca")
+        # self.db = Database("10.28.2.36", "suporte", "suporte", "biblioteca")
+        self.db = Database("localhost", "root", "suporte", "biblioteca")
         self.usuario = None
 
     def login(self, nome, senha, label_error):
