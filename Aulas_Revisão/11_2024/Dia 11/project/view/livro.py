@@ -11,9 +11,9 @@ class LivroWindow(QMainWindow):
         super().__init__()
         uic.loadUi(ui_file, self)
         self.id_usuario = id_usuario
-
         self.controller_livro = Controller_Livro(self, id_usuario)   
         self.botao_cadastrar.clicked.connect(self.cadastrar)
+        self.botao_deletar.clicked.connect(self.deletar)
         self.botao_voltar.clicked.connect(self.voltar)
 
     def cadastrar(self):
@@ -24,6 +24,15 @@ class LivroWindow(QMainWindow):
         label_error = self.label_error  
 
         self.controller_livro.cadastrar(autor, titulo, genero, codigo, label_error)
+
+    def deletar(self):
+        autor = self.autor.text()
+        titulo = self.titulo.text()
+        genero = self.genero.text()
+        codigo = self.codigo.text()
+        label_error = self.label_error  
+
+        self.controller_livro.deletar(autor, titulo, genero, codigo, label_error)
 
     def voltar(self):
         self.controller_livro.voltar()

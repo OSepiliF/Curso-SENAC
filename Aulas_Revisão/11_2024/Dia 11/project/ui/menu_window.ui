@@ -6,21 +6,24 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>450</width>
-    <height>420</height>
+    <width>601</width>
+    <height>500</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>Sistema de Biblioteca</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(85, 85, 127);</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QWidget" name="verticalLayoutWidget">
     <property name="geometry">
      <rect>
       <x>30</x>
-      <y>10</y>
-      <width>391</width>
-      <height>281</height>
+      <y>20</y>
+      <width>541</width>
+      <height>381</height>
      </rect>
     </property>
     <layout class="QVBoxLayout" name="verticalLayout">
@@ -39,14 +42,8 @@
          <bold>true</bold>
         </font>
        </property>
-       <property name="mouseTracking">
-        <bool>false</bool>
-       </property>
-       <property name="autoFillBackground">
-        <bool>false</bool>
-       </property>
-       <property name="frameShadow">
-        <enum>QFrame::Plain</enum>
+       <property name="styleSheet">
+        <string notr="true">color: white; background-color: #333333; padding: 10px; border-radius: 5px;</string>
        </property>
        <property name="text">
         <string>MENU</string>
@@ -58,8 +55,8 @@
      </item>
      <item>
       <layout class="QGridLayout" name="gridLayout">
-       <item row="2" column="0">
-        <widget class="QPushButton" name="botao_emprestimoLivros">
+       <item row="0" column="0">
+        <widget class="QPushButton" name="botao_listaLivros">
          <property name="maximumSize">
           <size>
            <width>220</width>
@@ -71,8 +68,12 @@
            <pointsize>12</pointsize>
           </font>
          </property>
+         <property name="styleSheet">
+          <string notr="true"> color: white; border-radius: 5px;
+background-color: rgb(117, 117, 117);</string>
+         </property>
          <property name="text">
-          <string>EMPRESTIMO DE LIVROS</string>
+          <string>LISTA DE LIVROS</string>
          </property>
         </widget>
        </item>
@@ -89,13 +90,17 @@
            <pointsize>12</pointsize>
           </font>
          </property>
+         <property name="styleSheet">
+          <string notr="true"> color: white; border-radius: 5px;
+background-color: rgb(117, 117, 117);</string>
+         </property>
          <property name="text">
           <string>CADASTRO DE LIVROS</string>
          </property>
         </widget>
        </item>
-       <item row="0" column="0">
-        <widget class="QPushButton" name="botao_listaLivros">
+       <item row="2" column="0">
+        <widget class="QPushButton" name="botao_emprestimoLivros">
          <property name="maximumSize">
           <size>
            <width>220</width>
@@ -107,8 +112,12 @@
            <pointsize>12</pointsize>
           </font>
          </property>
+         <property name="styleSheet">
+          <string notr="true">color: white; border-radius: 5px;
+background-color: rgb(117, 117, 117);</string>
+         </property>
          <property name="text">
-          <string>LISTA DE LIVROS</string>
+          <string>EMPRESTIMO DE LIVROS</string>
          </property>
         </widget>
        </item>
@@ -116,48 +125,60 @@
      </item>
     </layout>
    </widget>
-   <widget class="QWidget" name="horizontalLayoutWidget">
+   <widget class="QFrame" name="frame">
     <property name="geometry">
      <rect>
-      <x>30</x>
-      <y>310</y>
-      <width>391</width>
-      <height>61</height>
+      <x>0</x>
+      <y>420</y>
+      <width>601</width>
+      <height>80</height>
      </rect>
     </property>
-    <layout class="QHBoxLayout" name="horizontalLayout">
-     <item>
-      <widget class="QPushButton" name="botao_sair">
-       <property name="maximumSize">
-        <size>
-         <width>160</width>
-         <height>30</height>
-        </size>
-       </property>
-       <property name="font">
-        <font>
-         <pointsize>12</pointsize>
-        </font>
-       </property>
-       <property name="text">
-        <string>Sair</string>
-       </property>
-      </widget>
-     </item>
-    </layout>
+    <property name="styleSheet">
+     <string notr="true"> background-color: #333333;</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <widget class="QWidget" name="horizontalLayoutWidget">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>10</y>
+       <width>601</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <widget class="QPushButton" name="botao_sair">
+        <property name="maximumSize">
+         <size>
+          <width>160</width>
+          <height>30</height>
+         </size>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>12</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: white; border-radius: 5px;
+background-color: rgb(170, 0, 255);</string>
+        </property>
+        <property name="text">
+         <string>Sair</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
    </widget>
   </widget>
-  <widget class="QMenuBar" name="menubar">
-   <property name="geometry">
-    <rect>
-     <x>0</x>
-     <y>0</y>
-     <width>450</width>
-     <height>21</height>
-    </rect>
-   </property>
-  </widget>
-  <widget class="QStatusBar" name="statusbar"/>
  </widget>
  <resources/>
  <connections/>

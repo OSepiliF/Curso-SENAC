@@ -27,7 +27,7 @@ class Emprestimo:
             self.cursor.execute(query_livro, (titulo, autor, genero))
             livro = self.cursor.fetchone()
 
-            if not livro:
+            if livro == '':
                 return False  
 
             id_livro = livro[0]
@@ -54,18 +54,17 @@ class Emprestimo:
             return False
 
 
-    def devolver(self, id_usuario, codigo_livro):
+    def devolver(self, id_usuario, codigo):
         try:
             query_devolver = """
                 UPDATE emprestimo 
                 SET devolvido = true 
                 WHERE id_usuario = %s AND id_livro = %s AND devolvido = false
             """
-            self.cursor.execute(query_devolver, (id_usuario, codigo_livro))
+            self.cursor.execute(query_devolver, (id_usuario, codigo))
 
             query_update_livro = "UPDATE livro SET status = 'disponível' WHERE id_livro = %s"
-            self.cursor.execute(query_update_livro, (codigo_livro,))
-
+            self.cursor.execute(query_update_livro, (codigo,))
             self.conexao.commit() 
 
         except mysql.connector.Error as e:
