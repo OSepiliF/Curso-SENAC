@@ -17,84 +17,6 @@
    <string notr="true">background-color: rgb(85, 85, 127);</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QWidget" name="horizontalLayoutWidget">
-    <property name="geometry">
-     <rect>
-      <x>0</x>
-      <y>430</y>
-      <width>601</width>
-      <height>61</height>
-     </rect>
-    </property>
-    <layout class="QHBoxLayout" name="horizontalLayout">
-     <item>
-      <widget class="QPushButton" name="botao_voltar">
-       <property name="maximumSize">
-        <size>
-         <width>160</width>
-         <height>30</height>
-        </size>
-       </property>
-       <property name="font">
-        <font>
-         <pointsize>12</pointsize>
-        </font>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">color: white; border-radius: 5px;
-background-color: rgb(170, 0, 255);</string>
-       </property>
-       <property name="text">
-        <string>Voltar</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QPushButton" name="botao_disponiveis">
-       <property name="maximumSize">
-        <size>
-         <width>160</width>
-         <height>30</height>
-        </size>
-       </property>
-       <property name="font">
-        <font>
-         <pointsize>12</pointsize>
-        </font>
-       </property>
-       <property name="styleSheet">
-        <string notr="true"> color: white; border-radius: 5px;
-background-color: rgb(117, 117, 117);</string>
-       </property>
-       <property name="text">
-        <string>Disponíveis</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QPushButton" name="botao_meusLivros">
-       <property name="maximumSize">
-        <size>
-         <width>160</width>
-         <height>30</height>
-        </size>
-       </property>
-       <property name="font">
-        <font>
-         <pointsize>12</pointsize>
-        </font>
-       </property>
-       <property name="styleSheet">
-        <string notr="true"> color: white; border-radius: 5px;
-background-color: rgb(117, 117, 117);</string>
-       </property>
-       <property name="text">
-        <string>Meus Livros</string>
-       </property>
-      </widget>
-     </item>
-    </layout>
-   </widget>
    <widget class="QWidget" name="verticalLayoutWidget">
     <property name="geometry">
      <rect>
@@ -152,9 +74,86 @@ background-color: rgb(117, 117, 117);</string>
     <property name="frameShadow">
      <enum>QFrame::Raised</enum>
     </property>
+    <widget class="QWidget" name="horizontalLayoutWidget">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>10</y>
+       <width>601</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <widget class="QPushButton" name="botao_voltar">
+        <property name="maximumSize">
+         <size>
+          <width>160</width>
+          <height>30</height>
+         </size>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>12</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: white; border-radius: 5px;
+background-color: rgb(170, 0, 255);</string>
+        </property>
+        <property name="text">
+         <string>Voltar</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="botao_disponiveis">
+        <property name="maximumSize">
+         <size>
+          <width>160</width>
+          <height>30</height>
+         </size>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>12</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true"> color: white; border-radius: 5px;
+background-color: rgb(117, 117, 117);</string>
+        </property>
+        <property name="text">
+         <string>Disponíveis</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="botao_meusLivros">
+        <property name="maximumSize">
+         <size>
+          <width>160</width>
+          <height>30</height>
+         </size>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>12</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true"> color: white; border-radius: 5px;
+background-color: rgb(117, 117, 117);</string>
+        </property>
+        <property name="text">
+         <string>Meus Livros</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
    </widget>
    <zorder>frame</zorder>
-   <zorder>horizontalLayoutWidget</zorder>
    <zorder>verticalLayoutWidget</zorder>
   </widget>
  </widget>

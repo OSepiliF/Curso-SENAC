@@ -6,26 +6,166 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>591</width>
-    <height>591</height>
+    <width>601</width>
+    <height>500</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(85, 85, 127);</string>
+  </property>
   <widget class="QWidget" name="centralwidget">
+   <widget class="QWidget" name="verticalLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>20</y>
+      <width>541</width>
+      <height>371</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <item>
+      <widget class="QLabel" name="label_5">
+       <property name="font">
+        <font>
+         <pointsize>20</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: white; background-color: #333333; padding: 10px; border-radius: 5px;</string>
+       </property>
+       <property name="text">
+        <string>EMPRESTIMO DE LIVRO</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="label">
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+         <weight>50</weight>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: white;</string>
+       </property>
+       <property name="text">
+        <string>Titulo *</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="titulo">
+       <property name="font">
+        <font>
+         <pointsize>15</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border-radius: 5px; padding: 5px; background-color: #f0f0f0;</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_2">
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: white;</string>
+       </property>
+       <property name="text">
+        <string>Autor </string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="autor">
+       <property name="font">
+        <font>
+         <pointsize>15</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border-radius: 5px; padding: 5px; background-color: #f0f0f0;</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_3">
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: white;</string>
+       </property>
+       <property name="text">
+        <string>Gênero</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="genero">
+       <property name="font">
+        <font>
+         <pointsize>15</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border-radius: 5px; padding: 5px; background-color: #f0f0f0;</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_4">
+       <property name="styleSheet">
+        <string notr="true">color: white;</string>
+       </property>
+       <property name="text">
+        <string>Preenchimento obrigatório: *</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_error">
+       <property name="maximumSize">
+        <size>
+         <width>16777215</width>
+         <height>13</height>
+        </size>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
    <widget class="QFrame" name="frame">
     <property name="geometry">
      <rect>
-      <x>70</x>
-      <y>20</y>
-      <width>451</width>
-      <height>481</height>
+      <x>0</x>
+      <y>420</y>
+      <width>601</width>
+      <height>80</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgba(0, 85, 127, 255);
-border-radius: 25px;</string>
+     <string notr="true"> background-color: #333333;</string>
     </property>
     <property name="frameShape">
      <enum>QFrame::StyledPanel</enum>
@@ -33,150 +173,12 @@ border-radius: 25px;</string>
     <property name="frameShadow">
      <enum>QFrame::Raised</enum>
     </property>
-    <widget class="QWidget" name="verticalLayoutWidget">
-     <property name="geometry">
-      <rect>
-       <x>30</x>
-       <y>30</y>
-       <width>391</width>
-       <height>301</height>
-      </rect>
-     </property>
-     <layout class="QVBoxLayout" name="verticalLayout">
-      <item>
-       <widget class="QLabel" name="label_5">
-        <property name="font">
-         <font>
-          <pointsize>20</pointsize>
-          <weight>75</weight>
-          <bold>true</bold>
-         </font>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">color: white;</string>
-        </property>
-        <property name="text">
-         <string>EMPRESTIMO DE LIVRO</string>
-        </property>
-        <property name="alignment">
-         <set>Qt::AlignCenter</set>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QLabel" name="label">
-        <property name="font">
-         <font>
-          <pointsize>12</pointsize>
-          <weight>50</weight>
-          <bold>false</bold>
-         </font>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">color: white;</string>
-        </property>
-        <property name="text">
-         <string>Titulo *</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QLineEdit" name="titulo">
-        <property name="font">
-         <font>
-          <pointsize>15</pointsize>
-         </font>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">background-color: rgb(255, 255, 255);</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QLabel" name="label_2">
-        <property name="font">
-         <font>
-          <pointsize>12</pointsize>
-         </font>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">color: white;</string>
-        </property>
-        <property name="text">
-         <string>Autor </string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QLineEdit" name="autor">
-        <property name="font">
-         <font>
-          <pointsize>15</pointsize>
-         </font>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">background-color: rgb(255, 255, 255);</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QLabel" name="label_3">
-        <property name="font">
-         <font>
-          <pointsize>12</pointsize>
-         </font>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">color: white;</string>
-        </property>
-        <property name="text">
-         <string>Gênero</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QLineEdit" name="genero">
-        <property name="font">
-         <font>
-          <pointsize>15</pointsize>
-         </font>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">background-color: rgb(255, 255, 255);</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QLabel" name="label_4">
-        <property name="styleSheet">
-         <string notr="true">color: white;</string>
-        </property>
-        <property name="text">
-         <string>Preenchimento obrigatório: *</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QLabel" name="label_error">
-        <property name="maximumSize">
-         <size>
-          <width>16777215</width>
-          <height>13</height>
-         </size>
-        </property>
-        <property name="text">
-         <string/>
-        </property>
-       </widget>
-      </item>
-     </layout>
-    </widget>
     <widget class="QWidget" name="horizontalLayoutWidget">
      <property name="geometry">
       <rect>
-       <x>30</x>
-       <y>380</y>
-       <width>391</width>
+       <x>0</x>
+       <y>10</y>
+       <width>601</width>
        <height>61</height>
       </rect>
      </property>
@@ -195,7 +197,8 @@ border-radius: 25px;</string>
          </font>
         </property>
         <property name="styleSheet">
-         <string notr="true">background-color: #FF6F61; color: white; border-radius: 5px;</string>
+         <string notr="true">color: white; border-radius: 5px;
+background-color: rgb(170, 0, 255);</string>
         </property>
         <property name="text">
          <string>Voltar</string>
@@ -216,7 +219,8 @@ border-radius: 25px;</string>
          </font>
         </property>
         <property name="styleSheet">
-         <string notr="true">background-color: #0044cc; color: white; border-radius: 5px;</string>
+         <string notr="true"> color: white; border-radius: 5px;
+background-color: rgb(117, 117, 117);</string>
         </property>
         <property name="text">
          <string>Devolver</string>
@@ -237,7 +241,8 @@ border-radius: 25px;</string>
          </font>
         </property>
         <property name="styleSheet">
-         <string notr="true">background-color: #28a745; color: white; border-radius: 5px;</string>
+         <string notr="true"> color: white; border-radius: 5px;
+background-color: rgb(117, 117, 117);</string>
         </property>
         <property name="text">
          <string>Pegar</string>
@@ -248,23 +253,6 @@ border-radius: 25px;</string>
     </widget>
    </widget>
   </widget>
-  <widget class="QMenuBar" name="menubar">
-   <property name="geometry">
-    <rect>
-     <x>0</x>
-     <y>0</y>
-     <width>591</width>
-     <height>21</height>
-    </rect>
-   </property>
-   <widget class="QMenu" name="menuEmprestimo_Livro">
-    <property name="title">
-     <string>Emprestimo Livro</string>
-    </property>
-   </widget>
-   <addaction name="menuEmprestimo_Livro"/>
-  </widget>
-  <widget class="QStatusBar" name="statusbar"/>
  </widget>
  <resources/>
  <connections/>
