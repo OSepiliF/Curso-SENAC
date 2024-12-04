@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>Sistema de Biblioteca </string>
   </property>
   <property name="styleSheet">
    <string notr="true">background-color: rgb(85, 85, 127);</string>
@@ -23,7 +23,7 @@
       <x>30</x>
       <y>20</y>
       <width>541</width>
-      <height>361</height>
+      <height>271</height>
      </rect>
     </property>
     <layout class="QVBoxLayout" name="verticalLayout">
@@ -108,6 +108,12 @@
      </item>
      <item>
       <widget class="QLabel" name="label_4">
+       <property name="maximumSize">
+        <size>
+         <width>16777215</width>
+         <height>13</height>
+        </size>
+       </property>
        <property name="styleSheet">
         <string notr="true">color: rgb(255, 255, 255);</string>
        </property>
@@ -118,6 +124,12 @@
      </item>
      <item>
       <widget class="QLabel" name="label_error">
+       <property name="maximumSize">
+        <size>
+         <width>16777215</width>
+         <height>13</height>
+        </size>
+       </property>
        <property name="styleSheet">
         <string notr="true">color: red;</string>
        </property>

@@ -7,8 +7,8 @@ class Controller_Livro:
     def __init__(self, window, id_usuario):
         self.window = window
         self.id_usuario = id_usuario
-        self.db = Database("10.28.2.36", "suporte", "suporte", "biblioteca")
-        # self.db = Database("localhost", "root", "suporte", "biblioteca")
+        # self.db = Database("10.28.2.36", "suporte", "suporte", "biblioteca")
+        self.db = Database("localhost", "root", "suporte", "biblioteca")
         self.livro = None
 
     def cadastrar(self, autor, titulo, genero, codigo, label_error):

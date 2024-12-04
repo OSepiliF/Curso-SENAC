@@ -6,8 +6,8 @@ import mysql.connector
 class Controller_Emprestimo:
     def __init__(self, window, id_usuario):
         self.id_usuario = id_usuario
-        self.db = Database("10.28.2.36", "suporte", "suporte", "biblioteca")
-        #self.db = Database("localhost", "root", "suporte", "biblioteca")
+        # self.db = Database("10.28.2.36", "suporte", "suporte", "biblioteca")
+        self.db = Database("localhost", "root", "suporte", "biblioteca")
         self.window = window  
 
     def pegar_emprestimo(self, titulo, autor, genero, label_error):

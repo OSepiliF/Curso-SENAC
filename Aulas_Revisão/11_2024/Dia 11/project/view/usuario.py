@@ -3,7 +3,7 @@ from PyQt5.QtWidgets import QApplication, QMainWindow
 
 from controller.controller_usuario import Controller_Usuario
 
-ui_file = "Aulas_Revisão/11_2024/Dia 11/project/ui/usuario_window.ui"
+ui_file = "Curso-SENAC/Aulas_Revisão/11_2024/Dia 11/project/ui/usuario_window.ui"
 
 class UsuarioWindow(QMainWindow):
     def __init__(self):

@@ -5,22 +5,25 @@ from models.usuario import Usuario
 class Controller_Usuario:
     def __init__(self, window):
         self.window = window
-        self.db = Database("10.28.2.36", "suporte", "suporte", "biblioteca")
-        # self.db = Database("localhost", "root", "suporte", "biblioteca")
+        # self.db = Database("10.28.2.36", "suporte", "suporte", "biblioteca")
+        self.db = Database("localhost", "root", "suporte", "biblioteca")
         self.usuario = None 
 
     def cadastrar(self, nome, cpf, telefone, senha, confirmar_senha, label_error):
         if nome == '' or cpf == '' or telefone == '' or senha == '' or confirmar_senha == '':
             label_error.setStyleSheet('color: red;')
             label_error.setText("Verifique se todos os campos estão preenchidos!")
+            return
 
         elif senha != confirmar_senha:
             label_error.setStyleSheet('color: orange;')
             label_error.setText("Ambos os campos da senha devem ser iguais!")
+            return
 
-        elif len(cpf) < 11 or len(cpf) > 11:
+        elif len(cpf) != 11:
             label_error.setStyleSheet('color: red;')
             label_error.setText("CPF inválido!")
+            return
         
         else:
             try:

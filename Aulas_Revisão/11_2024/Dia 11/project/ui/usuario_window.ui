@@ -9,12 +9,18 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>598</width>
+    <width>601</width>
     <height>500</height>
    </rect>
   </property>
+  <property name="maximumSize">
+   <size>
+    <width>601</width>
+    <height>500</height>
+   </size>
+  </property>
   <property name="windowTitle">
-   <string/>
+   <string>Sistema de Biblioteca </string>
   </property>
   <property name="whatsThis">
    <string notr="true"/>
@@ -170,7 +176,7 @@ background-color: rgb(85, 85, 127);</string>
        <widget class="QLineEdit" name="nome">
         <property name="font">
          <font>
-          <pointsize>15</pointsize>
+          <pointsize>12</pointsize>
          </font>
         </property>
         <property name="styleSheet">
@@ -192,7 +198,7 @@ background-color: rgb(85, 85, 127);</string>
        <widget class="QLineEdit" name="cpf">
         <property name="font">
          <font>
-          <pointsize>15</pointsize>
+          <pointsize>12</pointsize>
          </font>
         </property>
         <property name="styleSheet">
@@ -214,63 +220,75 @@ background-color: rgb(85, 85, 127);</string>
        <widget class="QLineEdit" name="telefone">
         <property name="font">
          <font>
-          <pointsize>15</pointsize>
-         </font>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">border-radius: 5px; padding: 5px; background-color: #f0f0f0;</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QLabel" name="label_7">
-        <property name="styleSheet">
-         <string notr="true">color: rgb(255, 255, 255);</string>
-        </property>
-        <property name="text">
-         <string>Confirmar Senha *</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QLineEdit" name="confirmar_senha">
-        <property name="font">
-         <font>
           <pointsize>12</pointsize>
          </font>
         </property>
         <property name="styleSheet">
          <string notr="true">border-radius: 5px; padding: 5px; background-color: #f0f0f0;</string>
         </property>
-        <property name="echoMode">
-         <enum>QLineEdit::Password</enum>
-        </property>
        </widget>
       </item>
       <item>
-       <widget class="QLabel" name="label_6">
-        <property name="styleSheet">
-         <string notr="true">color: rgb(255, 255, 255);</string>
-        </property>
-        <property name="text">
-         <string>Senha *</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QLineEdit" name="senha">
-        <property name="font">
-         <font>
-          <pointsize>12</pointsize>
-         </font>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">border-radius: 5px; padding: 5px; background-color: #f0f0f0;</string>
-        </property>
-        <property name="echoMode">
-         <enum>QLineEdit::Password</enum>
-        </property>
-       </widget>
+       <layout class="QHBoxLayout" name="horizontalLayout_2">
+        <item>
+         <layout class="QVBoxLayout" name="verticalLayout">
+          <item>
+           <widget class="QLabel" name="label_6">
+            <property name="styleSheet">
+             <string notr="true">color: rgb(255, 255, 255);</string>
+            </property>
+            <property name="text">
+             <string>Senha *</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="senha">
+            <property name="font">
+             <font>
+              <pointsize>12</pointsize>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">border-radius: 5px; padding: 5px; background-color: #f0f0f0;</string>
+            </property>
+            <property name="echoMode">
+             <enum>QLineEdit::Password</enum>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QVBoxLayout" name="verticalLayout_2">
+          <item>
+           <widget class="QLabel" name="label_7">
+            <property name="styleSheet">
+             <string notr="true">color: rgb(255, 255, 255);</string>
+            </property>
+            <property name="text">
+             <string>Confirmar Senha *</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="confirmar_senha">
+            <property name="font">
+             <font>
+              <pointsize>12</pointsize>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">border-radius: 5px; padding: 5px; background-color: #f0f0f0;</string>
+            </property>
+            <property name="echoMode">
+             <enum>QLineEdit::Password</enum>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
       </item>
       <item>
        <widget class="QLabel" name="label_4">
@@ -284,6 +302,12 @@ background-color: rgb(85, 85, 127);</string>
       </item>
       <item>
        <widget class="QLabel" name="label_error">
+        <property name="maximumSize">
+         <size>
+          <width>16777215</width>
+          <height>13</height>
+         </size>
+        </property>
         <property name="text">
          <string/>
         </property>

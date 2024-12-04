@@ -6,9 +6,8 @@ class Usuario:
         self.conexao = conexao  
 
     def validar_cpf(self, cpf):
-        cpf = ''.join(filter(str.isdigit, cpf))  
-        return len(cpf) == 11  
-        
+        return 
+
     def verificar_usuario(self, nome, cpf):
         if nome:
             query = "SELECT * FROM usuario WHERE nome = %s"
@@ -20,23 +19,24 @@ class Usuario:
 
         else:
             return False
-
         return self.cursor.fetchone() is not None
 
         
     def cadastrar_usuario(self, nome, cpf, telefone, senha):
-        if not self.validar_cpf(cpf):
+        if not cpf.isdigit() or len(cpf) != 11:
             print("Erro: CPF inválido.")
             return False
-
+        
         try:
             query = "INSERT INTO usuario (nome, cpf, telefone, senha) VALUES (%s, %s, %s, %s)"
             self.cursor.execute(query, (nome, cpf, telefone, senha))
-            self.conexao.commit() 
+            self.conexao.commit()
             print("Usuário cadastrado com sucesso.")
             return True
+        
+        except mysql.connector.Error as e:
+            print(f"Erro ao cadastrar usuário: {e}")
+            self.conexao.rollback()
+            return False
 
-        except mysql.connector.Error as err:
-            print(f"Erro ao cadastrar usuário: {err}")
-            self.conexao.rollback()  
             
