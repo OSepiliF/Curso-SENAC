@@ -3,7 +3,7 @@ from PyQt5.QtWidgets import QApplication, QMainWindow
 
 from controller.controller_menu import Controller_Menu  
 
-ui_file = "Curso-SENAC/Aulas_Revisão/11_2024/Dia 11/project/ui/menu_window.ui"
+ui_file = "Aulas_Revisão/11_2024/Dia 11/project/ui/menu_window.ui"
 
 class MenuWindow(QMainWindow):
     def __init__(self, id_usuario):

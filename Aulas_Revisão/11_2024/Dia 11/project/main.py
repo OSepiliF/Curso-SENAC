@@ -8,4 +8,5 @@ if __name__ == '__main__':
     loginJanela = LoginWindow()
     loginJanela.show()
     sys.exit(app.exec_())
- 
+
+    print('Abrindo tela de login.')

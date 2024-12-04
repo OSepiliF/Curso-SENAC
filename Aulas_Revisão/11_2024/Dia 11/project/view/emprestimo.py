@@ -1,8 +1,9 @@
 from PyQt5 import uic
 from PyQt5.QtWidgets import QApplication, QMainWindow
+
 from controller.controller_emprestimo import Controller_Emprestimo
 
-ui_file = "Curso-SENAC/Aulas_Revisão/11_2024/Dia 11/project/ui/emprestimo_window.ui"
+ui_file = "Aulas_Revisão/11_2024/Dia 11/project/ui/emprestimo_window.ui"
 
 class EmprestimoWindow(QMainWindow):
     def __init__(self, id_usuario):

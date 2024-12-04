@@ -1,10 +1,9 @@
-import sys
 from PyQt5 import uic
 from PyQt5.QtWidgets import QApplication, QMainWindow
 
 from controller.controller_livro import Controller_Livro
 
-ui_file = "Curso-SENAC/Aulas_Revisão/11_2024/Dia 11/project/ui/livro_window.ui"
+ui_file = "Aulas_Revisão/11_2024/Dia 11/project/ui/livro_window.ui"
 
 class LivroWindow(QMainWindow):
     def __init__(self, id_usuario):
