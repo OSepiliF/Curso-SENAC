@@ -1,0 +1,74 @@
+@import url(./root.css);
+
+
+header {
+    display: flex;
+    max-height: 45px;
+    background-color: #135944;
+    align-items: center;
+    
+}
+#menu-header nav {
+    width: 100%;
+}
+
+#menu-header img {
+    max-height: 60px;
+}
+
+#menu-header button {
+    display: none;
+}
+
+#menu-header>nav>ul {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 15px;
+}
+
+#item-menu>a:hover {
+    background-color: #2c7660;
+
+}
+
+.item-menu a {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #f3be8a;
+    font-size: 15px;
+    padding: 8px 16px;
+    
+}
+
+@media(max-width: 600px) {
+    #menu-header {
+        position: relative;
+    }
+
+    #menu-header button {
+        display: flex;
+        padding: 3px 8px;
+        justify-self: end;
+        margin-right: 20px;
+        
+    }
+
+    #menu-header nav ul {
+        display: none;
+    }
+
+    #menu-header nav ul.ativo{
+        display: flex;
+        position: absolute;
+        z-index: 1;
+        justify-content: center;
+        align-items: center;
+        right: 0;
+        top: 45px;
+        padding-bottom: 10px;
+        width: 100%;
+        flex-direction: column;
+        background-color: #135944;
+    }
+    
+}

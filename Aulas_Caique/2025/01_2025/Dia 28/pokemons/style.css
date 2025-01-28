@@ -1,0 +1,15 @@
+
+#pokemon{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    border: 2px black solid;
+}
+
+#pokemon div > span {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
