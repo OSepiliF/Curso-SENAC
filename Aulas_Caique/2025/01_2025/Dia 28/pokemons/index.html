@@ -7,10 +7,26 @@
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    
-    <h1>Pokedex</h1>
-    <h2>Lista de pokemon's</h2>
-    <main id="pokemon"></main>
+    <nav>
+        <h1>Pokedex</h1>
+        <div class="pesquisar_pokemon">
+            <input type="text" id="pokemon-input" placeholder="Pesquisar pokemon" />
+            <button id="search-button">Pesquisar</button>
+        </div>
+        
+    </nav>
+
+    <main>
+        <div id="pokemon">
+        </div>
+        <div class="botoes_proxima_pag">
+            <button id="voltar-btn">Voltar</button>
+            <button id="proxima-btn">Próximo</button>
+        </div>
+        
+    </main>
+        
     <script src="./main.js"></script>
+    
 </body>
 </html>
