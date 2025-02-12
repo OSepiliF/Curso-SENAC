@@ -1,0 +1,183 @@
+* {
+    margin: 0%;
+    padding: 0%;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: lightblue;
+}
+
+main {
+    min-height: 90vh;
+}
+
+footer {
+    background-color: darkslateblue;
+    color: white;
+    padding: 30px 0;
+    text-align: center;
+}
+
+h1 {
+    font-size: 30px;
+}
+
+h2 {
+    font-size: 15px;
+}
+
+/* start header */
+.info_clinica_vet {
+    width: 100%;
+    height: 100px;
+    display: grid;
+    grid-template-columns: 20% 15% 15% 40%;
+    justify-content: center;
+    align-items: center;
+    column-gap: 2%;
+    background-color: white;
+}
+
+.pata_amiga {
+    display: flex;
+    align-items: center;
+}
+
+.info_clinica_vet img {
+    width: 90px;
+    height: auto;
+    margin-right: 1%;
+}
+
+.contato {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 10%;
+}
+
+.contato img {
+    width: 30px;
+    height: auto;
+    margin-right: 10px;
+}
+
+.endereco, .funcionamento {
+    display: grid;
+}
+
+.funcionamento img {
+    width: 40px;
+    height: auto;
+    margin-right: 10px;
+}
+
+#whatsapp, #telefone {
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    border-radius: 50px;
+    cursor: pointer;
+    user-select: none;
+    background-color: aquamarine;
+}
+
+#whatsapp h2, #telefone h2 {
+    font-size: 15px;    
+}
+
+/* start nav_bar */
+.nav_bar {
+    width: 100%;
+    height: 50px;
+    background-color:darkslateblue;
+    display: flex;
+    column-gap: 60px;
+    justify-content: center;
+    align-items: center;
+    justify-self: center;
+    
+}
+
+.nav_bar a {
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+}
+/* end nav_bar */
+/* end header */
+
+/* start carrossel_container  */
+.carrossel_container {
+    display: flex;
+    position: relative;
+    box-sizing: border-box;
+    overflow: hidden;
+    width: 60%;
+    height: 500px;
+    justify-self: center;
+    justify-content: center;
+}
+
+.carrossel {
+    display: flex;
+    justify-content: center;
+    width: 200%; 
+    animation: slide 10s infinite; 
+}
+
+.carrossel img {
+    width: 900px;
+    height: 600px;
+
+}
+
+
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+    25% {
+        transform: translateX(-50%);
+    }
+    50% {
+        transform: translateX(-200%);
+    }
+    
+}
+
+
+
+
+
+/* start footer */
+.footer_container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 0 10%;
+}
+
+.footer_container img {
+    width: 200px;
+    height: 100%;
+    justify-self: center;
+}
+
+.footer_info {
+    font-size: 0.9em;
+}
+
+.footer_info p {
+    margin-bottom: 10px;
+}
+
+.footer_contatos h3 {
+    font-size: 35px;
+    margin-bottom: 15px;
+}
+/* end footer */
