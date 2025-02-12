@@ -8,10 +8,6 @@ body {
     background-color: lightblue;
 }
 
-main {
-    min-height: 90vh;
-}
-
 footer {
     background-color: darkslateblue;
     color: white;
@@ -42,6 +38,10 @@ h2 {
 .pata_amiga {
     display: flex;
     align-items: center;
+}
+
+.pata_amiga h1 {
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .info_clinica_vet img {
@@ -97,7 +97,6 @@ h2 {
     justify-content: center;
     align-items: center;
     justify-self: center;
-    
 }
 
 .nav_bar a {
@@ -110,46 +109,110 @@ h2 {
 /* end header */
 
 /* start carrossel_container  */
-.carrossel_container {
-    display: flex;
-    position: relative;
-    box-sizing: border-box;
-    overflow: hidden;
-    width: 60%;
-    height: 500px;
-    justify-self: center;
-    justify-content: center;
-}
-
 .carrossel {
+    position: relative;
+    width: 100%;
+    height: 800px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    border-bottom: 50px darkslateblue solid;
+}
+
+.container_carrossel {
     display: flex;
+    width: 400%;
+    transition: transform 2s ease-in-out;
+}
+
+.item_carrossel {
+    display: flex;
+    width: 100%;
+    height: 800px;
+    position: relative;
+    align-items: center;
     justify-content: center;
-    width: 200%; 
-    animation: slide 10s infinite; 
+    background-size: cover; 
+    background-position: center; 
 }
 
-.carrossel img {
-    width: 900px;
-    height: 600px;
-
+.bg_carrossel {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, black, transparent); 
+    background-blend-mode: overlay;
 }
 
-
-@keyframes slide {
-    0% {
-        transform: translateX(0);
-    }
-    25% {
-        transform: translateX(-50%);
-    }
-    50% {
-        transform: translateX(-200%);
-    }
-    
+.item_carrossel:nth-child(1) {
+    background-image: url('../img/carrossel_1.jpg');
 }
 
+.item_carrossel:nth-child(2) {
+    background-image: url('../img/carrossel_2.jpg');
+}
 
+.item_carrossel:nth-child(3) {
+    background-image: url('../img/carrossel_3.jpg');
+}
 
+.item_carrossel:nth-child(4) {
+    background-image: url('../img/carrossel_4.jpg');
+}
+
+.text_carrossel {
+    position: absolute;
+    top: 65%;
+    left: 5%;
+    width: 25%;
+    height: auto;
+    transform: translateY(-50%);
+    padding: 30px 60px;
+    text-align: left;
+}
+
+.text_carrossel h1 {
+    font-size: 70px;
+    margin-bottom: 15px;
+    user-select: none;
+    margin-top: 20%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+}
+
+.text_carrossel h2 {
+    font-size: 20px;
+    line-height: 1.5;
+    user-select: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+}
+
+button {
+    position: absolute;
+    top: 50%;
+    color: white;
+    border: none;
+    padding: 30px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 30px;
+    background-color: transparent;
+    transition: all 0.5s ease;
+    transform: translateY(-50%);
+}
+
+button:hover {
+    background-color: darkslateblue;
+    transform: translateY(-50%) scale(1.2);
+}
+
+#prev {
+    left: 10px;
+}
+
+#next {
+    right: 10px;
+}
 
 
 /* start footer */
