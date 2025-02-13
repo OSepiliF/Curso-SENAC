@@ -1,0 +1,81 @@
+body {
+    background-color: aliceblue;
+}
+
+/* start serviços */
+.content_itens_servicos {
+    width: 60%;
+    justify-content: center;
+    align-items: center;
+    justify-self: center;
+    padding: 1%;
+}
+
+.content_itens_servicos h1 {
+    text-align: center;
+}
+
+.conteiner_opcoes {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 15px;
+    margin: 2%;
+}
+
+.servico_opcao {
+    width: 100%;
+    max-width: 800px; 
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.informacoes_cliente {
+    display: flex;
+    width: 80%;
+    flex-direction: column;
+    justify-self: center;
+}
+
+
+.informacoes_cliente label {
+    margin-top: 10px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.informacoes_cliente input {
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+button {
+    display: flex;
+    justify-self: center;
+    margin: 1%;
+    margin-bottom: 2%;
+    padding: 10px 60px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+button:focus {
+    outline: none;
+}
+
+/* end serviços */

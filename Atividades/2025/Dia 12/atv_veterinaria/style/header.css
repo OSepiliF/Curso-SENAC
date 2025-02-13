@@ -1,0 +1,102 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    user-select: none;
+}
+
+h1 {
+    font-size: 30px;
+}
+
+h2 {
+    font-size: 15px;
+}
+
+/* start header */
+.info_clinica_vet {
+    width: 100%;
+    height: 100px;
+    display: grid;
+    grid-template-columns: 20% 15% 15% 40%;
+    justify-content: center;
+    align-items: center;
+    column-gap: 2%;
+    background-color: white;
+}
+
+.pata_amiga {
+    display: flex;
+    align-items: center;
+}
+
+.logo_pata_amiga {
+    width: 90px;
+    height: auto;
+    margin-right: 1%;
+}
+
+.pata_text_img {
+    width: 200px;
+    height: auto;
+    margin-top: 2%;
+    margin-left: 2%;
+}
+
+.contato {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 10%;
+}
+
+.contato img {
+    width: 30px;
+    height: auto;
+    margin-right: 10px;
+}
+
+.endereco, .funcionamento {
+    display: grid;
+}
+
+.funcionamento img {
+    width: 40px;
+    height: auto;
+    margin-right: 10px;
+}
+
+#whatsapp, #telefone {
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    border-radius: 50px;
+    cursor: pointer;
+    user-select: none;
+    background-color: aliceblue;
+}
+
+#whatsapp h2, #telefone h2 {
+    font-size: 15px;    
+}
+
+/* start nav_bar */
+.nav_bar {
+    width: 100%;
+    height: 50px;
+    background-color:darkslateblue;
+    display: flex;
+    column-gap: 60px;
+    justify-content: center;
+    align-items: center;
+    justify-self: center;
+}
+
+.nav_bar a {
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+}
+/* end nav_bar */
+/* end header */

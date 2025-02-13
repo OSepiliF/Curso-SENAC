@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pata Amiga</title>
-    <link rel="stylesheet" href="../style/style.css">
+    <link rel="stylesheet" href="../style/servicos.css">
     <link rel="stylesheet" href="../style/header.css">
     <link rel="stylesheet" href="../style/footer.css">
 </head>
@@ -46,15 +46,15 @@
 
         <nav class="nav_bar">
             <div class="nav_item">
-                <a href="#">Home</a>
+                <a href="./index.html">Home</a>
 
             </div>
             <div class="nav_item">
-                <a href="#sobre">Sobre</a>
+                <a href="./index.html#sobre">Sobre</a>
             
             </div>
             <div class="nav_item">
-                <a href="./servicos.html">Serviços </a>
+                <a href="#">Serviços </a>
             
             </div>
             <div class="nav_item">
@@ -65,62 +65,50 @@
     </header>
 
     <main>
-        <div class="carrossel">
-            <div class="container_carrossel">
-                <div class="item_carrossel">
-                    <div class="bg_carrossel"></div>
-                    <div class="text_carrossel">
-                        <h1>Atendimento 24 Horas</h1>
-                        <h2>
-                            "Estamos sempre prontos para cuidar do seu pet a qualquer hora! Atendimento completo para garantir a saúde e bem-estar do seu amigo de quatro patas."
-                        </h2>
+        <div class="content_itens_servicos">
+            <h1>Serviços Oferecidos</h1>
+    
+            <form action="submit_servico" method="POST">
+                <div class="conteiner_opcoes">
+                    <div class="servico_opcao">
+                        <input type="radio" id="consulta" name="servico" value="Consulta Veterinária">
+                        <label for="consulta">Consultas Veterinárias</label>
+                    </div>
+                    <div class="servico_opcao">
+                        <input type="radio" id="vacinas" name="servico" value="Vacinas e Prevenção">
+                        <label for="vacinas">Vacinas e Prevenção</label>
+                    </div>
+                    <div class="servico_opcao">
+                        <input type="radio" id="cirurgias" name="servico" value="Cirurgias">
+                        <label for="cirurgias">Cirurgias</label>
+                    </div>
+                    <div class="servico_opcao">
+                        <input type="radio" id="emergencia" name="servico" value="Emergência 24h">
+                        <label for="emergencia">Emergência 24h</label>
                     </div>
                 </div>
                 
-                <div class="item_carrossel">
-                    <div class="bg_carrossel"></div>
-                    <div class="text_carrossel">
-                        <h1>Consultas Veterinárias</h1>
-                        <h2>
-                            "Cuidamos de todos os tipos de animais com carinho e dedicação. Nossos profissionais estão preparados para proporcionar o melhor atendimento."
-                        </h2>
-                    </div>
+    
+                <div class="informacoes_cliente">
+                    <label for="nome">Nome do Cliente:</label>
+                    <input type="text" id="nome" name="nome" required>
+    
+                    <label for="telefone_input">Telefone para Contato:</label>
+                    <input type="tel" id="telefone_input" name="telefone_input" required>
+    
+                    <label for="data">Data da Consulta:</label>
+                    <input type="date" id="data" name="data" required>
                 </div>
-                
-                <div class="item_carrossel">
-                    <div class="bg_carrossel"></div>
-                    <div class="text_carrossel">
-                        <h1>Exames de Diagnóstico</h1>
-                        <h2>
-                            "Realizamos exames completos para diagnosticar qualquer problema de saúde, garantindo que seu pet receba o tratamento adequado."
-                        </h2>
-                    </div>
-                </div>
-            
-                <div class="item_carrossel">
-                    <div class="bg_carrossel"></div>
-                    <div class="text_carrossel">
-                        <h1>Clínica Completa</h1>
-                        <h2>
-                            "Oferecemos serviços veterinários de alta qualidade, com uma equipe especializada e equipamentos modernos para o cuidado do seu pet."
-                        </h2>
-                    </div>
-                </div>
-            </div>
-            
-            <button id="prev">&#10094;</button>
-            <button id="next">&#10095;</button>
+    
+                <button type="submit">Marcar Consulta</button>
+            </form>
         </div>
-        <section id="sobre" class="sobre">
-            <h2>Sobre</h2>
-            <p>
-                A Pata Amiga é uma clínica veterinária dedicada ao bem-estar dos pets, com profissionais especializados
-                e equipamentos de última geração. Oferecemos serviços de qualidade para garantir a saúde e felicidade
-                dos seus animais, com amor e responsabilidade.
-            </p>
-        </section>
     </main>
-
+    
+    
+    
+    
+    
     <footer>
         <div class="footer_container">
             <div class="footer_info">
