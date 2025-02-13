@@ -8,8 +8,8 @@
     <link rel="stylesheet" href="../style/header.css">
     <link rel="stylesheet" href="../style/footer.css">
 </head>
-    <body>
-        <header>
+<body>
+    <header>
         <div class="info_clinica_vet">
             <div class="pata_amiga">
                 <img src="../img/pata.png" alt="Logo Pata Amiga" class="logo_pata_amiga">
@@ -65,47 +65,47 @@
     </header>
 
     <main>
-        <div class="content_itens_servicos">
-            <h1>Serviços Oferecidos</h1>
-    
-            <form action="submit_servico" method="POST">
-                <div class="conteiner_opcoes">
-                    <div class="servico_opcao">
-                        <input type="radio" id="consulta" name="servico" value="Consulta Veterinária">
-                        <label for="consulta">Consultas Veterinárias</label>
-                    </div>
-                    <div class="servico_opcao">
-                        <input type="radio" id="vacinas" name="servico" value="Vacinas e Prevenção">
-                        <label for="vacinas">Vacinas e Prevenção</label>
-                    </div>
-                    <div class="servico_opcao">
-                        <input type="radio" id="cirurgias" name="servico" value="Cirurgias">
-                        <label for="cirurgias">Cirurgias</label>
-                    </div>
-                    <div class="servico_opcao">
-                        <input type="radio" id="emergencia" name="servico" value="Emergência 24h">
-                        <label for="emergencia">Emergência 24h</label>
-                    </div>
+        <div class="container_servicos">
+            <!-- Serviço 1: Consulta Veterinária -->
+            <div class="servico_item">
+                <img src="..//img/servicos/consulta_veterinaria.jpg" alt="Consulta Veterinária">
+                <div class="text_servicos">
+                    <h1>Consulta Veterinária</h1>
+                    <h2>
+                        Oferecemos atendimentos clínicos especializados para diagnóstico de doenças e cuidados gerais. 
+                        Nossa equipe de veterinários experientes está preparada para ajudar a garantir a saúde do seu pet. 
+                        Realizamos avaliações completas e tratamos desde condições comuns até casos mais complexos.
+                    </h2>
                 </div>
-                
-    
-                <div class="informacoes_cliente">
-                    <label for="nome">Nome do Cliente:</label>
-                    <input type="text" id="nome" name="nome" required>
-    
-                    <label for="telefone_input">Telefone para Contato:</label>
-                    <input type="tel" id="telefone_input" name="telefone_input" required>
-    
-                    <label for="data">Data da Consulta:</label>
-                    <input type="date" id="data" name="data" required>
+            </div>
+        
+            <!-- Serviço 2: Vacinação -->
+            <div class="servico_item">
+                <div class="text_servicos">
+                    <h1>Vacinação</h1>
+                    <h2>
+                        A vacinação é fundamental para proteger seu animal de doenças graves e contagiosas. 
+                        Oferecemos vacinas atualizadas, seguindo as melhores práticas e recomendações veterinárias. 
+                        Mantenha seu pet saudável e livre de riscos, com um calendário de vacinação adequado à sua idade e necessidades.
+                    </h2>
                 </div>
-    
-                <button type="submit">Marcar Consulta</button>
-            </form>
-        </div>
+                <img src="../img/servicos/vacinacao.jpg" alt="Vacinação">
+            </div>
+        
+            <!-- Serviço 3: Cirurgias -->
+            <div class="servico_item">
+                <img src="../img/servicos/cirurgia.jpg" alt="Cirurgia">
+                <div class="text_servicos">
+                    <h1>Cirurgias</h1>
+                    <h2>
+                        Realizamos procedimentos cirúrgicos com total segurança e cuidados especializados. 
+                        Desde pequenas cirurgias até procedimentos mais complexos, garantimos a saúde e bem-estar do seu pet. 
+                        A recuperação é acompanhada de perto para que seu animal se recupere rapidamente e sem complicações.
+                    </h2>
+                </div>
+            </div>
+        </div>        
     </main>
-    
-    
     
     
     
