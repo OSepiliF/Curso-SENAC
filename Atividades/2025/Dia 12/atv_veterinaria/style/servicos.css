@@ -1,15 +1,14 @@
 body {
-    background-image: url("../img/servicos/PATINHAS.gif");
+    background-image: url("../img/PATINHAS.gif");
     background-size: 500px 500px; 
     background-position: center;                           
     width: 100%;
-    height: 100vh;                                                                
+    height: 100%;                                                                
 }
 
 main {
     background: linear-gradient(to right, black 5%, rgba(0, 0, 0, 0.8) 30%, transparent 100%);
 }
-
 
 /* start destaque_servicos */
 .destaque_servicos {
@@ -17,7 +16,6 @@ main {
     text-align: center;
     color: white;
     font-size: 22px;
-    background: linear-gradient(to right, rgba(0, 0, 0, 0.8), transparent);
     padding: 60px 0px;
     margin-bottom: 2%;
 }
@@ -25,7 +23,6 @@ main {
 .destaque_servicos h1 {
     margin-top: 5%;
     font-size: 55px;
-    color: darkslateblue;
 }
 
 .destaque_servicos h2 {
@@ -38,11 +35,7 @@ main {
 .container_servicos {
     width: 100%;
     height: 100%;
-    margin: auto;
-    
-    backdrop-filter: blur(15px);
-    -webkit-backdrop-filter: blur(15px);
-    background: rgba(0, 0, 0, 0.4); 
+    margin: auto;   
   
     display: flex;
     flex-direction: column;
@@ -51,7 +44,8 @@ main {
 }
 
 .container_servicos img {
-    width: 600px;
+    width: 100%;
+    max-width: 600px;
     height: auto;
     justify-self: center;
     border-radius: 10px;
@@ -95,7 +89,6 @@ main {
     font-size: 40px;
     text-transform: uppercase;
 }
-
 /* end serviços */
 
 /* start faq_anddepoimentos_container */
@@ -161,11 +154,12 @@ main {
 .faq_item details[open] {
     width: 100%; 
     justify-self: center;
+    color: white;
 }
 /*  end faq_and_depoimentos_container */
 
+/* start contato_container  */
 .contato_container {
-    
     margin-top: 5%;
     width: 100%;
     background: linear-gradient(to right, rgba(0, 0, 0, 0.8), transparent);
@@ -193,6 +187,33 @@ main {
     transition: 0.3s;
 }
 
-.contato button:hover {
-    background: slateblue;
+button:hover {
+    background-color: darkslateblue;
+    transform: translateY(-5%) scale(1.02);
+}
+
+/* end contato_container */
+
+@media(max-width: 1250px) and (min-width: 800px) {
+    .faq_and_depoimentos_container {
+        display: grid;
+        grid-template-columns: 600px;
+        justify-content: center;
+        align-items: start;
+        justify-self: center;
+        column-gap: 5%;
+    }
+
+    .contato button {
+        width: 50%;
+        padding: 1%;
+        border: none;
+        font-size: 25px;
+        cursor: pointer;
+        border-radius: 5px;
+        margin-bottom: 2%;
+        background: darkslateblue;
+        color: white;
+        transition: 0.3s;
+    }
 }

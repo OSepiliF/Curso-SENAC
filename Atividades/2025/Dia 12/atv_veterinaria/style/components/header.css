@@ -5,6 +5,12 @@
     user-select: none;
 }
 
+iframe {
+    display: block;
+    width: 100%;
+    border: none;
+}
+
 h1 {
     font-size: 30px;
 }
@@ -18,7 +24,7 @@ h2 {
     width: 100%;
     height: 100px;
     display: grid;
-    grid-template-columns: 20% 20% 20% 30%;
+    grid-template-columns: 25% auto 35%;
     justify-content: center;
     align-items: center;
     column-gap: 2%;
@@ -26,14 +32,14 @@ h2 {
 }
 
 .pata_amiga {
+    width: min-content;
     display: flex;
     align-items: center;
 }
 
 .logo_pata_amiga {
-    width: 90px;
+    width: 80px;
     height: auto;
-    margin-right: 1%;
 }
 
 .pata_text_img {
@@ -43,9 +49,16 @@ h2 {
     margin-left: 2%;
 }
 
+.descricao_header {
+    display: grid;
+    grid-template-columns: max-content max-content;
+    column-gap: 10%;
+    justify-self: center;
+}
+
 .contato {
     display: flex;
-    justify-content: center;
+    justify-content: end;
     align-items: center;
     column-gap: 10%;
 }
@@ -56,18 +69,8 @@ h2 {
     margin-right: 10px;
 }
 
-.endereco, .funcionamento {
-    display: grid;
-}
-
-.funcionamento img {
-    width: 40px;
-    height: auto;
-    margin-right: 10px;
-}
-
 #whatsapp, #telefone {
-    padding: 10px 20px;
+    padding: 1% 2%;
     display: flex;
     align-items: center;
     border-radius: 50px;
@@ -111,8 +114,53 @@ h2 {
 /* end nav_bar */
 /* end header */
 
-iframe {
-    display: block;
-    width: 100%;
-    border: none;
+@media(max-width: 1250px) and (min-width: 800px) {
+    .info_clinica_vet {
+        width: 100%;
+        height: 100px;
+        display: grid;
+        grid-template-columns: auto 60%;
+        grid-template-rows: 50px 50px;
+        justify-content: center;
+        align-items: center;
+        column-gap: 2%;
+        background-color: white;
+
+    }
+
+    .pata_amiga {
+        width: min-content;
+        display: flex;
+        align-items: center;
+        grid-area: 1 / 1 / 3 / 1;
+    }    
+
+    .descricao_header {
+        display: grid;
+        grid-template-columns: max-content max-content;
+        grid-template-rows: 50px;
+        justify-content: end;
+        align-items: center;
+        justify-self: end   ;
+    }
+
+    .contato {
+        display: flex;
+        justify-content: end;
+        align-items: center;
+    }
+
+    .contato h2, .contato p {
+        font-size: 12px;
+    }
+
+    #whatsapp, #telefone {
+        height: 40px;
+        display: flex;
+        align-items: center;
+        border-radius: 50px;
+        cursor: pointer;
+        background-color: aliceblue;
+        padding: 0.5% 2%;
+    }
 }

@@ -3,14 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pata Amiga</title>
+    <title>Agendar Consulta</title>
     <link rel="stylesheet" href="../style/exames.css">
     <link rel="stylesheet" href="../style/components/header.css">
     <link rel="stylesheet" href="../style/components/footer.css">
+    <link rel="stylesheet" href="../style/components/bg.css">
 </head>
 <body>
-    <iframe src="./components/header.html" style="border: none; width: 100%; height: 151px"></iframe>
+    <main>
+        <iframe src="./components/header.html" style="border: none; width: 100%; height: 151px"></iframe>
 
-    <iframe src="./components/footer.html" style="width: 100%; height: 260px"></iframe>
+        <div class="agendar_consulta">
+            <h1>Agende sua Consulta</h1>
+            <form action="/path-to-submit" method="POST">
+                <div class="form_group">
+                    <label for="nome">Nome Completo:</label>
+                    <input type="text" id="nome" name="nome" required>
+                </div>
+                <div class="form_group">
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form_group">
+                    <label for="telefone_exames">Telefone:</label>
+                    <input type="tel" id="telefone_exames" name="telefone_exames" required>
+                </div>
+                <div class="form_group">
+                    <label for="data_consulta">Data da Consulta:</label>
+                    <input type="date" id="data_consulta" name="data_consulta" required>
+                </div>
+                <div class="form_group">
+                    <label for="tipo_exame">Tipo de Exame:</label>
+                    <select id="tipo_exame" name="tipo_exame" required>
+                        <option value="exame1">Exame 1</option>
+                        <option value="exame2">Exame 2</option>
+                        <option value="exame3">Exame 3</option>
+                    </select>
+                </div>
+                <button type="submit">Agendar Consulta</button>
+            </form>
+        </div>
+
+        <iframe src="./components/footer.html" style="width: 100%; height: 260px"></iframe>
+    </main>
 </body>
 </html>
