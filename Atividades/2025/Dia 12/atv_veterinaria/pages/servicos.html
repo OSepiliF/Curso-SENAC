@@ -1,74 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pata Amiga</title>
+    <title>Pata Amiga - Serviços</title>
     <link rel="stylesheet" href="../style/servicos.css">
-    <link rel="stylesheet" href="../style/header.css">
-    <link rel="stylesheet" href="../style/footer.css">
+    <link rel="stylesheet" href="../style/components/header.css">
+    <link rel="stylesheet" href="../style/components/footer.css">
 </head>
 <body>
-    <header>
-        <div class="info_clinica_vet">
-            <div class="pata_amiga">
-                <img src="../img/pata.png" alt="Logo Pata Amiga" class="logo_pata_amiga">
-                <img src="../img/pata_img.png" alt="" class="pata_text_img">
-            </div>
-            
-            <div class="endereco">
-               <h2>R. Sei lá Onde - Pata de Ouro </h2>  
-               <p>- Campo Grande - MS, 79091-92 </p> 
-            </div>
-
-            <div class="funcionamento">
-                <h2>Horário de funcionamento:</h2>
-                <p>-Atendimento 24 Horas</p>
-            </div>
-
-            <div class="contato">
-                <div href="#" id="whatsapp">
-                    <img src="../img/icon_whatsapp.svg" alt="">
-                    <div>
-                        <h2>Chama no Whats</h2>
-                        <p>(67) 99912-9991</p>
-                    </div>
-                </div>
-                <div href="#" id="telefone">
-                <img src="../img/icon_telefone.svg" alt="">
-                    <div>
-                    <h2>Ligar Agora</h2>
-                        <p>(67) 99312-9291</p> 
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <nav class="nav_bar">
-            <div class="nav_item">
-                <a href="./index.html">Home</a>
-
-            </div>
-            <div class="nav_item">
-                <a href="./index.html#sobre">Sobre</a>
-            
-            </div>
-            <div class="nav_item">
-                <a href="#">Serviços </a>
-            
-            </div>
-            <div class="nav_item">
-                <a href="#">Exames</a>
-            
-            </div>
-        </nav>
-    </header>
+    <iframe src="./components/header.html" frameborder="0" style="width: 100%; height: 151px;"></iframe>
 
     <main>
         <div class="container_servicos">
-            <!-- Serviço 1: Consulta Veterinária -->
+            <!-- Seção de Destaque -->
+            <div class="destaque_servicos">
+                <h2>Cuidados de Qualidade para seu Pet</h1>
+                <p>Conheça nossos serviços especializados para garantir a saúde e o bem-estar do seu melhor amigo.</p>
+                <h1>Nossos Serviços</h1>
+            </div>
+
             <div class="servico_item">
-                <img src="..//img/servicos/consulta_veterinaria.jpg" alt="Consulta Veterinária">
+                <img src="../img/servicos/consulta_veterinaria.jpg" alt="Consulta Veterinária">
                 <div class="text_servicos">
                     <h1>Consulta Veterinária</h1>
                     <h2>
@@ -78,8 +31,8 @@
                     </h2>
                 </div>
             </div>
-        
-            <!-- Serviço 2: Vacinação -->
+            <hr>
+
             <div class="servico_item">
                 <div class="text_servicos">
                     <h1>Vacinação</h1>
@@ -91,8 +44,8 @@
                 </div>
                 <img src="../img/servicos/vacinacao.jpg" alt="Vacinação">
             </div>
-        
-            <!-- Serviço 3: Cirurgias -->
+            <hr>
+
             <div class="servico_item">
                 <img src="../img/servicos/cirurgia.jpg" alt="Cirurgia">
                 <div class="text_servicos">
@@ -104,25 +57,59 @@
                     </h2>
                 </div>
             </div>
-        </div>        
+            <hr> 
+            
+            <div class="faq_and_depoimentos_container">
+                <div class="depoimentos">
+                    <h2>O que nossos clientes dizem:</h2>
+                    <div class="depoimento_item">
+                        <p>"Ótimo atendimento! Meu cachorro foi muito bem cuidado. Os veterinários são muito atenciosos e explicaram tudo com detalhes. Recomendo para qualquer tutor que queira um atendimento de qualidade!"</p>
+                        <span>- Ana Souza</span>
+                    </div>
+                    <div class="depoimento_item">
+                        <p>"Equipe extremamente profissional e carinhosa. Meu gato precisou passar por um procedimento e fiquei impressionado com o cuidado e a paciência de toda a equipe. Meu pet se recuperou rápido e sem complicações!"</p>
+                        <span>- Marcos Oliveira</span>
+                    </div>
+                </div>
+            
+                <div class="faq">
+                    <h2>Perguntas Frequentes:</h2>
+                    <div class="faq_item">
+                        <details>
+                            <summary>Quais animais são atendidos?</summary>
+                            <p>Atendemos cães e gatos de todas as raças e idades. Nossa equipe está preparada para lidar com diferentes necessidades e oferecer o melhor atendimento para o seu pet.</p>
+                        </details>
+                    </div>
+                    <div class="faq_item">
+                        <details>
+                            <summary>Preciso agendar consulta?</summary>
+                            <p>Sim, recomendamos que você agende previamente para garantir um atendimento rápido e eficiente. No entanto, também atendemos emergências sem agendamento.</p>
+                        </details>
+                    </div>
+                    <div class="faq_item">
+                        <details>
+                            <summary>Quais formas de pagamento são aceitas?</summary>
+                            <p>Aceitamos dinheiro, cartões de crédito e débito, além de pagamento via Pix. Parcelamos procedimentos cirúrgicos em até 3x sem juros.</p>
+                        </details>
+                    </div>
+                    <div class="faq_item">
+                        <details>
+                            <summary>Vocês realizam atendimentos a domicílio?</summary>
+                            <p>Sim! Oferecemos atendimentos a domicílio para consultas e vacinas em casos específicos. Entre em contato para mais informações e disponibilidade.</p>
+                        </details>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contato_container">
+                <section class="contato">
+                    <button onclick="window.location.href='./exames.html'">Agendar Agora</button>
+                    <p>Entre em contato conosco para mais informações sobre nossos serviços. Nossa equipe está pronta para esclarecer suas dúvidas e garantir o melhor atendimento para seu pet.</p>
+                </section>
+            </div>  
+        </div> 
     </main>
     
-    
-    
-    <footer>
-        <div class="footer_container">
-            <div class="footer_info">
-                <p>&copy; 2025 Pata Amiga - Todos os direitos reservados</p>
-                <p>Endereço: R. Sei lá Onde - Pata de Ouro, Campo Grande - MS, 79091-92</p>
-            </div>
-            <img src="../img/pata.png" alt="">
-            <div class="footer_contatos">
-                <h3>Contato</h3>
-                <p><strong>WhatsApp:</strong> (67) 99912-9991</p>
-                <p><strong>Telefone:</strong> (67) 99312-9291</p>
-            </div>
-        </div>
-    </footer>
-    <script src="../js/script.js"></script>
+    <iframe src="./components/footer.html" style="width: 100%; height: 260px"></iframe>
 </body>
 </html>

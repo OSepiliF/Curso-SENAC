@@ -1,8 +1,18 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    user-select: none;
+}
+
 footer {
     background-color: darkslateblue;
     color: white;
     padding: 30px 0;
     text-align: center;
+    display: block;
+    width: 100%;
+    border: none;
 }
 
 /* start footer */

@@ -93,10 +93,26 @@ h2 {
 }
 
 .nav_bar a {
+    display: block; 
     text-align: center;
     color: white;
     font-size: 20px;
     text-decoration: none;
+    padding: 10px 20px; 
+    transition: background 0.2s ease-in-out;
+    width: 100%; 
 }
+
+.nav_bar a:active, .nav_bar a:hover {
+    background: rgba(0, 0, 0, 0.3); 
+    border-radius: 5px; 
+}
+
 /* end nav_bar */
 /* end header */
+
+iframe {
+    display: block;
+    width: 100%;
+    border: none;
+}

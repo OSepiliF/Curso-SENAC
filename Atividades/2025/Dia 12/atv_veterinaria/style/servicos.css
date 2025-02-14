@@ -1,43 +1,198 @@
 body {
-    background-image: 
-        url("../img/servicos/bg_img.jpg"),        
-        linear-gradient(to bottom, black, transparent); /* tenta colocar isso */
-    background-size: cover;                    
-    background-position: center;                
-    background-repeat: no-repeat;               
+    background-image: url("../img/servicos/PATINHAS.gif");
+    background-size: 500px 500px; 
+    background-position: center;                           
     width: 100%;
-    height: 100vh;                               
-    margin: 0;                                   
+    height: 100vh;                                                                
+}
+
+main {
+    background: linear-gradient(to right, black 5%, rgba(0, 0, 0, 0.8) 30%, transparent 100%);
 }
 
 
+/* start destaque_servicos */
+.destaque_servicos {
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-size: 22px;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.8), transparent);
+    padding: 60px 0px;
+    margin-bottom: 2%;
+}
+
+.destaque_servicos h1 {
+    margin-top: 5%;
+    font-size: 55px;
+    color: darkslateblue;
+}
+
+.destaque_servicos h2 {
+    font-size: 30px;
+    
+}
+/* end destaque_servicos */
+
 /* start serviços */
+.container_servicos {
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    background: rgba(0, 0, 0, 0.4); 
+  
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
 .container_servicos img {
-    width: 500px;
+    width: 600px;
     height: auto;
     justify-self: center;
+    border-radius: 10px;
+}
+
+.container_servicos hr {
+    width: 50px;
+    height: 1px;
+    background-color: blueviolet;
+    border: none;
+    margin: 5%;
+}
+
+.container_servicos {
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
 .servico_item {
     display: grid;
-    grid-template-columns: 30% 30%;
-    flex-direction: column;
-    justify-self: center;
+    width: 80%;
+    grid-template-columns: 1fr 1fr;
     justify-content: center;
     align-items: center; 
-    column-gap: 5%; 
-    margin: 100px auto;  
-    
 }
 
 .text_servicos {
     width: 100%;
     text-align: center;
     color: white;
+    padding: 20px;
+    justify-self: center;
 }
 
 .text_servicos h1 {
-    margin-bottom: 2%;
+    margin-bottom: 10px;
+    font-size: 40px;
+    text-transform: uppercase;
 }
 
 /* end serviços */
+
+/* start faq_anddepoimentos_container */
+.faq_and_depoimentos_container {
+    display: grid;
+    grid-template-columns: 800px 800px;
+    justify-content: center;
+    align-items: start;
+    justify-self: center;
+    column-gap: 5%;
+}
+
+.depoimentos h2, .faq h2 {
+    color: white;
+    font-size: 25px;
+    text-align: center;
+}
+
+.depoimentos {
+    text-align: center;
+    color: white;
+}
+
+.depoimento_item {
+    width: 100%;
+    margin: 10px auto;
+    padding: 2%;
+    border-radius: 10px;
+    font-style: italic;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+}
+
+.depoimento_item span {
+    display: block;
+    margin-top: 5px;
+    font-weight: bold;
+    color: darkslateblue;
+}
+
+.faq {
+    box-sizing: border-box;
+    width: 100%;
+    text-align: center;
+}
+
+.faq_item details summary {
+    font-weight: bold;
+    font-size: 18px;
+    color: darkslateblue;
+}
+
+.faq_item details {
+    width: 100%;
+    justify-self: center;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 1%;
+    margin: 10px 0;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.faq_item details[open] {
+    width: 100%; 
+    justify-self: center;
+}
+/*  end faq_and_depoimentos_container */
+
+.contato_container {
+    
+    margin-top: 5%;
+    width: 100%;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.8), transparent);
+    justify-content: center;
+}
+
+.contato {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 40px 0px;
+    color: white;
+}
+
+.contato button {
+    width: 20%;
+    padding: 1%;
+    border: none;
+    font-size: 25px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-bottom: 2%;
+    background: darkslateblue;
+    color: white;
+    transition: 0.3s;
+}
+
+.contato button:hover {
+    background: slateblue;
+}
