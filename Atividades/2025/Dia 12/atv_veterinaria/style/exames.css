@@ -92,7 +92,7 @@ button:hover {
 }
 /* end agendar_consulta */
 
-@media(max-width: 1250px) and (min-width: 800px) {
+@media(max-width: 768px) {
     .agendar_consulta form {
         width: 60%;
         background: rgba(255, 255, 255, 0.1);
