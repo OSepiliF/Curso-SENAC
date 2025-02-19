@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>01</title>
+</head>
+<body>
+    <form action="./index.php" method="post">
+        <div class="coluna_input">
+            <label for="text_n1">Número 1</label>
+            <input type="text" name="n1" id="n1" required>
+        </div>
+        <div class="coluna_input">
+            <label for="text_n2">Número 2</label>
+            <input type="text" name="n2" id="n2" required>
+        </div>
+        <button type="submit">OPERAR</button>
+    </form>
+
+    <style>
+        .coluna_input {
+            display: flex;
+            flex-direction: column;
+            max-width: 200px;
+        }
+
+    </style>
+</body>
+</html>
