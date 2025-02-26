@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <nav class="nav_bar"></nav>
+
+    <main>
+        <div class="container_form">
+            <h1>Cadastro</h1>
+            <form class="form_cadastro" action="./index.php" method="post">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required>
+                
+                <div class="container_dupla">
+                    <div>
+                        <label for="data_nasc">Data de Nascimento:</label>
+                        <input type="date" name="data_nasc" id="data_nasc" required>        
+                    </div>
+                    
+                    <div>
+                        <label for="sexo">Sexo:</label>
+                        <select name="sexo" id="sexo" required>
+                            <option value="masculino">Masculino</option>
+                            <option value="feminino">Feminino</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="container_dupla">
+                    <div>
+                        <label for="cpf">CPF:</label>
+                        <input type="text" name="cpf" id="cpf" required>
+                    </div>
+                   
+                    <div>
+                        <label for="rg">RG:</label>
+                    <input type="number" name="rg" id="rg" required>
+                    </div>
+                </div>
+                
+                <label for="email">E-mail:</label>
+                <input type="email" name="email" id="email" required>
+
+                <label for="confirm_email">Confirmar E-mail:</label>
+                <input type="email" name="confirm_email" id="confirm_email" required>
+
+                <div class="container_dupla">
+                    <div>
+                        <label for="senha">Senha:</label>
+                        <input type="password" name="senha" id="senha" required>
+                    </div>
+                   
+                    <div>
+                        <label for="confirm_senha">Confirmar Senha:</label>
+                    <input type="password" name="confirm_senha" id="confirm_senha" required>
+                    </div>
+                </div>
+
+                <label for="endereco">Endereço:</label>
+                <input type="text" name="endereco" id="endereco" required>
+    
+                <label for="cidade">Cidade:</label>
+                <input type="text" name="cidade" id="cidade" required>
+    
+                <label for="estado">Estado:</label>
+                <input type="text" name="estado" id="estado" required>
+    
+                <label for="celular">Celular:</label>
+                <input type="tel" name="celular" id="celular" required>
+    
+                <div class="aceito_termos">
+                    <input type="checkbox" name="termos" id="termos">
+                    <label for="termos">Li e aceito os termos.</label>
+                </div>
+
+                <div class="button_submit">
+                    <button type="submit">Enviar</button>
+                </div>
+            </form>
+        </div>  
+    </main> 
+</body>
+</html>
