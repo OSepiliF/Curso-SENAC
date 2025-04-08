@@ -1,0 +1,45 @@
+ID do Cenário de Teste: 
+- 001
+
+Título: 
+- Teste de login
+
+Objetivo: 
+- Verificar se o sistema permite login com um nome de usuário e senha válidos.
+
+Pré-condições:
+- O sistema tem que estar disponível e em funcionamento.
+- O usuário já possui uma conta registrada no sistema.
+- O usuário conhece seu nome de usuário e senha.
+
+Fluxo Principal:
+- Acesse a página de login.
+- Insira o nome de usuário válido no campo "Nome de usuário".
+- Insira a senha válida no campo "Senha".
+- Clique no botão "Entrar".
+- Verifique se o sistema redireciona o usuário para a página inicial ou dashboard.
+
+Resultado Esperado:
+- O sistema deve autenticar as credenciais corretamente.
+- O usuário deve ser redirecionado para a página inicial do sistema.
+- O nome de usuário deve aparecer como parte da saudação na página principal.
+
+Possíveis Resultados {
+    Positivo:
+    - O login é realizado com sucesso.
+    - O usuário é redirecionado para a página inicial ou dashboard.
+    - O nome de usuário aparece corretamente na saudação da página principal.
+
+    Negativo:
+    - Caso o nome de usuário ou a senha estejam incorretos, o sistema deve exibir uma mensagem de erro, como "Nome de usuário ou senha inválidos".
+    - Se o sistema não redirecionar o usuário para a página inicial após o login, o sistema deve registrar uma falha na autenticação e exibir a página de erro (404). 
+}
+    
+Dados de Teste:
+- ID de usuário.
+- Nome de usuário.
+- Senha.
+
+Pós-condições:
+- O usuário permanece autenticado e tem acesso ao sistema.
+- O nome de usuário é exibido corretamente na página inicial, perfil e demais telas do logado.
